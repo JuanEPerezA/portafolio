@@ -1,0 +1,36 @@
+@media screen and (max-width:575px) {
+  .paddingDiv{
+    /* padding-top: 14%; */
+    padding-bottom: 4%;
+  }
+
+  .footerPosition{
+    bottom: -70%;
+    position: absolute;
+    padding-bottom: 25px !important;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .paddingDiv{
+    padding-bottom: 4%;
+  }
+
+  .footerPosition{
+    bottom: -50%;
+    position: absolute;
+    padding-bottom: 25px !important;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .paddingDiv{
+    padding-bottom: 4%;
+  }
+
+  .footerPosition{
+    bottom: -50%;
+    position: absolute;
+    padding-bottom: 25px !important;
+  }
+}

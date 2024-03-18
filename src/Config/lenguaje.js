@@ -58,13 +58,13 @@ const lenguaje = {
         EN: 'Are you sure to remove this service?'
     },delete_confirmation_2:{
         ES: '¿Está seguro de eliminar este cliente?',
-        EN : 'Are you sure you want to remove this client?'
+        EN: 'Are you sure you want to remove this client?'
     },delete_confirmation_3:{
         ES: 'Si',
-        EN : 'Yes'
+        EN: 'Yes'
     },cancel_delete:{
         ES: 'Se ha cancelado la eliminación.',
-        EN : 'Delete has been cancelled.'
+        EN: 'Delete has been cancelled.'
     },
     pdf_client_tittle:{
         ES: 'Listado de Clientes',
@@ -78,71 +78,83 @@ const lenguaje = {
     },
     archive_client:{
         ES: 'Clientes',
-        EN : 'Clients'
+        EN: 'Clients'
     },archive_user:{
         ES: 'Usuarios',
-        EN : 'Users'
+        EN: 'Users'
     },archive_service:{
         ES: 'Servicios',
-        EN : 'Services'
+        EN: 'Services'
     },
     service_view_1:{
         ES: 'Servicios',
-        EN : 'Services'
+        EN: 'Services'
     },service_view_2:{
         ES: 'Servicio',
-        EN : 'Service'
+        EN: 'Service'
     },service_view_3:{
         ES: 'Eliminar',
-        EN : 'Delete'
+        EN: 'Delete'
     },service_view_4:{
         ES: 'Registrar Servicio',
-        EN : 'Register Service'
+        EN: 'Register Service'
     },service_view_5:{
         ES: 'Listar todos los servicios',
-        EN : 'List all services'
+        EN: 'List all services'
     },service_view_6:{
         ES: 'Listar todos los servicios activos',
-        EN : 'List all active services'
+        EN: 'List all active services'
     },service_view_7:{
         ES: 'Listar todos los servicios inactivos',
-        EN : 'List all inactive services'
+        EN: 'List all inactive services'
     },service_view_8:{
         ES: 'Ocultar formulario',
-        EN : 'Hide form'
+        EN: 'Hide form'
     },service_view_9:{
         ES: 'Servicios del Cliente:',
-        EN : 'Client Services:'
+        EN: 'Client Services:'
     },no_services:{
         ES: 'No hay servicios para exportar.',
-        EN : 'There are no services to export.'
+        EN: 'There are no services to export.'
     },
     no_results:{
         ES: 'Sin resultados.',
-        EN : 'Without results.'
+        EN: 'Without results.'
     },
     users_tab:{
         ES: 'Usuarios',
-        EN : 'Users'
+        EN: 'Users'
     },clients_tab:{
         ES: 'Clientes',
-        EN : 'Clients'
+        EN: 'Clients'
     },
     logOut:{
         ES: 'Cerrar Sesion',
-        EN : 'LogOut'
+        EN: 'LogOut'
     },
-    cb_lenguaje:{
+    cargo:{
+        ES: 'Desarrollador Fullstack',
+        EN: 'Fullstack Developer'
+    },
+    navbar_lenguaje:{
         ES: 'Lenguaje',
-        EN : 'Language'
+        EN: 'Language'
     },
-    cb_about:{
+    navbar_about:{
         ES: 'Sobre Mi',
-        EN : 'About'
+        EN: 'About'
+    },
+    navbar_contact:{
+        ES: 'Contacto',
+        EN: 'Contact'
+    },
+    download_cv:{
+        ES: 'DESCARGAR HV',
+        EN: 'Download CV'
     },
     cb_resume:{
         ES: 'Resumen',
-        EN : 'Resume'
+        EN: 'Resume'
     },
     form_users_1: {
         ES: 'Contraseña',

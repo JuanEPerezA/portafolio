@@ -26,8 +26,8 @@ const Navbar = ({idioma, setIdioma}) => {
                   <div className="hidden sm:ml-6 sm:block">
                      <div className="flex space-x-4">
                         <a href="#" className="darkMode rounded-md px-3 py-2 text-sm font-medium" aria-current="page">{lenguaje.cb_resume[`${idioma}`]}</a>
-                        <a href="#" className="darkMode rounded-md px-3 py-2 text-sm font-medium">{lenguaje.cb_about[`${idioma}`]}</a>
-                        <a href="#" className="darkMode rounded-md px-3 py-2 text-sm font-medium">Contacto</a>
+                        <a href="#" className="darkMode rounded-md px-3 py-2 text-sm font-medium">{lenguaje.navbar_about[`${idioma}`]}</a>
+                        <a href="#" className="darkMode rounded-md px-3 py-2 text-sm font-medium">{lenguaje.navbar_contact[`${idioma}`]}</a>
                      </div>
                   </div>
                </div>
@@ -45,7 +45,7 @@ const Navbar = ({idioma, setIdioma}) => {
                         <li className="nav-item">
                            <div className="dropdown">
                               <button className="btn darkMode dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                 {lenguaje.cb_lenguaje[`${idioma}`]}
+                                 {lenguaje.navbar_lenguaje[`${idioma}`]}
                               </button>
                               <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1" style={{"background":"transparent","borderColor":"transparent"}}>
                                  <li><button className="btn btn-link" onClick={() => setIdioma('EN')}><ReactCountryFlag countryCode="us" style={{width: '3em',height: '3em', borderRadius: '55%'}} svg /></button></li>
@@ -63,8 +63,8 @@ const Navbar = ({idioma, setIdioma}) => {
          <div className="sm:hidden" id="mobile-menu">
             <div className="space-y-1 px-2 pb-3 pt-2">
                <a href="#" className="block rounded-md px-3 py-2 text-base font-medium" aria-current="page">{lenguaje.cb_resume[`${idioma}`]}</a>
-               <a href="#" className="block rounded-md px-3 py-2 text-base font-medium">{lenguaje.cb_about[`${idioma}`]}</a>
-               <a href="#" className="block rounded-md px-3 py-2 text-base font-medium">Contacto</a>
+               <a href="#" className="block rounded-md px-3 py-2 text-base font-medium">{lenguaje.navbar_about[`${idioma}`]}</a>
+               <a href="#" className="block rounded-md px-3 py-2 text-base font-medium">{lenguaje.navbar_contact[`${idioma}`]}</a>
             </div>
          </div>
       </nav>
