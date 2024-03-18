@@ -10,7 +10,7 @@ function App() {
   return (
     <>
         <Navbar idioma={idioma} setIdioma={setIdioma}/>
-        <Home idioma={idioma} setIdioma={setIdioma}/>
+        {/* <Home idioma={idioma} setIdioma={setIdioma}/> */}
       {/* <Footer idioma={idioma} setIdioma={setIdioma}/> */}
     </>
   );

@@ -1,9 +1,12 @@
-import React, { Component } from "react";
+import React from 'react';
+import lenguaje from '../Config/lenguaje';
 
-export class Contacto extends Component {
-    render () {
-        return (
-            <h1>Contacto</h1>
-        )
-    }
+const Contacto = ({idioma}) => {
+  return (
+    <>      
+    <h1>Contacto**</h1>
+    </>
+  );
 }
+
+export default Contacto;

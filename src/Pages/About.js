@@ -1,9 +1,12 @@
-import React, { Component } from "react";
+import React from 'react';
+import lenguaje from '../Config/lenguaje';
 
-export class About extends Component {
-    render () {
-        return (
-            <h1>about</h1>
-        )
-    }
+const About = ({idioma}) => {
+  return (
+    <>      
+    <h1>Aboutttttttttttt</h1>
+    </>
+  );
 }
+
+export default About;
