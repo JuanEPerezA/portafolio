@@ -5,8 +5,7 @@ import Home from './../Pages/Home';
 import About from './../Pages/About';
 import Contacto from './../Pages/Contacto';
 
-function Routes() {
-  const [idioma, setIdioma] = useState(['ES'])
+const Routes = ({idioma, setIdioma}) => {
 
   return (
     <BrowserRouter>

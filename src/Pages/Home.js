@@ -1,11 +1,11 @@
 import React from 'react';
 import lenguaje from '../Config/lenguaje';
-import Navbar from '../Components/Navbar';
+// import Navbar from '../Components/Navbar';
 
 const Home = ({idioma, setIdioma}) => {
   return (
     <>
-    <Navbar idioma={idioma} setIdioma={setIdioma}/>
+    {/* <Navbar idioma={idioma} setIdioma={setIdioma}/> */}
     <div className="flex flex-col items-center h-[100vh] md:h-[90vh] lg:h-[80vh] xl:h-[71vh] justify-center aos-init aos-animate" data-aos="fade" style={{"padding-top":"10vh"}}>
         <img className="rounded-full w-[250px] h-[250px] 2xl:w-[280px] 2xl:h-[280px]" src="./Assets/Images/J.png" alt="Avatar"/>
         <h3 className="mt-6 mb-1 text-5xl font-semibold darkMode">Juan Esteban Pérez Aguas</h3>
