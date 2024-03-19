@@ -1,19 +1,16 @@
 import React from 'react';
 import lenguaje from '../Config/lenguaje';
+import Navbar from '../Components/Navbar';
 
-const Home = ({idioma}) => {
+const Home = ({idioma, setIdioma}) => {
   return (
-    <>      
+    <>
+    <Navbar idioma={idioma} setIdioma={setIdioma}/>
     <div className="flex flex-col items-center h-[100vh] md:h-[90vh] lg:h-[80vh] xl:h-[71vh] justify-center aos-init aos-animate" data-aos="fade" style={{"padding-top":"10vh"}}>
         <img className="rounded-full w-[250px] h-[250px] 2xl:w-[280px] 2xl:h-[280px]" src="./Assets/Images/J.png" alt="Avatar"/>
         <h3 className="mt-6 mb-1 text-5xl font-semibold darkMode">Juan Esteban Pérez Aguas</h3>
         <h6 className="mb-4 text-2xl text-[#7B7B7B]">{lenguaje.cargo[`${idioma}`]}</h6>
         <div className="flex space-x-3">
-            {/* <a href="https://www.facebook.com/Juancho998" target="_blank" rel="noopener noreferrer">
-                <span className="socialbtn text-[#1773EA]">
-                    <i className="fa-brands fa-facebook-f"></i>
-                </span>
-            </a> */}
             <a href="https://github.com/JuanEPerezA" target="_blank" rel="noopener noreferrer">
                 <span className="socialbtn text-[#e14a84]">
                     <i className="fa-brands fa-github"></i>

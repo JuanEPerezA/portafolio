@@ -1,10 +1,12 @@
 import React from 'react';
 import lenguaje from '../Config/lenguaje';
+import Navbar from '../Components/Navbar';
 
-const About = ({idioma}) => {
+const About = ({idioma, setIdioma}) => {
   return (
-    <>      
-    <h1>Aboutttttttttttt</h1>
+    <>
+    <Navbar idioma={idioma} setIdioma={setIdioma}/>
+    <h1>About**</h1>
     </>
   );
 }
