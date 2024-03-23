@@ -211,7 +211,7 @@ code {
   --tw-gradient-to: rgb(250 82 82 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
   --tw-gradient-to: #DD2476;
-  font-family: Roboto Slab, serif;
+  /* font-family: Roboto Slab, serif; */
   font-size: 2.5rem;
   font-weight: 700;
 }
@@ -219,7 +219,7 @@ code {
 .after-effect::after {
   position: absolute;
   top: 50%;
-  width: 12rem;
+  width: 45rem;
   height: 0.125rem;
   --tw-translate-y: -50%;
   transform: translate(var(0), var(-50%)) rotate(var(0)) skewX(var(0)) skewY(var(0)) scaleX(var(1)) scaleY(var(1));
