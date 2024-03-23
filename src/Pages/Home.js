@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import lenguaje from '../Config/lenguaje';
-// import Navbar from '../Components/Navbar';
+import { LanguageContext } from '../Config/LanguageProvider';
 
-const Home = ({idioma, setIdioma}) => {
+const Home = () => {
+  const { idioma, setIdioma } = useContext(LanguageContext); // Obtén el estado y la función de cambio de idioma del contexto
+
+  useEffect(() => {
+    console.log('Estado del idioma en Home:', idioma);
+  }, [idioma]);
   return (
     <>
     {/* <Navbar idioma={idioma} setIdioma={setIdioma}/> */}
-    <div className="flex flex-col items-center h-[100vh] md:h-[90vh] lg:h-[80vh] xl:h-[71vh] justify-center aos-init aos-animate" data-aos="fade" style={{"padding-top":"10vh"}}>
+    <div className="flex flex-col items-center h-[100vh] md:h-[90vh] lg:h-[80vh] xl:h-[71vh] justify-center aos-init aos-animate" data-aos="fade" style={{"paddingTop":"10vh"}}>
         <img className="rounded-full w-[250px] h-[250px] 2xl:w-[280px] 2xl:h-[280px]" src="./Assets/Images/J.png" alt="Avatar"/>
         <h3 className="mt-6 mb-1 text-5xl font-semibold darkMode">Juan Esteban Pérez Aguas</h3>
         <h6 className="mb-4 text-2xl text-[#7B7B7B]">{lenguaje.cargo[`${idioma}`]}</h6>
@@ -33,7 +38,7 @@ const Home = ({idioma, setIdioma}) => {
                 </span>
             </a>
         </div>
-        <button className="dowanload-btn" style={{"margin-left":"1rem"}}>
+        <button className="dowanload-btn" style={{"marginLeft":"1rem"}}>
             <img src="./Assets/Images/icons/dowanload.png" alt="icon" className="mr-2" style={{"display":"unset"}}/>
             <a href="./Assets/CV Juan Perez.pdf" target="_blank" rel="noopener noreferrer" download="JuanPérez.pdf" style={{"color":"white"}}>{lenguaje.download_cv[`${idioma}`]}</a>
         </button>

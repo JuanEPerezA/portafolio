@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import lenguaje from '../Config/lenguaje';
+import { LanguageContext } from '../Config/LanguageProvider';
 
-const Resume = ({idioma, setIdioma}) => {
+const Resume = () => {
+  const { idioma, setIdioma } = useContext(LanguageContext); // Obtén el estado y la función de cambio de idioma del contexto
+
+  useEffect(() => {
+    console.log('Estado del idioma en Resume:', idioma);
+  }, [idioma]);
   return (
     <>
       <div className="bg-homeBg min-h-screen bg-no-repeat bg-center bg-cover bg-fixed md:pb-16 w-full">

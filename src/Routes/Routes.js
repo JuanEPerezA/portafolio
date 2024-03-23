@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 // import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import { BrowserRouter, Routes as Switch, Route} from 'react-router-dom';
 import Home from './../Pages/Home';
 import About from './../Pages/About';
 import Resume from './../Pages/Resume';
 import Contacto from './../Pages/Contacto';
+import { LanguageContext } from '../Config/LanguageProvider';
 
-const Routes = ({idioma, setIdioma}) => {
+const Routes = () => {
+  const { idioma, setIdioma } = useContext(LanguageContext); // Obtén el estado y la función de cambio de idioma del contexto
 
   return (
     <BrowserRouter>

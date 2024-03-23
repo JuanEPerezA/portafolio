@@ -1,15 +1,16 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import Navbar from './Components/Navbar';
 import Routes from './Routes/Routes';
+import { LanguageContext } from './Config/LanguageProvider';
 
 function App() {
 
-  const [idioma, setIdioma] = useState(['ES'])
+  const { idioma, setIdioma } = useContext(LanguageContext); // Obtén el estado y la función de cambio de idioma del contexto
 
   return (
     <>
-      <Navbar idioma={idioma} setIdioma={setIdioma}/>
-      <Routes idioma={idioma} setIdioma={setIdioma}/>
+      <Navbar />
+      <Routes />
     </>
   );
 }
