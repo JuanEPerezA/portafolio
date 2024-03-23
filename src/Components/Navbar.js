@@ -25,7 +25,7 @@ const Navbar = ({idioma, setIdioma}) => {
                <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                   <div className="hidden sm:ml-6 sm:block">
                      <div className="flex space-x-4">
-                        <a href="#" className="darkMode rounded-md px-3 py-2 text-sm font-medium" aria-current="page">{lenguaje.cb_resume[`${idioma}`]}</a>
+                        <a href="/Resume" className="darkMode rounded-md px-3 py-2 text-sm font-medium" aria-current="page">{lenguaje.cb_resume[`${idioma}`]}</a>
                         <a href="/About" className="darkMode rounded-md px-3 py-2 text-sm font-medium">{lenguaje.navbar_about[`${idioma}`]}</a>
                         <a href="/Contact" className="darkMode rounded-md px-3 py-2 text-sm font-medium">{lenguaje.navbar_contact[`${idioma}`]}</a>
                      </div>

@@ -79,6 +79,42 @@ const lenguaje = {
         ES: 'Todos los derechos reservados por ',
         EN: 'All Rights Reserved by '
     },
+    education:{
+        ES: 'Educación',
+        EN: 'Education'
+    },
+    primaria:{
+        ES: 'Educación Primaria',
+        EN: 'Primary Education'
+    },
+    bachiller:{
+        ES: 'Bachiller Académico',
+        EN: 'Academic Bachelor'
+    },
+    profesional:{
+        ES: 'Tecnólogo en Análisis y Desarrollo de Sistemas de Información',
+        EN: 'Technologist in Analysis and Development of Information Systems'
+    },
+    experience:{
+        ES: 'Experiencia',
+        EN: 'Work Experience'
+    },
+    expNexos:{
+        ES: 'Aprendiz Desarrollo de Software',
+        EN: 'Software Development Apprentice'
+    },
+    desarrolladorWeb:{
+        ES: 'Desarrollador Web',
+        EN: 'Web Developer'
+    },
+    full:{
+        ES: 'Desarrollador Fullstack',
+        EN: 'Fullstack Developer'
+    },
+    conocimientos:{
+        ES: 'Conocimientos',
+        EN: 'Knowledges'
+    },
 };
 
 export default lenguaje;

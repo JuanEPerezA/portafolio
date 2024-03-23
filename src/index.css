@@ -67,58 +67,39 @@ code {
   border-color: transparent;
 }
 
-
-/* FORM.JS */
-/* @media screen and (max-width:575px) {
-  .paddingDiv{
-    padding-bottom: 4%;
-  }
-
-  .footerPosition{
-    bottom: -70%;
-    position: absolute;
-    padding-bottom: 25px !important;
-  }
+.bgConocimientos{
+  background: #a5a5c3;
+  padding: 3%;
 }
 
-@media screen and (min-width: 576px) and (max-width: 767px) {
-  .paddingDiv{
-    padding-bottom: 4%;
-  }
-
-  .footerPosition{
-    bottom: -50%;
-    position: absolute;
-    padding-bottom: 25px !important;
-  }
+.bgNJP{
+  background: rgb(80,86,246);
+  background: linear-gradient(90deg, rgba(80,86,246,1) 15%, rgba(80,86,246,1) 26%, rgba(189,187,245,0.7372198879551821) 100%);
 }
 
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  .paddingDiv{
-    padding-bottom: 4%;
-  }
+.bgLCGS{
+  background: rgb(83,122,80);
+  background: linear-gradient(90deg, rgba(83,122,80,1) 15%, rgba(83,122,80,1) 26%, rgba(123,84,143,0.891281512605042) 100%);
+}
 
-  .footerPosition{
-    bottom: -50%;
-    position: absolute;
-    padding-bottom: 25px !important;
-  }
-} */
-/* FIN FORM.JS */
-/* NAV */
+.bgSena{
+  background: rgb(255,98,50);
+  background: linear-gradient(90deg, rgba(255,98,50,0.5747549019607843) 16%, rgba(255,98,50,0.3226540616246498) 36%, rgba(0,0,0,0.7372198879551821) 100%);
+}
+
+.bgNexos{
+  /* background: rgb(0,117,255); */
+  background: linear-gradient(90deg, rgba(0,117,255,0.3478641456582633) 0%, rgba(255,59,0,0.3226540616246498) 35%, rgba(255,59,0,0.3310574229691877) 100%);
+}
+
+.bgTrendi{
+  /* background: rgb(255,59,0); */
+  background: linear-gradient(90deg, rgba(255,59,0,0.28343837535014005) 0%, rgba(255,59,0,0.3226540616246498) 35%, rgba(0,99,255,0.39548319327731096) 100%);
+}
+
 .colorNav{
   background: transparent !important;
 }
-/*FIN NAV*/
-
-/* HIDE RADIO */
-/* [type=radio] { 
-  position: absolute;
-  opacity: 0;
-  width: 0;
-  height: 0;
-} */ 
-
 .swal2-html-container{
   overflow: hidden !important;
 }
@@ -128,36 +109,6 @@ code {
   opacity: 0;
   width: 0;
   height: 0;
-}
-
-/* IMAGE STYLES */
-[type=radio] + img {
-  cursor: pointer;
-  margin-right: 0.5rem;
-}
-
-/* CHECKED STYLES */
-[type=radio]:checked + img {
-  outline: 2px solid #f00;
-}
-
-.avatar {
-  /* vertical-align: middle;
-  width: 20%;
-  height: 20%; */
-  border-radius: 50%;
-}
-
-.avatar-active{
-  outline: 4px solid #0080009e;
-  background: #0080009e;
-  /* background: rgba(77, 255, 98, 0.572); */
-}
-
-.avatar-inactive{
-  outline: 4px solid #ff00007a;
-  background: #ff00007a;
-  /* ff00007a */
 }
 
 .column {
