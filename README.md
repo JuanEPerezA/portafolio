@@ -21,3 +21,5 @@ MEJORAS:
 ✔. Al darle clic al celular, que redireccione al WhatsApp.
 
 ORGANIZAR NAVBAR (HOVER, ESTILOS, Y ENRUTADO)
+
+29-03-2024-> Organizar lo del lenguaje, ya que si está en INGLES, y se cambia de vista, se vuelve a poner en ESPAÑOL (el del DARKMODE SI FUNCIONA)
