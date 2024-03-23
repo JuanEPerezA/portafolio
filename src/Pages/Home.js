@@ -11,6 +11,17 @@ const Home = ({idioma, setIdioma}) => {
         <h3 className="mt-6 mb-1 text-5xl font-semibold darkMode">Juan Esteban Pérez Aguas</h3>
         <h6 className="mb-4 text-2xl text-[#7B7B7B]">{lenguaje.cargo[`${idioma}`]}</h6>
         <div className="flex space-x-3">
+            <a href="https://api.whatsapp.com/send?phone=573117121720" target="_blank" rel="noopener noreferrer" className="alink">
+                <span className="socialbtn text-[#377c4d]">
+                    <i className="fa-brands fa-whatsapp"></i>
+                </span>
+            </a>
+            <a href="mailto:jepa9@hotmail.com" target="_blank" rel="noopener noreferrer" className="alink">
+                <span className="socialbtn text-[#6cb8d9]">
+                    <i className="fa-brands fa-at"></i>
+                </span>
+            </a>
+
             <a href="https://github.com/JuanEPerezA" target="_blank" rel="noopener noreferrer">
                 <span className="socialbtn text-[#e14a84]">
                     <i className="fa-brands fa-github"></i>
@@ -22,7 +33,7 @@ const Home = ({idioma, setIdioma}) => {
                 </span>
             </a>
         </div>
-        <button className="dowanload-btn">
+        <button className="dowanload-btn" style={{"margin-left":"1rem"}}>
             <img src="./Assets/Images/icons/dowanload.png" alt="icon" className="mr-2" style={{"display":"unset"}}/>
             <a href="./Assets/CV Juan Perez.pdf" target="_blank" rel="noopener noreferrer" download="JuanPérez.pdf" style={{"color":"white"}}>{lenguaje.download_cv[`${idioma}`]}</a>
         </button>

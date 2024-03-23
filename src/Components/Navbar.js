@@ -25,9 +25,10 @@ const Navbar = ({idioma, setIdioma}) => {
                <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                   <div className="hidden sm:ml-6 sm:block">
                      <div className="flex space-x-4">
-                        <a href="/Resume" className="darkMode rounded-md px-3 py-2 text-sm font-medium" aria-current="page">{lenguaje.cb_resume[`${idioma}`]}</a>
-                        <a href="/About" className="darkMode rounded-md px-3 py-2 text-sm font-medium">{lenguaje.navbar_about[`${idioma}`]}</a>
-                        <a href="/Contact" className="darkMode rounded-md px-3 py-2 text-sm font-medium">{lenguaje.navbar_contact[`${idioma}`]}</a>
+                        <a href="/" className="darkMode anavbar rounded-md px-3 py-2 text-sm font-medium">{lenguaje.navbar_home[`${idioma}`]}</a>
+                        <a href="/Resume" className="darkMode anavbar rounded-md px-3 py-2 text-sm font-medium">{lenguaje.navbar_resume[`${idioma}`]}</a>
+                        <a href="/About" className="darkMode anavbar rounded-md px-3 py-2 text-sm font-medium">{lenguaje.navbar_about[`${idioma}`]}</a>
+                        <a href="/Contact" className="darkMode anavbar rounded-md px-3 py-2 text-sm font-medium">{lenguaje.navbar_contact[`${idioma}`]}</a>
                      </div>
                   </div>
                </div>
@@ -62,9 +63,10 @@ const Navbar = ({idioma, setIdioma}) => {
 
          <div className="sm:hidden" id="mobile-menu">
             <div className="space-y-1 px-2 pb-3 pt-2">
-               <a href="#" className="block rounded-md px-3 py-2 text-base font-medium" aria-current="page">{lenguaje.cb_resume[`${idioma}`]}</a>
-               <a href="/About" className="block rounded-md px-3 py-2 text-base font-medium">{lenguaje.navbar_about[`${idioma}`]}</a>
-               <a href="/Contact" className="block rounded-md px-3 py-2 text-base font-medium">{lenguaje.navbar_contact[`${idioma}`]}</a>
+               <a href="/" className="darkMode anavbar rounded-md px-3 py-2 text-sm font-medium"><i class="fa-solid fa-house"></i></a>
+               <a href="/Resume" className="block anavbar rounded-md px-3 py-2 text-base font-medium">{lenguaje.navbar_resume[`${idioma}`]}</a>
+               <a href="/About" className="block anavbar rounded-md px-3 py-2 text-base font-medium">{lenguaje.navbar_about[`${idioma}`]}</a>
+               <a href="/Contact" className="block anavbar rounded-md px-3 py-2 text-base font-medium">{lenguaje.navbar_contact[`${idioma}`]}</a>
             </div>
          </div>
       </nav>

@@ -7,6 +7,10 @@ const lenguaje = {
         ES: 'Desarrollador Fullstack',
         EN: 'Fullstack Developer'
     },
+    navbar_home:{
+        ES: 'Inicio',
+        EN: 'Home'
+    },
     navbar_lenguaje:{
         ES: 'Lenguaje',
         EN: 'Language'
@@ -23,7 +27,7 @@ const lenguaje = {
         ES: 'DESCARGAR HV',
         EN: 'DOWNLOAD CV'
     },
-    cb_resume:{
+    navbar_resume:{
         ES: 'Resumen',
         EN: 'Resume'
     },

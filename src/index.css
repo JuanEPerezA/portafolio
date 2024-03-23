@@ -194,6 +194,14 @@ code {
   color: red !important;
 }
 
+.anavbar {
+  color: var(--font-color) !important;
+}
+
+.anavbar:hover {
+  color: red !important;
+}
+
 .mr-2 {
   margin-right: 0.5rem;
 }
