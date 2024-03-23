@@ -2,7 +2,7 @@ import React from 'react';
 import DarkMode from './DarkMode';
 import ReactCountryFlag from "react-country-flag"
 import lenguaje from '../Config/lenguaje';
-import { Link, BrowserRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 const Navbar = ({idioma, setIdioma}) => {
 

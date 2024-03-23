@@ -1,6 +1,5 @@
 import React from 'react';
 import lenguaje from '../Config/lenguaje';
-// import Navbar from '../Components/Navbar';
 
 const About = ({idioma, setIdioma}) => {
   return (
