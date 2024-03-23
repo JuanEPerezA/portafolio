@@ -6,12 +6,12 @@ const Resume = ({idioma, setIdioma}) => {
     <>
       <div className="bg-homeBg min-h-screen bg-no-repeat bg-center bg-cover bg-fixed md:pb-16 w-full">
           <div className="container grid grid-cols-12 md:gap-10 justify-between darkMode">
-              <div className="col-span-12 lg:col-span-4 hidden lg:block h-screen sticky top-44 darkMode">
+              <div className="col-span-12 lg:col-span-4 hidden lg:block h-screen sticky top-44 darkMode divIzquierda">
                   <div className="w-full mb-6 lg:mb-0 mx-auto relative text-center px-6 rounded-[20px] mt-[180px] md:mt-[220px] lg:mt-0">
-                      <img src="./Assets/Images/J.png" className="w-[240px] absolute left-[50%] transform -translate-x-[50%] h-[240px] drop-shadow-xl mx-auto rounded-[20px] -mt-[115px]" alt="JEPA"/>
-                      <div className="pt-[100px] pb-8">
+                      <img src="./Assets/Images/J.png" className="w-[240px] absolute left-[50%] -translate-x-[50%] h-[240px] mx-auto -mt-[115px]" alt="JEPA" style={{"border-radius": "50%"}}/>
+                      <div className="pt-[100px]">
                           <h2 className="mt-6 mb-1 text-[26px] font-semibold">Juan Esteban Pérez Aguas</h2>
-                          <h3 className="mb-4 text-[#7B7B7B] inline-block px-5 py-1.5 rounded-lg">{lenguaje.cargo[`${idioma}`]}</h3>
+                          <h3 className="text-[#7B7B7B] inline-block px-5 rounded-lg">{lenguaje.cargo[`${idioma}`]}</h3>
                           <div className="flex justify-center space-x-3">
                             <a href="https://github.com/JuanEPerezA" target="_blank" rel="noopener noreferrer">
                                 <span className="socialbtn text-[#e14a84]">
@@ -24,8 +24,8 @@ const Resume = ({idioma, setIdioma}) => {
                                 </span>
                             </a>
                           </div>
-                          <div className="p-7 rounded-2xl mt-7">
-                              <div className="flex border-b border-[#E3E3E3] pb-2.5">
+                          <div className="divPersonalData">
+                              <div className="flex border-b border-[#E3E3E3] pb-1">
                                   <span className="socialbtn text-[#E93B81] shadow-md">
                                       <i className="fa-solid fa-mobile-screen-button"></i>
                                   </span>
@@ -34,7 +34,7 @@ const Resume = ({idioma, setIdioma}) => {
                                       <a href="https://api.whatsapp.com/send?phone=573117121720" target="_blank" rel="noopener noreferrer" className="alink">+57 3117121720</a>
                                   </div>
                               </div>
-                              <div className="flex border-b border-[#E3E3E3] py-2.5">
+                              <div className="flex border-b border-[#E3E3E3] py-1">
                                   <span className="socialbtn  text-[#6AB5B9] shadow-md">
                                       <i className="fa-solid fa-envelope-open-text"></i>
                                   </span>
@@ -43,7 +43,7 @@ const Resume = ({idioma, setIdioma}) => {
                                       <a href="mailto:jepa9@hotmail.com" target="_blank" rel="noopener noreferrer" className="alink">jepa9@hotmail.com</a>
                                   </div>
                               </div>
-                              <div className="flex border-b border-[#E3E3E3] py-2.5">
+                              <div className="flex border-b border-[#E3E3E3] py-1">
                                   <span className="socialbtn  text-[#FD7590] shadow-md">
                                       <i className="fa-solid fa-location-dot"></i>
                                   </span>
@@ -52,7 +52,7 @@ const Resume = ({idioma, setIdioma}) => {
                                       <p className="">Medellín, Colombia</p>
                                   </div>
                               </div>
-                              <div className="flex py-2.5">
+                              <div className="flex py-1">
                                   <span className="socialbtn   text-[#C17CEB] shadow-md">
                                       <i className="fa-solid fa-calendar-days"></i>
                                   </span>
@@ -70,10 +70,10 @@ const Resume = ({idioma, setIdioma}) => {
                   </div>
               </div>
 
-              <div className="col-span-12 lg:col-span-8 darkMode">
+              <div className="col-span-12 lg:col-span-8 darkMode divDerecha">
                 <div className="container">
                     <div className="py-12 px-4 md:px-0">
-                        <h2 className="after-effect after:left-44">Resume</h2>
+                        <h2 className="after-effect after:left-44">{lenguaje.resume[`${idioma}`]}</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-x-6 gap-y-6 mt-[30px]">
                             <div>
                                 <div className="flex items-center space-x-2 mb-4">
@@ -127,17 +127,17 @@ const Resume = ({idioma, setIdioma}) => {
                     </div>
                 </div>
 
-                <div className="container py-12 px-2 sm:px-5 md:px-10 lg:px-20 bg-center">
+                <div className="container px-2 sm:px-5 md:px-10 lg:px-20 bg-center">
                       <div className="col-span-1 bgConocimientos text-center">
                         <h4 className="text-5xl font-medium mb-8">{lenguaje.conocimientos[`${idioma}`]}</h4>
-                        <div className="flex gap-y-5 gap-x-2.5 flex-wrap">
-                          <button className="resume-btn">Digital Design</button>
-                          <button className="resume-btn">Marketing</button>
-                          <button className="resume-btn">Social Media</button>
-                          <button className="resume-btn">Print</button>
-                          <button className="resume-btn">Time Management</button>
-                          <button className="resume-btn">Flexibility</button>
-                          <button className="resume-btn">Print</button>
+                        <div className="flex gap-y-5 gap-x-2.5 flex-wrap" style={{"justify-content":"center"}}>
+                          <button className="resume-btn">PHP</button>
+                          <button className="resume-btn">SLIM</button>
+                          <button className="resume-btn">TWIG</button>
+                          <button className="resume-btn">REACT JS</button>
+                          <button className="resume-btn">GIT</button>
+                          <button className="resume-btn">SQL</button>
+                          <button className="resume-btn">WS</button>
                         </div>
                       </div>
                 </div>

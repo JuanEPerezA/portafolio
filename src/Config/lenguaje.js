@@ -115,6 +115,10 @@ const lenguaje = {
         ES: 'Conocimientos',
         EN: 'Knowledges'
     },
+    resume:{
+        ES: 'Resumen',
+        EN: 'Resume'
+    },
 };
 
 export default lenguaje;

@@ -67,9 +67,18 @@ code {
   border-color: transparent;
 }
 
+.divPersonalData{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
 .bgConocimientos{
-  background: #a5a5c3;
+  /* background: #c4c4ff; */
+  background: #0000f34f;
   padding: 3%;
+  border-radius: 0.5rem;
 }
 
 .bgNJP{
@@ -117,22 +126,33 @@ code {
   padding: 10px;
 }
 
-         
+.divIzquierda {
+  height: 100vh;
+  position: fixed;
+}
+
+.divDerecha{
+  margin-left: 30vw;
+  width: 1000px;
+}
+
 .dowanload-btn {
   background-image: linear-gradient(to right, #E55D87 0%, #5FC3E4  51%, #E55D87  100%);
   margin: 10px;
-  padding: 15px 45px;
+  padding: 10px 30px;
+  margin-top: 1rem;
+  margin-left: 5rem;
   text-align: center;
   text-transform: uppercase;
   transition: 0.5s;
   color: white;
-  /* box-shadow: 0 0 20px #eee; */
   border-radius: 25px;
   display: block;
+  /* box-shadow: 0 0 20px #eee; */
 }
 
 .dowanload-btn:hover {
-  background-position: right center; /* change the direction of the change here */
+  background-position: right center;
   color: #fff;
   text-decoration: none;
 }
@@ -238,6 +258,7 @@ code {
 /* Resume */
 
 .resume-btn {
+  width: 20%;
   cursor: default;
   border-radius: 0.5rem;
   --tw-bg-opacity: 1;
