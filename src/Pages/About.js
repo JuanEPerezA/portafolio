@@ -77,7 +77,7 @@ const About = ({idioma, setIdioma}) => {
                               <h2 className="after-effect after:left-52">{lenguaje.aboutMe[`${idioma}`]}</h2>
                               <div className="lg:hidden">
                                   <div className="w-full mb-6 lg:mb-0 mx-auto relative  text-center  px-6 rounded-[20px] mt-[180px] md:mt-[220px] lg:mt-0">
-                                      <img src="./Assets/Images/about/avatar.jpg" className="w-[240px] absolute left-[50%] transform -translate-x-[50%] h-[240px] drop-shadow-xl mx-auto rounded-[20px] -mt-[140px]" alt="about" />
+                                      <img src="./Assets/Images/about/avatar.jpg" className="w-[240px] absolute left-[50%] transform -translate-x-[50%] h-[240px] drop-shadow-xl mx-auto rounded-[20px] -mt-[140px]" alt="JEPA" />
                                       <div className="pt-[100px] pb-8">
                                           <h2 className="mt-6 mb-1 text-[26px] font-semibold">
                                             Juan Esteban Pérez Aguas
@@ -190,7 +190,7 @@ const About = ({idioma, setIdioma}) => {
 
                           <div className="px-2 sm:px-5 md:px-10 lg:px-14">
                             <div className="max-w-full h-auto py-10 rounded-xl">
-                                <h3 className="text-center text-6xl mb-3 font-semibold">{lenguaje.misTrabajos[`${idioma}`]}</h3>
+                              <h3 className="text-center text-6xl mb-3 font-semibold">{lenguaje.misTrabajos[`${idioma}`]}</h3>
                               <div className="grid gap-8 grid-cols-1 md:grid-cols-4 xl:grid-cols-4">
                                   <div className="about-box">
                                     <img className="w-15 h-15 object-contain block" src="./Assets/Images/icons/logoNexosColor.png"alt="nexos"/>

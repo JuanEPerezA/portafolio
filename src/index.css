@@ -283,3 +283,24 @@ code {
 	overflow: hidden;
 	text-align: center;
 }
+
+/* Resume */
+
+.resume-btn {
+  cursor: default;
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(237 242 242 / var(--tw-bg-opacity));
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(68 86 108 / var(--tw-text-opacity));
+}
+
+.bg-color-810 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 251 251 / var(--tw-bg-opacity));
+}
+
