@@ -1,16 +1,13 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import DarkMode from './DarkMode';
 import ReactCountryFlag from "react-country-flag"
 import lenguaje from '../Config/lenguaje';
 import { BrowserRouter } from 'react-router-dom';
-import { LanguageContext } from '../Config/LanguageProvider';
 
-const Navbar = () => {
-  const { idioma, setIdioma } = useContext(LanguageContext); // Obtén el estado y la función de cambio de idioma del contexto
-
-  useEffect(() => {
-    console.log('Estado del idioma en Navbar:', idioma);
-  }, [idioma]);
+const Navbar = ({idioma, setIdioma}) => {
+   useEffect(() => {
+     localStorage.setItem("idiomaNuevo", idioma);
+   }, [idioma]);
 
    return (
       <>

@@ -1,20 +1,14 @@
-import React, { useContext, useEffect } from 'react';
+import React from 'react';
 import lenguaje from '../Config/lenguaje';
-import { LanguageContext } from '../Config/LanguageProvider';
 
-const Resume = () => {
-  const { idioma, setIdioma } = useContext(LanguageContext); // Obtén el estado y la función de cambio de idioma del contexto
-
-  useEffect(() => {
-    console.log('Estado del idioma en Resume:', idioma);
-  }, [idioma]);
+const Resume = ({idioma, setIdioma}) => {
   return (
     <>
       <div className="bg-homeBg min-h-screen bg-no-repeat bg-center bg-cover bg-fixed md:pb-16 w-full">
           <div className="container grid grid-cols-12 md:gap-10 justify-between darkMode">
               <div className="col-span-12 lg:col-span-4 hidden lg:block h-screen sticky top-44 darkMode divIzquierda">
                   <div className="w-full mb-6 lg:mb-0 mx-auto relative text-center px-6 rounded-[20px] mt-[180px] md:mt-[220px] lg:mt-0">
-                      <img src="./Assets/Images/J.png" className="w-[240px] absolute left-[50%] -translate-x-[50%] h-[240px] mx-auto -mt-[115px]" alt="JEPA" style={{"border-radius": "50%"}}/>
+                      <img src="./Assets/Images/J.png" className="w-[240px] absolute left-[50%] -translate-x-[50%] h-[240px] mx-auto -mt-[115px]" alt="JEPA" style={{"borderRadius": "50%"}}/>
                       <div className="pt-[100px]">
                           <h2 className="mt-6 mb-1 text-[26px] font-semibold">Juan Esteban Pérez Aguas</h2>
                           <h3 className="text-[#7B7B7B] inline-block px-5 rounded-lg">{lenguaje.cargo[`${idioma}`]}</h3>
@@ -136,7 +130,7 @@ const Resume = () => {
                 <div className="container px-2 sm:px-5 md:px-10 lg:px-20 bg-center">
                       <div className="col-span-1 bgConocimientos text-center">
                         <h4 className="text-5xl font-medium mb-8">{lenguaje.conocimientos[`${idioma}`]}</h4>
-                        <div className="flex gap-y-5 gap-x-2.5 flex-wrap" style={{"justify-content":"center"}}>
+                        <div className="flex gap-y-5 gap-x-2.5 flex-wrap" style={{"justifyContent":"center"}}>
                           <button className="resume-btn">PHP</button>
                           <button className="resume-btn">SLIM</button>
                           <button className="resume-btn">TWIG</button>

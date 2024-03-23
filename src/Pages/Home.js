@@ -1,13 +1,8 @@
-import React, { useContext, useEffect } from 'react';
+import React from 'react';
 import lenguaje from '../Config/lenguaje';
-import { LanguageContext } from '../Config/LanguageProvider';
+// import Navbar from '../Components/Navbar';
 
-const Home = () => {
-  const { idioma, setIdioma } = useContext(LanguageContext); // Obtén el estado y la función de cambio de idioma del contexto
-
-  useEffect(() => {
-    console.log('Estado del idioma en Home:', idioma);
-  }, [idioma]);
+const Home = ({idioma, setIdioma}) => {
   return (
     <>
     {/* <Navbar idioma={idioma} setIdioma={setIdioma}/> */}
