@@ -2,11 +2,13 @@ import React from 'react';
 import DarkMode from './DarkMode';
 import ReactCountryFlag from "react-country-flag"
 import lenguaje from '../Config/lenguaje';
+import { Link, BrowserRouter } from 'react-router-dom';
 
 const Navbar = ({idioma, setIdioma}) => {
 
    return (
       <>
+      <BrowserRouter>
       <nav className="bg-light darkMode">
          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
             <div className="relative flex h-16 items-center justify-between">
@@ -25,10 +27,10 @@ const Navbar = ({idioma, setIdioma}) => {
                <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                   <div className="hidden sm:ml-6 sm:block">
                      <div className="flex space-x-4">
-                        <a href="/" className="darkMode anavbar rounded-md px-3 py-2 text-sm font-medium">{lenguaje.navbar_home[`${idioma}`]}</a>
-                        <a href="/Resume" className="darkMode anavbar rounded-md px-3 py-2 text-sm font-medium">{lenguaje.navbar_resume[`${idioma}`]}</a>
-                        <a href="/About" className="darkMode anavbar rounded-md px-3 py-2 text-sm font-medium">{lenguaje.navbar_about[`${idioma}`]}</a>
-                        <a href="/Contact" className="darkMode anavbar rounded-md px-3 py-2 text-sm font-medium">{lenguaje.navbar_contact[`${idioma}`]}</a>
+                        <a href="/" className={`darkMode anavbar rounded-md px-3 py-2 text-sm font-medium ${window.location.pathname === '/' ? 'navBarActive' : '' }`}>{lenguaje.navbar_home[`${idioma}`]}</a>
+                        <a href="/Resume" className={`darkMode anavbar rounded-md px-3 py-2 text-sm font-medium ${window.location.pathname === '/Resume' ? 'navBarActive' : '' }`}>{lenguaje.navbar_resume[`${idioma}`]}</a>
+                        <a href="/About" className={`darkMode anavbar rounded-md px-3 py-2 text-sm font-medium ${window.location.pathname === '/About' ? 'navBarActive' : '' }`} >{lenguaje.navbar_about[`${idioma}`]}</a>
+                        <a href="/Contact" className={`darkMode anavbar rounded-md px-3 py-2 text-sm font-medium ${window.location.pathname === '/Contact' ? 'navBarActive' : '' }`}>{lenguaje.navbar_contact[`${idioma}`]}</a>
                      </div>
                   </div>
                </div>
@@ -70,6 +72,7 @@ const Navbar = ({idioma, setIdioma}) => {
             </div>
          </div>
       </nav>
+      </BrowserRouter>
       </>
    );
 }

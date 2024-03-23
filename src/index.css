@@ -62,6 +62,10 @@ code {
   margin-bottom: 0px !important;
 }
 
+.navBarActive {
+  color: red !important;
+}
+
 .transparentButton{
   background: transparent;
   border-color: transparent;
@@ -195,7 +199,7 @@ code {
 }
 
 .anavbar {
-  color: var(--font-color) !important;
+  color: var(--font-color);
 }
 
 .anavbar:hover {
