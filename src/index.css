@@ -15,6 +15,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+  
+.ml-div {
+  margin-left: 0vw;
+}
+
+@media screen and (min-width: 601px) {
+  .ml-div {
+    margin-left: 30vw;
+  }
+}
 
 .botons-group{
   border-radius: 57px;
@@ -136,8 +146,7 @@ code {
 }
 
 .divDerecha{
-  margin-left: 30vw;
-  width: 1000px;
+  width: 100%;
 }
 
 .dowanload-btn {
@@ -236,7 +245,7 @@ code {
 .after-effect::after {
   position: absolute;
   top: 50%;
-  width: 45rem;
+  width: 38vw;
   height: 0.125rem;
   --tw-translate-y: -50%;
   transform: translate(var(0), var(-50%)) rotate(var(0)) skewX(var(0)) skewY(var(0)) scaleX(var(1)) scaleY(var(1));
@@ -292,4 +301,3 @@ code {
   --tw-bg-opacity: 1;
   background-color: rgb(248 251 251 / var(--tw-bg-opacity));
 }
-

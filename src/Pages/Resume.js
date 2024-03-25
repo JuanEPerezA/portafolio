@@ -70,9 +70,9 @@ const Resume = ({idioma, setIdioma}) => {
                   </div>
               </div>
 
-              <div className="col-span-12 lg:col-span-8 darkMode divDerecha">
+              <div className="col-span-12 lg:col-span-8 darkMode divDerecha ml-div">
                 <div className="container">
-                    <div className="py-12 px-4 md:px-0">
+                    <div className="pt-12 px-4 md:px-0">
                         <h2 className="after-effect after:left-44">{lenguaje.resume[`${idioma}`]}</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-x-6 gap-y-6 mt-[30px]">
                             <div>
@@ -126,8 +126,7 @@ const Resume = ({idioma, setIdioma}) => {
                         </div>
                     </div>
                 </div>
-
-                <div className="container px-2 sm:px-5 md:px-10 lg:px-20 bg-center">
+                <div className="container px-4 pb-2 lg:pb-0 sm:px-5 md:px-10 lg:px-20 bg-center">
                       <div className="col-span-1 bgConocimientos text-center">
                         <h4 className="text-5xl font-medium mb-8">{lenguaje.conocimientos[`${idioma}`]}</h4>
                         <div className="flex gap-y-5 gap-x-2.5 flex-wrap" style={{"justifyContent":"center"}}>
