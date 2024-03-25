@@ -3,42 +3,61 @@ import DarkMode from './DarkMode';
 import ReactCountryFlag from "react-country-flag"
 import lenguaje from '../Config/lenguaje';
 import { BrowserRouter } from 'react-router-dom';
+import { Fragment } from 'react'
+import { Disclosure, Menu, Transition } from '@headlessui/react'
+// import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const Navbar = ({idioma, setIdioma}) => {
    useEffect(() => {
      localStorage.setItem("idiomaNuevo", idioma);
    }, [idioma]);
 
+   const navigation = [
+    { name: lenguaje.navbar_home[`${idioma}`], href: '/', current: true },
+    { name: lenguaje.navbar_resume[`${idioma}`], href: '/Resume', current: false },
+    { name: lenguaje.navbar_about[`${idioma}`], href: '/About', current: false },
+    { name: lenguaje.navbar_contact[`${idioma}`], href: '/Contact', current: false },
+   ]
+   
+   function classNames(...classes) {
+     return classes.filter(Boolean).join(' ')
+   }
+
    return (
       <>
       <BrowserRouter>
-      <nav className="bg-light darkMode">
-         <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-            <div className="relative flex h-16 items-center justify-between">
-               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                  <button type="button" className="relative inline-flex items-center justify-center rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
-                     <span className="absolute -inset-0.5"></span>
-                     <span className="sr-only">Open main menu</span>
-                     <svg className="block h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                     </svg>
-                     <svg className="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                     </svg>
-                  </button>
-               </div>
-               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                  <div className="hidden sm:ml-6 sm:block">
-                     <div className="flex space-x-4">
+        <Disclosure as="nav" className="darkMode">
+          {({ open }) => (
+            <>
+              <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+                <div className="relative flex h-16 items-center justify-between">
+                  <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                    <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                      <span className="absolute -inset-0.5" />
+                      <span className="sr-only">Open main menu</span>
+                      {open ? (
+                        <span className="socialbtn text-[#e14a84]">
+                          <i class="fa-solid fa-xmark"></i>
+                        </span>
+                      ) : (
+                        <span className="socialbtn text-[#e14a84]">
+                          <i class="fa-solid fa-bars"></i>
+                        </span>
+                      )}
+                    </Disclosure.Button>
+                  </div>
+                  <div className="flex flex-1 items-center justify-center hidden sm:ml-6 sm:block">
+                    <div className="hidden sm:ml-6 sm:block">
+                      <div className="flex space-x-4">
                         <a href="/" className={`darkMode anavbar rounded-md px-3 py-2 text-sm font-medium ${window.location.pathname === '/' ? 'navBarActive' : '' }`}>{lenguaje.navbar_home[`${idioma}`]}</a>
                         <a href="/Resume" className={`darkMode anavbar rounded-md px-3 py-2 text-sm font-medium ${window.location.pathname === '/Resume' ? 'navBarActive' : '' }`}>{lenguaje.navbar_resume[`${idioma}`]}</a>
                         <a href="/About" className={`darkMode anavbar rounded-md px-3 py-2 text-sm font-medium ${window.location.pathname === '/About' ? 'navBarActive' : '' }`} >{lenguaje.navbar_about[`${idioma}`]}</a>
                         <a href="/Contact" className={`darkMode anavbar rounded-md px-3 py-2 text-sm font-medium ${window.location.pathname === '/Contact' ? 'navBarActive' : '' }`}>{lenguaje.navbar_contact[`${idioma}`]}</a>
-                     </div>
+                      </div>
+                    </div>
                   </div>
-               </div>
                <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                  <div className="hidden sm:ml-6 sm:block">
+                  <div>
                      <div className="flex space-x-4">
                         <DarkMode/>
                      </div>
@@ -62,19 +81,21 @@ const Navbar = ({idioma, setIdioma}) => {
                      </ul>
                   </div>
                </div>
-               </div>
-            </div>
-         </div>
+              </div>
+                </div>
+              </div>
 
-         <div className="sm:hidden" id="mobile-menu">
-            <div className="space-y-1 px-2 pb-3 pt-2">
-               <a href="/" className="darkMode anavbar rounded-md px-3 py-2 text-sm font-medium"><i className="fa-solid fa-house"></i></a>
-               <a href="/Resume" className="block anavbar rounded-md px-3 py-2 text-base font-medium">{lenguaje.navbar_resume[`${idioma}`]}</a>
-               <a href="/About" className="block anavbar rounded-md px-3 py-2 text-base font-medium">{lenguaje.navbar_about[`${idioma}`]}</a>
-               <a href="/Contact" className="block anavbar rounded-md px-3 py-2 text-base font-medium">{lenguaje.navbar_contact[`${idioma}`]}</a>
-            </div>
-         </div>
-      </nav>
+              <Disclosure.Panel className="sm:hidden" id="mobile-menu">
+                <div className="space-y-1 px-2 pb-3 pt-2">
+                  <a href="/" className={`darkMode block anavbar rounded-md px-3 py-2 text-base font-medium ${window.location.pathname === '/' ? 'navBarActive' : '' }`}><i className="fa-solid fa-house">​ㅤ</i>{lenguaje.navbar_home[`${idioma}`]}</a>
+                  <a href="/Resume" className={`darkMode block anavbar rounded-md px-3 py-2 text-base font-medium ${window.location.pathname === '/Resume' ? 'navBarActive' : '' }`}><i className="fa-regular fa-file-lines">​ㅤ</i>{lenguaje.navbar_resume[`${idioma}`]}</a>
+                  <a href="/About" className={`darkMode block anavbar rounded-md px-3 py-2 text-base font-medium ${window.location.pathname === '/About' ? 'navBarActive' : '' }`} ><i className="fa-regular fa-user">​ㅤ</i>{lenguaje.navbar_about[`${idioma}`]}</a>
+                  <a href="/Contact" className={`darkMode block anavbar rounded-md px-3 py-2 text-base font-medium ${window.location.pathname === '/Contact' ? 'navBarActive' : '' }`}><i className="fa-solid fa-address-book">​ㅤ</i>{lenguaje.navbar_contact[`${idioma}`]}</a>
+                </div>
+              </Disclosure.Panel>
+            </>
+          )}
+        </Disclosure>
       </BrowserRouter>
       </>
    );
