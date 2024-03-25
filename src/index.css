@@ -214,6 +214,11 @@ code {
   margin-right: 0.625rem;
 }
 
+.imgAvatarSM {
+  height: 40vh;
+  width: 45vw;
+}
+
 /* About */
 .after-effect {
   position: relative;
