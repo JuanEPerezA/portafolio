@@ -1,27 +1,15 @@
 import React, { useEffect } from 'react';
+import $ from 'jquery';
 import DarkMode from './DarkMode';
 import ReactCountryFlag from "react-country-flag"
 import lenguaje from '../Config/lenguaje';
 import { BrowserRouter } from 'react-router-dom';
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-// import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Disclosure } from '@headlessui/react'
 
 const Navbar = ({idioma, setIdioma}) => {
    useEffect(() => {
-     localStorage.setItem("idiomaNuevo", idioma);
+    localStorage.setItem("idiomaNuevo", idioma);
    }, [idioma]);
-
-   const navigation = [
-    { name: lenguaje.navbar_home[`${idioma}`], href: '/', current: true },
-    { name: lenguaje.navbar_resume[`${idioma}`], href: '/Resume', current: false },
-    { name: lenguaje.navbar_about[`${idioma}`], href: '/About', current: false },
-    { name: lenguaje.navbar_contact[`${idioma}`], href: '/Contact', current: false },
-   ]
-   
-   function classNames(...classes) {
-     return classes.filter(Boolean).join(' ')
-   }
 
    return (
       <>
@@ -37,11 +25,11 @@ const Navbar = ({idioma, setIdioma}) => {
                       <span className="sr-only">Open main menu</span>
                       {open ? (
                         <span className="socialbtn text-[#e14a84]">
-                          <i class="fa-solid fa-xmark"></i>
+                          <i className="fa-solid fa-xmark"></i>
                         </span>
                       ) : (
                         <span className="socialbtn text-[#e14a84]">
-                          <i class="fa-solid fa-bars"></i>
+                          <i className="fa-solid fa-bars"></i>
                         </span>
                       )}
                     </Disclosure.Button>
@@ -65,7 +53,7 @@ const Navbar = ({idioma, setIdioma}) => {
                </div>
                <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                <div className="relative ml-3 darkMode">
-                  <div className=" navbar-collapse" id="navbarCollapse">
+                  <div className="navbar-collapse hidden sm:ml-6 sm:block" id="navbarCollapse">
                      <ul className="navbar-nav nav-tabs" style={{"borderColor":"transparent"}}>
                         <li className="nav-item">
                            <div className="dropdown">
@@ -79,6 +67,15 @@ const Navbar = ({idioma, setIdioma}) => {
                            </div>
                         </li>
                      </ul>
+                  </div>
+                  <div className="navbar-collapse sm:hidden" id="navbarCollapse">
+                    <div id="divIdioma">
+                        {idioma === 'ES' ? (
+                          <button id="btnEn" className="btn btn-link" onClick={() => setIdioma('EN')}><ReactCountryFlag countryCode="us" style={{width: '3em',height: '3em', borderRadius: '55%'}} svg /></button>
+                        ) : (
+                          <button id="btnEs" className="btn btn-link" onClick={() => setIdioma('ES')}><ReactCountryFlag countryCode="es" style={{width: '3em',height: '3em', borderRadius: '55%'}} svg /></button>
+                        )}
+                    </div>
                   </div>
                </div>
               </div>
