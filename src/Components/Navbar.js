@@ -40,7 +40,7 @@ const Navbar = ({idioma, setIdioma}) => {
                         <a href="/" className={`darkMode anavbar rounded-md px-3 py-2 text-sm font-medium ${window.location.pathname === '/' ? 'navBarActive' : '' }`}>{lenguaje.navbar_home[`${idioma}`]}</a>
                         <a href="/Resume" className={`darkMode anavbar rounded-md px-3 py-2 text-sm font-medium ${window.location.pathname === '/Resume' ? 'navBarActive' : '' }`}>{lenguaje.navbar_resume[`${idioma}`]}</a>
                         <a href="/About" className={`darkMode anavbar rounded-md px-3 py-2 text-sm font-medium ${window.location.pathname === '/About' ? 'navBarActive' : '' }`} >{lenguaje.navbar_about[`${idioma}`]}</a>
-                        <a href="/Contact" className={`darkMode anavbar rounded-md px-3 py-2 text-sm font-medium ${window.location.pathname === '/Contact' ? 'navBarActive' : '' }`}>{lenguaje.navbar_contact[`${idioma}`]}</a>
+                        {/* <a href="/Contact" className={`darkMode anavbar rounded-md px-3 py-2 text-sm font-medium ${window.location.pathname === '/Contact' ? 'navBarActive' : '' }`}>{lenguaje.navbar_contact[`${idioma}`]}</a> */}
                       </div>
                     </div>
                   </div>
@@ -87,7 +87,7 @@ const Navbar = ({idioma, setIdioma}) => {
                   <a href="/" className={`darkMode block anavbar rounded-md px-3 py-2 text-base font-medium ${window.location.pathname === '/' ? 'navBarActive' : '' }`}><i className="fa-solid fa-house">​ㅤ</i>{lenguaje.navbar_home[`${idioma}`]}</a>
                   <a href="/Resume" className={`darkMode block anavbar rounded-md px-3 py-2 text-base font-medium ${window.location.pathname === '/Resume' ? 'navBarActive' : '' }`}><i className="fa-regular fa-file-lines">​ㅤ</i>{lenguaje.navbar_resume[`${idioma}`]}</a>
                   <a href="/About" className={`darkMode block anavbar rounded-md px-3 py-2 text-base font-medium ${window.location.pathname === '/About' ? 'navBarActive' : '' }`} ><i className="fa-regular fa-user">​ㅤ</i>{lenguaje.navbar_about[`${idioma}`]}</a>
-                  <a href="/Contact" className={`darkMode block anavbar rounded-md px-3 py-2 text-base font-medium ${window.location.pathname === '/Contact' ? 'navBarActive' : '' }`}><i className="fa-solid fa-address-book">​ㅤ</i>{lenguaje.navbar_contact[`${idioma}`]}</a>
+                  {/* <a href="/Contact" className={`darkMode block anavbar rounded-md px-3 py-2 text-base font-medium ${window.location.pathname === '/Contact' ? 'navBarActive' : '' }`}><i className="fa-solid fa-address-book">​ㅤ</i>{lenguaje.navbar_contact[`${idioma}`]}</a> */}
                 </div>
               </Disclosure.Panel>
             </>
