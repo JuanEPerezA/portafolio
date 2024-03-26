@@ -198,7 +198,7 @@ code {
 }
 
 .alink {
-  background-color: var(--background-color) !important;
+  background-color: transparent !important;
   color: var(--font-color) !important;
 } 
 

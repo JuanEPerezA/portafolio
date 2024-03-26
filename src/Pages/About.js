@@ -70,14 +70,14 @@ const About = ({idioma, setIdioma}) => {
                   </div>
               </div>
 
-              <div className="col-span-12 lg:col-span-8 darkMode divDerecha">
+              <div className="col-span-12 lg:col-span-8 darkMode divDerecha ml-div">
                   <div>
-                      <div className="lg:rounded-2xl ">
+                      <div className="lg:rounded-2xl">
                           <div className="pt-12 md:py-12 px-2 sm:px-5 md:px-10 lg:px-14">
-                              <h2 className="after-effect after:left-52">{lenguaje.aboutMe[`${idioma}`]}</h2>
+                              <h2 className="after-effect after:left-52" style={{"textAlign":"center"}}>{lenguaje.aboutMe[`${idioma}`]}</h2>
                               <div className="lg:hidden">
-                                  <div className="w-full mb-6 lg:mb-0 mx-auto relative  text-center  px-6 rounded-[20px] mt-[180px] md:mt-[220px] lg:mt-0">
-                                      <img src="./Assets/Images/about/avatar.jpg" className="w-[240px] absolute left-[50%] transform -translate-x-[50%] h-[240px] drop-shadow-xl mx-auto rounded-[20px] -mt-[140px]" alt="JEPA" />
+                                  <div className="w-full mb-6 lg:mb-0 mx-auto relative text-center px-6 rounded-[20px] mt-[180px] md:mt-[220px] lg:mt-0">
+                                      <img src="./Assets/Images/J.png" alt="Avatar" className="w-[240px] absolute left-[50%] transform -translate-x-[50%] h-[240px] drop-shadow-xl mx-auto rounded-[20px] -mt-[140px]" />
                                       <div className="pt-[100px] pb-8">
                                           <h2 className="mt-6 mb-1 text-[26px] font-semibold">
                                             Juan Esteban Pérez Aguas
@@ -99,7 +99,7 @@ const About = ({idioma, setIdioma}) => {
                                             </a>
                                           </div>
 
-                                          <div className="p-7 rounded-2xl mt-7 bg-[#F3F6F6]">
+                                          <div className="p-7 rounded-2xl mt-7 darkMode">
                                               <div className="flex border-b border-[#E3E3E3]  pb-2.5">
                                                   <span className="socialbtn  text-[#E93B81] shadow-md">
                                                       <i className="fa-solid fa-mobile-screen-button"></i>
@@ -121,7 +121,7 @@ const About = ({idioma, setIdioma}) => {
                                               </div>
 
                                               <div className="flex border-b border-[#E3E3E3]  py-2.5">
-                                                  <span className="socialbtn   text-[#FD7590] shadow-md">
+                                                  <span className="socialbtn text-[#FD7590] shadow-md">
                                                       <i className="fa-solid fa-location-dot"></i>
                                                   </span>
                                                   <div className="text-left ml-2.5">
@@ -131,7 +131,7 @@ const About = ({idioma, setIdioma}) => {
                                               </div>
 
                                               <div className="flex py-2.5">
-                                                  <span className="socialbtn   text-[#C17CEB] shadow-md">
+                                                  <span className="socialbtn text-[#C17CEB] shadow-md">
                                                       <i className="fa-solid fa-calendar-days"></i>
                                                   </span>
                                                   <div className="text-left ml-2.5">
@@ -141,14 +141,14 @@ const About = ({idioma, setIdioma}) => {
                                               </div>
                                           </div>
                                           <button className="dowanload-btn">
-                                            <img className="mr-3" src="./Assets/Images/icons/dowanload.png" alt="icon" />
-                                            {lenguaje.download_cv[`${idioma}`]}
+                                            <i class="fa-solid fa-download"></i>
+                                            ​ㅤ{lenguaje.download_cv[`${idioma}`]}
                                           </button>
                                       </div>
                                   </div>
                               </div>
 
-                              <div className="lg:grid grid-cols-12 md:gap-10 pt-4 md:pt-[30px] items-center hidden">
+                              <div className="lg:grid grid-cols-12 md:gap-10 pt-4 md:pt-[30px] sm:pt-0 items-center hidden">
                                   <div className="col-span-12 space-y-2.5">
                                       <div className="lg:mr-16">
                                         <p className="text-[#7B7B7B] leading-7">
@@ -165,7 +165,7 @@ const About = ({idioma, setIdioma}) => {
                           </div>
 
                           <div className="pb-12 px-2 sm:px-5 md:px-10 lg:px-14">
-                              <h3 className="text-[35px] font-bold font-robotoSlab pb-5"> {lenguaje.queHago[`${idioma}`]}</h3>
+                              <h3 className="text-[35px] font-bold font-robotoSlab pb-5" style={{"textAlign":"center"}}> {lenguaje.queHago[`${idioma}`]}</h3>
                               <div className="grid gap-8 grid-cols-1 md:grid-cols-3 xl:grid-cols-3">
                                   <div className="about-box bg-[#fefaf0]">
                                       <img className="w-10 h-10 object-contain block" src="./Assets/Images/icons/DB.png"alt="icon"/>
@@ -190,8 +190,8 @@ const About = ({idioma, setIdioma}) => {
 
                           <div className="px-2 sm:px-5 md:px-10 lg:px-14">
                             <div className="max-w-full h-auto py-10 rounded-xl">
-                              <h3 className="text-center text-6xl mb-3 font-semibold">{lenguaje.misTrabajos[`${idioma}`]}</h3>
-                              <div className="grid gap-8 grid-cols-1 md:grid-cols-4 xl:grid-cols-4">
+                              <h3 className="text-center text-6xl mb-3 font-semibold" style={{"textAlign":"center"}}>{lenguaje.misTrabajos[`${idioma}`]}</h3>
+                              <div className="grid gap-8 grid-cols-2 md:grid-cols-4 xl:grid-cols-4">
                                   <div className="about-box">
                                     <img className="w-15 h-15 object-contain block" src="./Assets/Images/icons/logoNexosColor.png"alt="nexos"/>
                                   </div>
