@@ -1,7 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
 import lenguaje from '../Config/lenguaje';
 
 const Contacto = ({idioma, setIdioma}) => {
+  const [asunto, setAsunto] = useState('');
+  const [emisor, setEmisor] = useState('');
+  const [mensaje, setMensaje] = useState('');
+  const [errores, setErrores] = useState({});
+
+  const validarFormulario = () => {
+    const nuevosErrores = {};
+
+    if (!asunto.trim()) {
+      nuevosErrores.asunto = 'El campo Asunto es requerido';
+    }
+
+    if (!emisor.trim()) {
+      nuevosErrores.emisor = 'El campo Emisor es requerido';
+    } else if (!/^\S+@\S+\.\S+$/.test(emisor)) {
+      nuevosErrores.emisor = 'Por favor ingresa un correo electrónico válido';
+    }
+
+    if (!mensaje.trim()) {
+      nuevosErrores.mensaje = 'El campo Mensaje es requerido';
+    }
+
+    setErrores(nuevosErrores);
+
+    return Object.keys(nuevosErrores).length === 0;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (validarFormulario()) {
+      // Aquí puedes enviar el formulario, por ejemplo, a través de una función enviarCorreo()
+      console.log('Formulario enviado');
+    }
+  };
   return (
     <>
       <main className="bg-homeBg dark:bg-homeTwoBg-dark min-h-screen bg-no-repeat bg-center bg-cover bg-fixed md:pb-16 w-full">
@@ -82,7 +116,6 @@ const Contacto = ({idioma, setIdioma}) => {
                         <br />
                         <span className="font-semibold dark:text-white">design work or partnerships.</span>
                     </h3>
-
                     <form action="https://formspree.io/f/xoqrgaab" method="POST">
                         <div className="returnmessage"
                             data-success="Your message has been received, We will contact you soon."></div>
@@ -121,6 +154,53 @@ const Contacto = ({idioma, setIdioma}) => {
                             className="px-6 py-2 rounded-lg border-[2px] mt-3 border-color-910 font-semibold cursor-pointer hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476] hover:text-white transition-colors duration-300 ease-in-out hover:border-transparent dark:text-white"
                             value="Submit" />
                     </form>
+
+                    <form onSubmit={handleSubmit} className="space-y-4">
+                  <div>
+                    <label htmlFor="asunto" className="block text-sm font-medium text-gray-700">
+                      Asunto
+                    </label>
+                    <input
+                      type="text"
+                      id="asunto"
+                      value={asunto}
+                      onChange={(e) => setAsunto(e.target.value)}
+                      className={`mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md ${errores.asunto && 'border-red-500'}`}
+                    />
+                    {errores.asunto && <p className="text-red-500 text-xs mt-1">{errores.asunto}</p>}
+                  </div>
+                  <div>
+                    <label htmlFor="emisor" className="block text-sm font-medium text-gray-700">
+                      Emisor
+                    </label>
+                    <input
+                      type="email"
+                      id="emisor"
+                      value={emisor}
+                      onChange={(e) => setEmisor(e.target.value)}
+                      className={`mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md ${errores.emisor && 'border-red-500'}`}
+                    />
+                    {errores.emisor && <p className="text-red-500 text-xs mt-1">{errores.emisor}</p>}
+                  </div>
+                  <div>
+                    <label htmlFor="mensaje" className="block text-sm font-medium text-gray-700">
+                      Mensaje
+                    </label>
+                    <textarea
+                      id="mensaje"
+                      value={mensaje}
+                      onChange={(e) => setMensaje(e.target.value)}
+                      className={`mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md ${errores.mensaje && 'border-red-500'}`}
+                    />
+                    {errores.mensaje && <p className="text-red-500 text-xs mt-1">{errores.mensaje}</p>}
+                  </div>
+                  <button
+                    type="submit"
+                    className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  >
+                    Enviar
+                  </button>
+                </form>
                 </div>
 
                 <footer className="overflow-hidden rounded-b-2xl">
