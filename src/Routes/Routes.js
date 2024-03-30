@@ -5,6 +5,7 @@ import Home from './../Pages/Home';
 import About from './../Pages/About';
 import Resume from './../Pages/Resume';
 import Contacto from './../Pages/Contacto';
+// import NotFound from './../Pages/NotFound';
 
 const Routes = ({idioma, setIdioma}) => {
 
@@ -16,6 +17,7 @@ const Routes = ({idioma, setIdioma}) => {
         <Route exact path="/About" element={<About idioma={idioma} setIdioma={setIdioma}/>}/>
         <Route exact path="/Resume" element={<Resume idioma={idioma} setIdioma={setIdioma}/>}/>
         <Route exact path='/Contact' element={<Contacto idioma={idioma} setIdioma={setIdioma}/>} />
+        <Route path="*" element={<Home idioma={idioma} setIdioma={setIdioma}/>} />
       </Switch>
     </BrowserRouter>
   );
