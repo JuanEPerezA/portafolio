@@ -301,3 +301,14 @@ code {
   --tw-bg-opacity: 1;
   background-color: rgb(248 251 251 / var(--tw-bg-opacity));
 }
+
+.textCamposRequeridos {
+  color: red;
+  font-style: italic;
+}
+
+.blackButton {
+  background-color: var(--background-color);
+  border-color: var(--font-color);
+  color: var(--font-color);
+}

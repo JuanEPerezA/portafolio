@@ -3,7 +3,7 @@ import lenguaje from '../Config/lenguaje';
 
 const Contacto = ({idioma, setIdioma}) => {
   const [asunto, setAsunto] = useState('');
-  const [emisor, setEmisor] = useState('');
+  const [correo, setcorreo] = useState('');
   const [mensaje, setMensaje] = useState('');
   const [errores, setErrores] = useState({});
 
@@ -11,17 +11,17 @@ const Contacto = ({idioma, setIdioma}) => {
     const nuevosErrores = {};
 
     if (!asunto.trim()) {
-      nuevosErrores.asunto = 'El campo Asunto es requerido';
+      nuevosErrores.asunto = lenguaje.asuntoRequerido[`${idioma}`];
     }
 
-    if (!emisor.trim()) {
-      nuevosErrores.emisor = 'El campo Emisor es requerido';
-    } else if (!/^\S+@\S+\.\S+$/.test(emisor)) {
-      nuevosErrores.emisor = 'Por favor ingresa un correo electrónico válido';
+    if (!correo.trim()) {
+      nuevosErrores.correo = lenguaje.correoRequerido[`${idioma}`];
+    } else if (!/^\S+@\S+\.\S+$/.test(correo)) {
+      nuevosErrores.correo = 'Por favor ingresa un correo electrónico válido';
     }
 
     if (!mensaje.trim()) {
-      nuevosErrores.mensaje = 'El campo Mensaje es requerido';
+      nuevosErrores.mensaje = lenguaje.mensajeRequerido[`${idioma}`];
     }
 
     setErrores(nuevosErrores);
@@ -36,11 +36,12 @@ const Contacto = ({idioma, setIdioma}) => {
       console.log('Formulario enviado');
     }
   };
+  
   return (
     <>
       <main className="bg-homeBg min-h-screen bg-no-repeat bg-center bg-cover bg-fixed md:pb-16 w-full">
-        <div className="container grid grid-cols-12 md:gap-10 justify-between lg:mt-[220px] darkMode">
-          <section className="col-span-12 lg:col-span-4 hidden lg:block h-screen sticky top-44 darkMode divIzquierda">
+        <div className="container grid grid-cols-12 md:gap-10 justify-between">
+          <section className="col-span-12 lg:col-span-4 hidden lg:block h-screen sticky top-44 divIzquierda">
             <div className="w-full mb-6 lg:mb-0 mx-auto relative text-center px-6 rounded-[20px] mt-[180px] md:mt-[220px] lg:mt-0">
                 <img src="./Assets/Images/J.png" className="w-[240px] absolute left-[50%] -translate-x-[50%] h-[240px] mx-auto -mt-[115px]" alt="JEPA" style={{"borderRadius": "50%"}}/>
                 <div className="pt-[100px]">
@@ -104,37 +105,41 @@ const Contacto = ({idioma, setIdioma}) => {
             </div>
           </section>
   
-          <section className="col-span-12 lg:col-span-8 darkMode divDerecha ml-div">
-            <div className="bg-white lg:rounded-2xl">
+          <section className="col-span-12 lg:col-span-8 divDerecha ml-div">
+            <div className="lg:rounded-2xl">
               <h2 className="after-effect after:left-60 after:top-[76px] mb-12 md:mb-[30px] pl-4 md:pl-[60px] pt-12"> Contact </h2>
-              <div className="mx-4 md:mx-[60px] p-4 md:p-16 bg-color-810 rounded-xl mb-[30px] md:mb-[60px]">
-                <h3 className="text-4xl">
-                  <span className="text-gray-lite">I'm always open to discussing product</span>
-                  <br />
-                  <span className="font-semibold">design work or partnerships.</span>
+              <div className="mx-4 md:mx-[60px] p-4 md:p-16 rounded-xl">
+                <h3 className="text-3xl">
+                  <span className="text-gray-lite">{lenguaje.contactMeText1[`${idioma}`]}</span>
                 </h3>
 
                 <form onSubmit={handleSubmit} className="space-y-4">
-                  <div className="empty_notice">
-                    <span>Please Fill Required Fields</span>
-                  </div>
-                  <div>
-                    <label htmlFor="asunto" className="block text-sm font-medium text-gray-700">{lenguaje.asunto[`${idioma}`]} *</label>
-                    <input type="text" id="asunto" value={asunto} onChange={(e) => setAsunto(e.target.value)} className={`mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md ${errores.asunto && 'border-red-500'}`} />
-                    {errores.asunto && <p className="text-red-500 text-xs mt-1">{errores.asunto}</p>}
-                  </div>
-                  <div>
-                    <label htmlFor="emisor" className="block text-sm font-medium text-gray-700">{lenguaje.correo[`${idioma}`]} *</label>
-                    <input type="email" id="emisor" value={emisor} onChange={(e) => setEmisor(e.target.value)} className={`mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md ${errores.emisor && 'border-red-500'}`} />
-                    {errores.emisor && <p className="text-red-500 text-xs mt-1">{errores.emisor}</p>}
-                  </div> 
-                  <div>
-                    <label htmlFor="mensaje" className="block text-sm font-medium text-gray-700">{lenguaje.mensaje[`${idioma}`]} *</label>
-                    <textarea id="mensaje" value={mensaje} onChange={(e) => setMensaje(e.target.value)} className={`mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md ${errores.mensaje && 'border-red-500'}`} />
-                    {errores.mensaje && <p className="text-red-500 text-xs mt-1">{errores.mensaje}</p>}
+                  <section style={{"padding":"2% 0 2% 0"}}>
+                    <span className='textCamposRequeridos'>{lenguaje.camposRequeridos1[`${idioma}`]}</span>
+                  </section>
+
+                  <div className="relative z-0 w-full mb-8 group">
+                    <input type="text" id="asunto" name="asunto" value={asunto} onChange={(e) => setAsunto(e.target.value)} className="block autofill:text-red-900 needed py-2.5 px-0 w-full text-sm text-gray-lite bg-transparent border-0 border-b-[2px] border-[#B5B5B5] appearance-none focus:outline-none focus:ring-0 focus:border-[#5185D4] peer"/>
+                    <label for="asunto" className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#5185D4] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8">
+                      {errores.asunto ? (<><span>{lenguaje.asunto[`${idioma}`]}</span><span id="txtAsuntoRequerido" className='textCamposRequeridos'>{' | '}{lenguaje.asuntoRequerido[`${idioma}`]}</span></>) : (<>{lenguaje.asunto[`${idioma}`]}{' *'}</>)}
+                    </label>
                   </div>
 
-                  <button type="submit" className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  <div className="relative z-0 w-full mb-8 group">
+                    <input type="email" id="correo" name="correo" value={correo} onChange={(e) => setcorreo(e.target.value)} className="block autofill:text-red-900 needed py-2.5 px-0 w-full text-sm text-gray-lite bg-transparent border-0 border-b-[2px] border-[#B5B5B5] appearance-none focus:outline-none focus:ring-0 focus:border-[#5185D4] peer"/>
+                    <label for="correo" className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#5185D4] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8">
+                      {errores.correo ? (<><span>{lenguaje.correo[`${idioma}`]}</span><span id="txtCorreoRequerido" className='textCamposRequeridos'>{' | '}{lenguaje.correoRequerido[`${idioma}`]}</span></>) : (<>{lenguaje.correo[`${idioma}`]}{' *'}</>)}
+                    </label>
+                  </div>
+
+                  <div className="relative z-0 w-full mb-8 group">
+                    <textarea id="mensaje" name="mensaje" value={mensaje} onChange={(e) => setMensaje(e.target.value)} className="block autofill:text-red-900 needed py-2.5 px-0 w-full text-sm text-gray-lite bg-transparent border-0 border-b-[2px] border-[#B5B5B5] appearance-none focus:outline-none focus:ring-0 focus:border-[#5185D4] peer"/>
+                    <label for="mensaje" className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#5185D4] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8">
+                      {errores.mensaje ? (<><span>{lenguaje.mensaje[`${idioma}`]}</span><span id="txtMensajeRequerido" className='textCamposRequeridos'>{' | '}{lenguaje.mensajeRequerido[`${idioma}`]}</span></>) : (<>{lenguaje.mensaje[`${idioma}`]}{' *'}</>)}
+                    </label>
+                  </div>
+
+                  <button type="submit" className="blackButton px-6 py-2 rounded-lg border-[2px] mt-3 font-semibold cursor-pointer hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476] hover:text-white transition-colors duration-300 ease-in-out hover:border-transparent"
                   >{lenguaje.enviarCorreo[`${idioma}`]}</button>
                 </form>
               </div>

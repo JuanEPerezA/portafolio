@@ -123,6 +123,42 @@ const lenguaje = {
         ES: 'Resumen',
         EN: 'Resume'
     },
+    asunto:{
+        ES: 'Asunto',
+        EN: 'Subject'
+    },
+    asuntoRequerido:{
+        ES: 'El campo asunto es requerido.',
+        EN: 'The subject field is required.'
+    },
+    correo:{
+        ES: 'Correo',
+        EN: 'Email'
+    },
+    correoRequerido:{
+        ES: 'El campo correo es requerido.',
+        EN: 'The subject email is required.'
+    },
+    mensaje:{
+        ES: 'Mensaje',
+        EN: 'Message'
+    },
+    mensajeRequerido:{
+        ES: 'El campo mensaje es requerido.',
+        EN: 'The message field is required.'
+    },
+    enviarCorreo:{
+        ES: 'Enviar',
+        EN: 'Send'
+    },
+    camposRequeridos1:{
+        ES: 'Por favor llena todos los campos requeridos.',
+        EN: 'Please Fill Required Fields.'
+    },
+    contactMeText1:{
+        ES: '¡Hola! Estoy abierto a escuchar ofertas de trabajo, al igual que sugerencias sobre mi portafolio',
+        EN: 'Hello! I am open to hearing job offers, as well as suggestions about my portfolio.'
+    },
 };
 
 export default lenguaje;
