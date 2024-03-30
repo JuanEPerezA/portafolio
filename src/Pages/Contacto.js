@@ -38,7 +38,7 @@ const Contacto = ({idioma, setIdioma}) => {
   };
   return (
     <>
-      <main className="bg-homeBg dark:bg-homeTwoBg-dark min-h-screen bg-no-repeat bg-center bg-cover bg-fixed md:pb-16 w-full">
+      <main className="bg-homeBg min-h-screen bg-no-repeat bg-center bg-cover bg-fixed md:pb-16 w-full">
         <div className="container grid grid-cols-12 md:gap-10 justify-between lg:mt-[220px] darkMode">
           <section className="col-span-12 lg:col-span-4 hidden lg:block h-screen sticky top-44 darkMode divIzquierda">
             <div className="w-full mb-6 lg:mb-0 mx-auto relative text-center px-6 rounded-[20px] mt-[180px] md:mt-[220px] lg:mt-0">
@@ -105,107 +105,43 @@ const Contacto = ({idioma, setIdioma}) => {
           </section>
   
           <section className="col-span-12 lg:col-span-8 darkMode divDerecha ml-div">
-            <div className="bg-white lg:rounded-2xl dark:bg-[#111111]">
-                <h2 className="after-effect after:left-60 after:top-[76px] mb-12 md:mb-[30px] pl-4 md:pl-[60px] pt-12">
-                    Contact </h2>
-                <div
-                    className="mx-4 md:mx-[60px] p-4 md:p-16 dark:border-[#212425] dark:border-2 bg-color-810 rounded-xl dark:bg-[#111111] mb-[30px] md:mb-[60px]">
-                    <h3 className="text-4xl">
-                        <span className="text-gray-lite dark:text-[#A6A6A6]">I'm always open to discussing
-                            product</span>
-                        <br />
-                        <span className="font-semibold dark:text-white">design work or partnerships.</span>
-                    </h3>
-                    <form action="https://formspree.io/f/xoqrgaab" method="POST">
-                        <div className="returnmessage"
-                            data-success="Your message has been received, We will contact you soon."></div>
-                        <div className="empty_notice">
-                            <span>Please Fill Required Fields</span>
-                        </div>
+            <div className="bg-white lg:rounded-2xl">
+              <h2 className="after-effect after:left-60 after:top-[76px] mb-12 md:mb-[30px] pl-4 md:pl-[60px] pt-12"> Contact </h2>
+              <div className="mx-4 md:mx-[60px] p-4 md:p-16 bg-color-810 rounded-xl mb-[30px] md:mb-[60px]">
+                <h3 className="text-4xl">
+                  <span className="text-gray-lite">I'm always open to discussing product</span>
+                  <br />
+                  <span className="font-semibold">design work or partnerships.</span>
+                </h3>
 
-                        <div className="relative z-0 w-full mt-[40px] mb-8 group">
-                            <input type="text" id="name" name="name"
-                                className="block autofill:bg-transparent py-2.5 px-0 w-full text-sm text-gray-lite bg-transparent border-0 border-b-[2px] border-[#B5B5B5] appearance-none dark:text-white dark:border-[#333333] dark:focus:border-[#FF6464] focus:outline-none focus:ring-0 focus:border-[#FF6464] peer"
-                                placeholder=" " required="" />
-                            <label for="name"
-                                className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-color-910 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#FF6464] peer-focus:dark:text-[#FF6464] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8">
-                                Name * </label>
-                        </div>
-
-                        <div className="relative z-0 w-full mb-8 group">
-                            <input type="email" name="email"
-                                className="block autofill:text-red-900 needed py-2.5 px-0 w-full text-sm text-gray-lite bg-transparent border-0 border-b-[2px] border-[#B5B5B5] appearance-none dark:text-white dark:border-[#333333] dark:focus:border-[#FF6464] focus:outline-none focus:ring-0 focus:border-[#5185D4] peer"
-                                placeholder=" " id="email" required="" />
-                            <label for="email"
-                                className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-color-910 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#5185D4] peer-focus:dark:text-[#FF6464] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8">
-                                Email * </label>
-                        </div>
-
-                        <div className="relative z-0 w-full mb-8 group">
-                            <input type="text" name="message"
-                                className="block py-2.5 px-0 w-full text-sm text-gray-lite bg-transparent border-0 border-b-[2px] border-[#B5B5B5] appearance-none dark:text-white dark:border-[#333333] dark:focus:border-[#FF6464] focus:outline-none focus:ring-0 focus:border-[#CA56F2] peer"
-                                placeholder=" " id="message" required="" />
-                            <label for="message"
-                                className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-color-910 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#CA56F2] peer-focus:dark:text-[#FF6464] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8">
-                                Message * </label>
-                        </div>
-
-                        <input type="submit"
-                            className="px-6 py-2 rounded-lg border-[2px] mt-3 border-color-910 font-semibold cursor-pointer hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476] hover:text-white transition-colors duration-300 ease-in-out hover:border-transparent dark:text-white"
-                            value="Submit" />
-                    </form>
-
-                    <form onSubmit={handleSubmit} className="space-y-4">
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div className="empty_notice">
+                    <span>Please Fill Required Fields</span>
+                  </div>
                   <div>
-                    <label htmlFor="asunto" className="block text-sm font-medium text-gray-700">
-                      Asunto
-                    </label>
-                    <input
-                      type="text"
-                      id="asunto"
-                      value={asunto}
-                      onChange={(e) => setAsunto(e.target.value)}
-                      className={`mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md ${errores.asunto && 'border-red-500'}`}
-                    />
+                    <label htmlFor="asunto" className="block text-sm font-medium text-gray-700">{lenguaje.asunto[`${idioma}`]} *</label>
+                    <input type="text" id="asunto" value={asunto} onChange={(e) => setAsunto(e.target.value)} className={`mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md ${errores.asunto && 'border-red-500'}`} />
                     {errores.asunto && <p className="text-red-500 text-xs mt-1">{errores.asunto}</p>}
                   </div>
                   <div>
-                    <label htmlFor="emisor" className="block text-sm font-medium text-gray-700">
-                      Emisor
-                    </label>
-                    <input
-                      type="email"
-                      id="emisor"
-                      value={emisor}
-                      onChange={(e) => setEmisor(e.target.value)}
-                      className={`mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md ${errores.emisor && 'border-red-500'}`}
-                    />
+                    <label htmlFor="emisor" className="block text-sm font-medium text-gray-700">{lenguaje.correo[`${idioma}`]} *</label>
+                    <input type="email" id="emisor" value={emisor} onChange={(e) => setEmisor(e.target.value)} className={`mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md ${errores.emisor && 'border-red-500'}`} />
                     {errores.emisor && <p className="text-red-500 text-xs mt-1">{errores.emisor}</p>}
-                  </div>
+                  </div> 
                   <div>
-                    <label htmlFor="mensaje" className="block text-sm font-medium text-gray-700">
-                      Mensaje
-                    </label>
-                    <textarea
-                      id="mensaje"
-                      value={mensaje}
-                      onChange={(e) => setMensaje(e.target.value)}
-                      className={`mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md ${errores.mensaje && 'border-red-500'}`}
-                    />
+                    <label htmlFor="mensaje" className="block text-sm font-medium text-gray-700">{lenguaje.mensaje[`${idioma}`]} *</label>
+                    <textarea id="mensaje" value={mensaje} onChange={(e) => setMensaje(e.target.value)} className={`mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md ${errores.mensaje && 'border-red-500'}`} />
                     {errores.mensaje && <p className="text-red-500 text-xs mt-1">{errores.mensaje}</p>}
                   </div>
-                  <button
-                    type="submit"
-                    className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                  >
-                    Enviar
-                  </button>
-                </form>
-                </div>
 
-                <footer className="overflow-hidden rounded-b-2xl">
-                    <p className="text-center py-6 text-gray-lite">© 2024 {lenguaje.derechos[`${idioma}`]} Juan Pérez</p>
-                  </footer>
+                  <button type="submit" className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  >{lenguaje.enviarCorreo[`${idioma}`]}</button>
+                </form>
+              </div>
+
+              <footer className="overflow-hidden rounded-b-2xl">
+                <p className="text-center py-6 text-gray-lite">© 2024 {lenguaje.derechos[`${idioma}`]} Juan Pérez</p>
+              </footer>
             </div>
           </section>
         </div>
