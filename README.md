@@ -24,5 +24,6 @@ MEJORAS:
 
 ✔. 29-03-2024-> Organizar lo del lenguaje, ya que si está en INGLES, y se cambia de vista, se vuelve a poner en ESPAÑOL (el del DARKMODE SI FUNCIONA)
 
-❌ CORREGIR RESPONSIVE
-❌ HACER VISTA DE CONTACTO
+❌ (Toda la pág) Corregir responsive.
+✔. Hacer vista de contacto (31/03/2024)
+✔. Enviar Correos (31/03/2024).
