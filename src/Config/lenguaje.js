@@ -159,6 +159,14 @@ const lenguaje = {
         ES: '¡Hola! Estoy abierto a escuchar ofertas de trabajo, al igual que sugerencias sobre mi portafolio',
         EN: 'Hello! I am open to hearing job offers, as well as suggestions about my portfolio.'
     },
+    correoEnviado:{
+        ES: 'Correo enviado con éxito!',
+        EN: 'Mail sent successfully!'
+    },
+    correoNoEnviado:{
+        ES: 'Error al enviar el correo',
+        EN: 'Error sending email'
+    },
 };
 
 export default lenguaje;
