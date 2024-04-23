@@ -27,3 +27,18 @@ MEJORAS:
 ❌ (Toda la pág) Corregir responsive.
 ✔. Hacer vista de contacto (31/03/2024)
 ✔. Enviar Correos (31/03/2024).
+
+
+23/04/2024
+En contacto: 
+- desactivar el botón de enviar el correo, después del primer click.
+- cuando se envié el correo exitosamente, limpiar formulario.
+Sobre mi:
+- En lo que hago, centrar el texto con el icono.
+En resumen: 
+- cambiar textos de fecha y cargo a color blanco.
+- organizar responsive en conocimientos. (✔ De paso cambiar titulo a "conocimientos más fuertes)
+
+- Agregar mis proyectos en el home.
+? Año footer, dinámico.
+? Mostrar mis trabajos y estudios, traídos en un objeto (TRABAJOS: id, nombre, cargio, fecha_iniciall, fecha_final, color o className || ESTUDIOS: id, nombre, educacion, fecha, color/className)
