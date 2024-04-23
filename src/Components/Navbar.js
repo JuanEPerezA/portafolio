@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import $ from 'jquery';
 import DarkMode from './DarkMode';
 import ReactCountryFlag from "react-country-flag"
 import lenguaje from '../Config/lenguaje';

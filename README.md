@@ -31,12 +31,12 @@ MEJORAS:
 
 23/04/2024
 En contacto: 
-- desactivar el botón de enviar el correo, después del primer click.
-- cuando se envié el correo exitosamente, limpiar formulario.
+✔ desactivar el botón de enviar el correo, después del primer click.
+✔ cuando se envíe el correo exitosamente, limpiar formulario.
 Sobre mi:
-- En lo que hago, centrar el texto con el icono.
+✔ En lo que hago, centrar el texto con el icono.
 En resumen: 
-- cambiar textos de fecha y cargo a color blanco.
+✔ cambiar textos de fecha y cargo a color blanco.
 - organizar responsive en conocimientos. (✔ De paso cambiar titulo a "conocimientos más fuertes)
 
 - Agregar mis proyectos en el home.

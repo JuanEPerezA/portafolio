@@ -167,20 +167,20 @@ const About = ({idioma, setIdioma}) => {
                               <h3 className="text-[40px] font-bold font-robotoSlab pb-5" style={{"textAlign":"center"}}> {lenguaje.queHago[`${idioma}`]}</h3>
                               <div className="grid gap-8 grid-cols-1 md:grid-cols-3 xl:grid-cols-3">
                                 <section className="about-box bg-[#fefaf0]">
-                                  <img className="w-10 h-10 object-contain block" src="./Assets/Images/icons/DB.png"alt="icon"/>
-                                  <div className="space-y-2">
+                                  <img className="w-10 h-10 object-contain block self-center" src="./Assets/Images/icons/DB.png"alt="icon"/>
+                                  <div className="space-y-2 self-center">
                                     <h3 className="text-[22px] font-semibold text-[#000000]">{lenguaje.dbManagment[`${idioma}`]}</h3>
                                   </div>
                                 </section>
                                 <section className="about-box bg-[#f3faff]">
-                                  <img className="w-10 h-10 object-contain block" src="./Assets/Images/icons/icon5.svg" alt="icon"/>
-                                  <div className="space-y-2">
+                                  <img className="w-10 h-10 object-contain block self-center" src="./Assets/Images/icons/icon5.svg" alt="icon"/>
+                                  <div className="space-y-2 self-center">
                                     <h3 className="text-[22px] font-semibold text-[#000000]">{lenguaje.backDev[`${idioma}`]}</h3>
                                   </div>
                                 </section>
                                 <section className="about-box bg-[#fefaf0]">
-                                  <img className="w-10 h-10 object-contain block" src="./Assets/Images/icons/icon1.svg" alt="icon"/>
-                                  <div className="space-y-2">
+                                  <img className="w-10 h-10 object-contain block self-center" src="./Assets/Images/icons/icon1.svg" alt="icon"/>
+                                  <div className="space-y-2 self-center">
                                     <h3 className="text-[22px] font-semibold text-[#000000]">{lenguaje.frontDev[`${idioma}`]}</h3>
                                   </div>
                                 </section>
