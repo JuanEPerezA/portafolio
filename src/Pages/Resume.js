@@ -128,15 +128,15 @@ const Resume = ({idioma, setIdioma}) => {
                 </div>
                 <div className="container px-4 pb-2 lg:pb-0 sm:px-5 md:px-10 lg:px-20 bg-center">
                       <div className="col-span-1 bgConocimientos text-center">
-                        <h4 className="text-5xl font-medium mb-8">{lenguaje.conocimientos[`${idioma}`]}</h4>
-                        <div className="flex gap-y-5 gap-x-2.5 flex-wrap" style={{"justifyContent":"center"}}>
-                          <button className="resume-btn">PHP</button>
-                          <button className="resume-btn">SLIM</button>
-                          <button className="resume-btn">TWIG</button>
-                          <button className="resume-btn">REACT JS</button>
-                          <button className="resume-btn">GIT</button>
-                          <button className="resume-btn">SQL</button>
-                          <button className="resume-btn">WS</button>
+                        <h4 className="text-4xl font-medium mb-8">{lenguaje.conocimientos[`${idioma}`]}</h4>
+                        <div className="flex gap-y-5 gap-x-2.5 flex-wrap justify-center">
+                          <button className="resume-btn sm:w-1/5">PHP</button>
+                          <button className="resume-btn sm:w-1/5">SLIM</button>
+                          <button className="resume-btn sm:w-1/5">TWIG</button>
+                          <button className="resume-btn sm:w-1/5">REACT JS</button>
+                          <button className="resume-btn sm:w-1/5">GIT</button>
+                          <button className="resume-btn sm:w-1/5">SQL</button>
+                          <button className="resume-btn sm:w-1/5">WS</button>
                         </div>
                       </div>
                 </div>

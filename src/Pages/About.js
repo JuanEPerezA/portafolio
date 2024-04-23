@@ -141,7 +141,7 @@ const About = ({idioma, setIdioma}) => {
                                               </section>
                                           </div>
                                           <button className="dowanload-btn">
-                                            <i class="fa-solid fa-download"></i>
+                                            <i className="fa-solid fa-download"></i>
                                             ​ㅤ{lenguaje.download_cv[`${idioma}`]}
                                           </button>
                                       </div>

@@ -37,8 +37,8 @@ Sobre mi:
 ✔ En lo que hago, centrar el texto con el icono.
 En resumen: 
 ✔ cambiar textos de fecha y cargo a color blanco.
-- organizar responsive en conocimientos. (✔ De paso cambiar titulo a "conocimientos más fuertes)
+✔ organizar responsive en conocimientos. (✔ De paso cambiar titulo a "conocimientos más fuertes)
 
-- Agregar mis proyectos en el home.
+? Agregar mis proyectos en el home.
 ? Año footer, dinámico.
 ? Mostrar mis trabajos y estudios, traídos en un objeto (TRABAJOS: id, nombre, cargio, fecha_iniciall, fecha_final, color o className || ESTUDIOS: id, nombre, educacion, fecha, color/className)

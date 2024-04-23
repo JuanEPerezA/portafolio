@@ -8,6 +8,7 @@
     --nav-active-color:white;
     --card-background-color: #f7f7f7;
     --color-toggle-table: #eff1f5;
+    --logo-mille: url('./../../../public/Assets/Images/icons/logoMille.svg');
 }
 
 [data-theme="dark"] {
@@ -18,6 +19,7 @@
     --nav-active-color: black;
     --card-background-color: black;
     --color-toggle-table: gray;
+    --logo-mille: url('./../../../public/Assets/Images/icons/logoMill.svg');
 }
 
 
