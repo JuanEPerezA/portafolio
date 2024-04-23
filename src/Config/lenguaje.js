@@ -120,8 +120,8 @@ const lenguaje = {
         EN: 'Fullstack Developer'
     },
     conocimientos:{
-        ES: 'Conocimientos',
-        EN: 'Knowledges'
+        ES: 'Conocimientos más fuertes',
+        EN: 'Stronger Knowledges'
     },
     resume:{
         ES: 'Resumen',
