@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import lenguaje from '../Config/lenguaje';
 import Swal from 'sweetalert2';
+import $ from 'jquery';
 
 const Contacto = ({idioma, setIdioma}) => {
   const [asunto, setAsunto] = useState('');
@@ -19,7 +20,7 @@ const Contacto = ({idioma, setIdioma}) => {
     if (!correo.trim()) {
       nuevosErrores.correo = lenguaje.correoRequerido[`${idioma}`];
     } else if (!/^\S+@\S+\.\S+$/.test(correo)) {
-      nuevosErrores.correo = 'Por favor ingresa un correo electrónico válido';
+      nuevosErrores.correo = lenguaje.correoNoValido[`${idioma}`];
     }
 
     if (!mensaje.trim()) {
@@ -32,10 +33,17 @@ const Contacto = ({idioma, setIdioma}) => {
   };
 
   const handleSubmit = (e) => {
+    $("#btnSend").css("cursor", "wait");
+    $("#btnSend").attr('disabled', 'disabled');
+    $("#btnSend").html(lenguaje.btnWaitText[`${idioma}`]);
     e.preventDefault();
     if (validarFormulario()) {
       enviarCorreo();
       console.log('Formulario enviado');
+    } else {
+      $("#btnSend").removeAttr('disabled')
+      $("#btnSend").css("cursor", "pointer");
+      $("#btnSend").html(lenguaje.enviarCorreo[`${idioma}`]);
     }
   };
 
@@ -46,7 +54,7 @@ const Contacto = ({idioma, setIdioma}) => {
       mensaje: mensaje
     };
 
-    emailjs.send('service_6k78p84', 'template_eewp29j', templateParams, 'neeMGub0O4kHc48vM')
+    emailjs.send(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, templateParams, process.env.REACT_APP_USER_ID_EMAILJS)
       .then((response) => {
         console.log('Correo enviado con éxito!', response.status, response.text);
         Swal.fire({
@@ -55,6 +63,10 @@ const Contacto = ({idioma, setIdioma}) => {
           showConfirmButton: false,
           timer: 2000
         });
+        limpiarCampos();
+        $("#btnSend").removeAttr('disabled');
+        $("#btnSend").css("cursor", "pointer");
+        $("#btnSend").html(lenguaje.enviarCorreo[`${idioma}`]);
       }, (error) => {
         Swal.fire({
           icon: "error",
@@ -63,9 +75,19 @@ const Contacto = ({idioma, setIdioma}) => {
           showConfirmButton: true
         });
         console.error('Error al enviar el correo:', error);
+        $("#btnSend").removeAttr('disabled');
+        $("#btnSend").css("cursor", "pointer");
+        $("#btnSend").html(lenguaje.enviarCorreo[`${idioma}`]);
       });
   };
   
+  function limpiarCampos() {
+    setAsunto('');
+    setcorreo('');
+    setMensaje('');
+    setErrores({});
+  }
+
   return (
     <>
       <main className="bg-homeBg min-h-screen bg-no-repeat bg-center bg-cover bg-fixed md:pb-16 w-full">
@@ -168,7 +190,7 @@ const Contacto = ({idioma, setIdioma}) => {
                     </label>
                   </div>
 
-                  <button type="submit" className="blackButton px-6 py-2 rounded-lg border-[2px] mt-3 font-semibold cursor-pointer hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476] hover:text-white transition-colors duration-300 ease-in-out hover:border-transparent"
+                  <button type="submit" id="btnSend" className="blackButton px-6 py-2 rounded-lg border-[2px] mt-3 font-semibold cursor-pointer hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476] hover:text-white transition-colors duration-300 ease-in-out hover:border-transparent"
                   >{lenguaje.enviarCorreo[`${idioma}`]}</button>
                 </form>
               </div>

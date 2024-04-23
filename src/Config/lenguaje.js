@@ -171,6 +171,14 @@ const lenguaje = {
         ES: 'Error al enviar el correo',
         EN: 'Error sending email'
     },
+    correoNoValido:{
+        ES: 'Por favor ingresa un correo electrónico válido',
+        EN: 'Please enter a valid email'
+    },
+    btnWaitText:{
+        ES: 'Por favor espere...',
+        EN: 'Please wait...'
+    },
 };
 
 export default lenguaje;
