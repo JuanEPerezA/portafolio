@@ -81,19 +81,19 @@ const Resume = ({idioma, setIdioma}) => {
                                     <h4 className="text-5xl font-medium">{lenguaje.education[`${idioma}`]}</h4>
                                 </div>
                                 <div className="bgNJP py-4 pl-5 pr-3 space-y-2 mb-6 rounded-lg">
-                                    <span className="text-tiny text-[#7B7B7B] font-semibold">2009</span>
+                                    <span className="text-tiny text-[#a1a1a1] font-semibold">2009</span>
                                     <h3 className="text-xl darkModeText font-semibold">{lenguaje.primaria[`${idioma}`]}</h3>
-                                    <p className="text-[#7B7B7B]">Escuela Niño Jesus de Praga</p>
+                                    <p className="text-[#a1a1a1]">Escuela Niño Jesus de Praga</p>
                                 </div>
                                 <div className="bgLCGS py-4 pl-5 pr-3 space-y-2 rounded-lg mb-6">
-                                    <span className="text-tiny text-[#7B7B7B] font-semibold">2015</span>
+                                    <span className="text-tiny text-[#a1a1a1] font-semibold">2015</span>
                                     <h3 className="text-xl darkModeText font-semibold">{lenguaje.bachiller[`${idioma}`]}</h3>
-                                    <p className="text-[#7B7B7B]">IE Luís Carlos Galán Sarmiento</p>
+                                    <p className="text-[#a1a1a1]">IE Luís Carlos Galán Sarmiento</p>
                                 </div>
                                 <div className="bgSena py-4 pl-5 pr-3 space-y-2 rounded-lg">
-                                    <span className="text-tiny text-[#7B7B7B] font-semibold">2018</span>
+                                    <span className="text-tiny text-[#a1a1a1] font-semibold">2018</span>
                                     <h3 className="text-xl darkModeText font-semibold">{lenguaje.profesional[`${idioma}`]}</h3>
-                                    <p className="text-[#7B7B7B]">SENA</p>
+                                    <p className="text-[#a1a1a1]">SENA</p>
                                 </div>
                             </div>
 
@@ -103,24 +103,24 @@ const Resume = ({idioma, setIdioma}) => {
                                 <h4 className="text-5xl font-medium">{lenguaje.experience[`${idioma}`]}</h4>
                               </div>
                               <div className="py-4 bgNexos pl-5 pr-3 space-y-2 rounded-lg mb-6">
-                                <span className="text-tiny text-[#7B7B7B] font-semibold">02/2018 - 08/2018</span>
+                                <span className="text-tiny text-[#00000094] font-semibold">02/2018 - 08/2018</span>
                                 <h3 className="text-xl darkModeText font-semibold">Nexos Software S.A.S</h3>
-                                <p className="text-[#7B7B7B]">{lenguaje.expNexos[`${idioma}`]}</p>
+                                <p className="text-[#00000094]">{lenguaje.expNexos[`${idioma}`]}</p>
                               </div>
-                              <div className="py-4 bg-[#4f467469] pl-5 pr-3 space-y-2 rounded-lg mb-6">
-                                <span className="text-tiny text-[#7B7B7B] font-semibold">04/2019 – 10/2020</span>
+                              <div className="py-4 bg-[#9dace0f5] pl-5 pr-3 space-y-2 rounded-lg mb-6">
+                                <span className="text-tiny text-[#00000094] font-semibold">04/2019 – 10/2020</span>
                                 <h3 className="text-xl darkModeText font-semibold">HYG Consultores S.A.S</h3>
-                                <p className="text-[#7B7B7B]">{lenguaje.desarrolladorWeb[`${idioma}`]}</p>
+                                <p className="text-[#00000094]">{lenguaje.desarrolladorWeb[`${idioma}`]}</p>
                               </div>
                               <div className="py-4 bg-[#fc941d73] pl-5 pr-3 space-y-2 rounded-lg mb-6">
-                                <span className="text-tiny text-[#7B7B7B] font-semibold">11/2021 – 07/2022</span>
+                                <span className="text-tiny text-[#00000094] font-semibold">11/2021 – 07/2022</span>
                                 <h3 className="text-xl darkModeText font-semibold">Proyectos Millennium S.A.S</h3>
-                                <p className="text-[#7B7B7B]">{lenguaje.desarrolladorWeb[`${idioma}`]}</p>
+                                <p className="text-[#00000094]">{lenguaje.desarrolladorWeb[`${idioma}`]}</p>
                               </div>
                               <div className="py-4 bgTrendi pl-5 pr-3 space-y-2 rounded-lg mb-6">
-                                <span className="text-tiny text-[#7B7B7B] font-semibold">07/2022 – 03/2024</span>
+                                <span className="text-tiny text-[#00000094] font-semibold">07/2022 – 03/2024</span>
                                 <h3 className="text-xl darkModeText font-semibold">Trendi - Trends & Innovation S.A.S</h3>
-                                <p className="text-[#7B7B7B]">{lenguaje.full[`${idioma}`]}</p>
+                                <p className="text-[#00000094]">{lenguaje.full[`${idioma}`]}</p>
                               </div>
                             </div>
                         </div>
