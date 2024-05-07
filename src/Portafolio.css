@@ -1,29 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
   
 .ml-div {
   margin-left: 0vw;
 }
 
-@media screen and (min-width: 601px) {
-  .ml-div {
-    margin-left: 30vw;
-  }
+.App {
+  text-align: center;
+}
+
+.btn:hover {
+  color: red;
+}
+
+.lblRed{
+  color:red;font-size: larger;
 }
 
 .botons-group{
@@ -147,7 +139,7 @@ code {
   width: 100%;
 }
 
-.dowanload-btn {
+.downloadBtn {
   background-image: linear-gradient(to right, #E55D87 0%, #5FC3E4  51%, #E55D87  100%);
   margin: 10px;
   padding: 10px 30px;
@@ -159,10 +151,9 @@ code {
   color: white;
   border-radius: 25px;
   display: block;
-  /* box-shadow: 0 0 20px #eee; */
 }
 
-.dowanload-btn:hover {
+.downloadBtn:hover {
   background-position: right center;
   color: #fff;
   text-decoration: none;
@@ -306,4 +297,236 @@ code {
   background-color: var(--background-color);
   border-color: var(--font-color);
   color: var(--font-color);
+}
+
+/* INICIO DARKMODE */
+:root {
+  --font-color: rgb(0, 0, 0);
+  --background-color: white;
+  --link-color: cornflowerblue;
+  --button-color: black;
+  --nav-active-color:white;
+  --card-background-color: #f7f7f7;
+  --color-toggle-table: #eff1f5;
+  --logo-mille: url('./../public/Assets/Images/logoMille.svg');
+}
+
+[data-theme="dark"] {
+  --font-color: white;
+  --background-color: rgb(0, 0, 0);
+  --link-color: lightblue;
+  --button-color: white;
+  --nav-active-color: black;
+  --card-background-color: black;
+  --color-toggle-table: gray;
+  --logo-mille: url('./../public/Assets/Images/logoMill.svg');
+}
+
+.logo-mil{
+  background: var(--logo-mille);
+  background-repeat: no-repeat;
+  height: 100%;
+  color: transparent;
+  border-color: transparent;
+  margin-top: 4vh;
+}
+
+.navLogo{
+  background-repeat: no-repeat;
+  height: 100%;
+  color: transparent;
+  border-color: transparent;
+}
+
+.toggle-theme-wrapper span {
+  font-size: 45px;
+}
+
+.toggle-theme {
+  position: relative;
+  display: inline-block;
+  height: 34px;
+  width: 60px;
+}
+
+.toggle-theme input {
+  display: none;
+}
+
+.slider {
+  background-color: transparent;
+  position: absolute;
+  cursor: pointer;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition: 0.2s;
+  border: solid 0.5px;
+  border-color: black;
+}
+
+.slider:before {
+  background-color: transparent;
+  bottom: 4px;
+  content: "🌒";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 26px;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+  content: "☀️";
+}
+
+input:checked + .slider {
+  background-color: black;
+  border: solid 0.5px;
+  border-color: yellow;
+  content: "☀️ !important";
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--font-color);
+}
+
+.darkMode {
+  background-color: var(--background-color) !important;
+  color: var(--font-color);
+} 
+
+.darkModeText {
+  color: var(--font-color) !important;
+}
+
+.font-table{
+  color: var(--button-color);
+}
+
+/* .colorNav{
+background: transparent !important;
+} */
+
+.navbar-header-footer{
+  background-color: var(--card-background-color);
+  color: var(--button-color);
+  border-color: #dfdfdf !important;
+}
+
+.navbar-light .navbar-toggler{
+  background-color: white;
+}
+
+.navbar-dark{
+  background-color: var(--background-color);
+  color: var(--button-color);
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  color: rgb(0, 162, 255) !important;
+  background-color: var(--nav-active-color);
+  border-color: #dee2e6 #dee2e6 var(--nav-active-color);
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link{
+  color: var(--button-color) !important;
+}
+
+.logo-mil{
+  background-repeat: no-repeat;
+  height: 100%;
+  color: transparent;
+  border-color: transparent;
+}
+
+.button-color{
+  border-color: var(--button-color);
+  color: var(--button-color);
+}
+
+.footer{
+  color: var(--button-color);
+}
+
+.footerIcons{
+  justify-content: flex-end !important;
+  display: flex !important;
+}
+
+a {
+  color: var(--link-color);
+}
+
+span{
+  color: var(--button-color);
+}
+
+.tblDarkMode{
+  background-color: var(--background-color);
+}
+
+.cZijsi{
+  background-color:var(--background-color) !important;
+}
+
+.cPZhfo{
+  color: var(--button-color) !important;
+  font-size: 16px !important;
+}
+
+.dceWFj{
+  border-color: var(--color-toggle-table) !important;
+  color: var(--button-color) !important;
+  background-color: var(--color-toggle-table) !important;
+}
+
+.blSiWP{
+  background-color:var(--background-color) !important;
+  border-color: var(--color-toggle-table) !important;
+}
+
+.dOTclF{
+  background-color:var(--background-color) !important;
+}
+/* FIN DARKMODE */
+
+/* TAMAÑOS PANTALLAS */
+@media screen and (max-width:575px) {
+  .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    border: none !important;
+  }
+
+  .footer{
+    text-align: center;
+  }
+
+  .footerIcons{
+    justify-content: center !important;
+  }
+
+  .downloadBtn {
+    margin: 0;
+    padding: 10px 30px;
+    margin-top: 0;
+    margin-left: 15%;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .ml-div {
+    margin-left: 30vw;
+  }
 }

@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import $ from 'jquery';
-import "../Assets/CSS/DarkMode.css";
-import { ChangeEventHandler } from "react";
 
 const setDark = () => {
   localStorage.setItem("theme", "dark");
@@ -25,7 +23,7 @@ if (defaultDark) {
   setDark();
 }
 
-const toggleTheme: ChangeEventHandler<HTMLInputElement> = (e) => {
+const toggleTheme = (e) => {
   if (e.target.checked) {
     setDark();
   } else {
@@ -63,7 +61,6 @@ const DarkMode = () => {
       ) : (
         <button id="btnDark2" className="btn" onClick={darkMode}><span style={{"fontSize":"30px"}}>🌒</span></button>
       )}
-
     </div>
     </>
   );

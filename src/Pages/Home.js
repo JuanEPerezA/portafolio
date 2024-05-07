@@ -1,6 +1,5 @@
 import React from 'react';
-import lenguaje from '../Config/lenguaje';
-// import Navbar from '../Components/Navbar';
+import lenguaje from '../Configs/lenguaje';
 
 const Home = ({idioma, setIdioma}) => {
   return (
@@ -36,8 +35,8 @@ const Home = ({idioma, setIdioma}) => {
                 </span>
             </a>
         </div>
-        <button className="dowanload-btn" style={{"marginLeft":"1rem"}}>
-            <img src="./Assets/Images/icons/dowanload.png" alt="icon" className="mr-2" style={{"display":"unset"}}/>
+        <button className="downloadBtn" style={{"marginLeft":"1rem"}}>
+            <img src="./Assets/Images/download.png" alt="icon" className="mr-2" style={{"display":"unset"}}/>
             <a href="./Assets/CV Juan Perez.pdf" target="_blank" rel="noopener noreferrer" download="JuanPérez.pdf" className='text-white'>{lenguaje.download_cv[`${idioma}`]}</a>
         </button>
     </div>

@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
-import lenguaje from '../Config/lenguaje';
+import lenguaje from '../Configs/lenguaje';
 import Swal from 'sweetalert2';
 import $ from 'jquery';
+import Footer from '../Components/Footer';
 
 const Contacto = ({idioma, setIdioma}) => {
   const [asunto, setAsunto] = useState('');
@@ -90,7 +91,7 @@ const Contacto = ({idioma, setIdioma}) => {
 
   return (
     <>
-      <main className="bg-homeBg min-h-screen bg-no-repeat bg-center bg-cover bg-fixed md:pb-16 w-full">
+      <main className="bg-homeBg bg-no-repeat bg-center bg-cover bg-fixed md:pb-16 w-full">
         <div className="container grid grid-cols-12 md:gap-10 justify-between">
           <section className="col-span-12 lg:col-span-4 hidden lg:block h-screen sticky top-44 divIzquierda">
             <div className="w-full mb-6 lg:mb-0 mx-auto relative text-center px-6 rounded-[20px] mt-[180px] md:mt-[220px] lg:mt-0">
@@ -99,15 +100,25 @@ const Contacto = ({idioma, setIdioma}) => {
                     <h2 className="mt-6 mb-1 text-[26px] font-semibold">Juan Esteban Pérez Aguas</h2>
                     <h3 className="text-[#7B7B7B] inline-block px-5 rounded-lg">{lenguaje.cargo[`${idioma}`]}</h3>
                     <section className="flex justify-center space-x-3">
+                      <a href="https://api.whatsapp.com/send?phone=573117121720" target="_blank" rel="noopener noreferrer" className="alink">
+                        <span className="socialbtn text-[#377c4d]">
+                          <i className="fa-brands fa-whatsapp"></i>
+                        </span>
+                      </a>
+                      <a href="mailto:jepa9@hotmail.com" target="_blank" rel="noopener noreferrer" className="alink">
+                        <span className="socialbtn text-[#6cb8d9]">
+                          <i className="fa-brands fa-at"></i>
+                        </span>
+                      </a>
                       <a href="https://github.com/JuanEPerezA" target="_blank" rel="noopener noreferrer">
-                          <span className="socialbtn text-[#e14a84]">
-                            <i className="fa-brands fa-github"></i>
-                          </span>
+                        <span className="socialbtn text-[#e14a84]">
+                          <i className="fa-brands fa-github"></i>
+                        </span>
                       </a>
                       <a href="https://www.linkedin.com/in/jepa1998/" target="_blank" rel="noopener noreferrer">
-                          <span className="socialbtn text-[#0072b1]">
-                            <i className="fa-brands fa-linkedin-in"></i>
-                          </span>
+                        <span className="socialbtn text-[#0072b1]">
+                          <i className="fa-brands fa-linkedin-in"></i>
+                        </span>
                       </a>
                     </section>
                     <div className="divPersonalData">
@@ -148,8 +159,8 @@ const Contacto = ({idioma, setIdioma}) => {
                           </div>
                         </section>
                     </div>
-                    <button className="dowanload-btn">
-                      <img src="./Assets/Images/icons/dowanload.png" alt="icon" className="mr-2" style={{"display":"unset"}}/>
+                    <button className="downloadBtn">
+                      <img src="./Assets/Images/download.png" alt="icon" className="mr-2" style={{"display":"unset"}}/>
                       <a href="./Assets/CV Juan Perez.pdf" target="_blank" rel="noopener noreferrer" download="JuanPérez.pdf" className='text-white'>{lenguaje.download_cv[`${idioma}`]}</a>
                     </button>
                 </div>
@@ -158,8 +169,8 @@ const Contacto = ({idioma, setIdioma}) => {
   
           <section className="col-span-12 lg:col-span-8 divDerecha ml-div">
             <div className="lg:rounded-2xl">
-              <h2 className="after-effect after:left-60 after:top-[76px] mb-12 md:mb-[30px] pl-4 md:pl-[60px] pt-12">{lenguaje.contactMe[`${idioma}`]}</h2>
-              <div className="mx-4 md:mx-[60px] p-4 md:p-16 rounded-xl">
+              <h2 className="after-effect after:left-64 after:top-[76px] mb-12 md:mb-[30px] pl-4 pt-12">{lenguaje.contactMe[`${idioma}`]}</h2>
+              <div className="mx-4 md:mx-[60px] rounded-xl">
                 <h3 className="text-3xl">
                   <span className="text-gray-lite">{lenguaje.contactMeText1[`${idioma}`]}</span>
                 </h3>
@@ -195,9 +206,7 @@ const Contacto = ({idioma, setIdioma}) => {
                 </form>
               </div>
 
-              <footer className="overflow-hidden rounded-b-2xl">
-                <p className="text-center py-6 text-gray-lite">© 2024 {lenguaje.derechos[`${idioma}`]} Juan Pérez</p>
-              </footer>
+              <Footer idioma={idioma} setIdioma={setIdioma}/>
             </div>
           </section>
         </div>

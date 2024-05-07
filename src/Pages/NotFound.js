@@ -1,5 +1,5 @@
 import React from 'react';
-import lenguaje from '../Config/lenguaje';
+// import lenguaje from '../Configs/lenguaje';
 
 const NotFound = ({idioma, setIdioma}) => {
   return (

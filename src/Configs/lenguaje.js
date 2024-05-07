@@ -84,8 +84,8 @@ const lenguaje = {
         EN: 'Where I work?'
     },
     derechos:{
-        ES: 'Todos los derechos reservados por ',
-        EN: 'All Rights Reserved by '
+        ES: 'Todos los derechos reservados por Juan Pérez',
+        EN: 'All Rights Reserved by Juan Pérez'
     },
     education:{
         ES: 'Educación',

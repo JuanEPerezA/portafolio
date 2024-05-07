@@ -1,11 +1,12 @@
 import React from 'react';
-import lenguaje from '../Config/lenguaje';
+import lenguaje from '../Configs/lenguaje';
+import Footer from '../Components/Footer';
 
 const About = ({idioma, setIdioma}) => {
   return (
     <>
       <main className="bg-homeBg min-h-screen bg-no-repeat bg-center bg-cover bg-fixed md:pb-16 w-full">
-          <div className="container grid grid-cols-12 md:gap-10 justify-between darkMode">
+          <div className="container grid grid-cols-12 md:gap-10 justify-between darkMode">  
               <section className="col-span-12 lg:col-span-4 hidden lg:block h-screen sticky top-44 darkMode divIzquierda">
                   <div className="w-full mb-6 lg:mb-0 mx-auto relative text-center px-6 rounded-[20px] mt-[180px] md:mt-[220px] lg:mt-0">
                       <img src="./Assets/Images/J.png" className="w-[240px] absolute left-[50%] -translate-x-[50%] h-[240px] mx-auto -mt-[115px]" alt="JEPA" style={{"borderRadius": "50%"}}/>
@@ -13,15 +14,25 @@ const About = ({idioma, setIdioma}) => {
                           <h2 className="mt-6 mb-1 text-[26px] font-semibold">Juan Esteban Pérez Aguas</h2>
                           <h3 className="text-[#7B7B7B] inline-block px-5 rounded-lg">{lenguaje.cargo[`${idioma}`]}</h3>
                           <section className="flex justify-center space-x-3">
+                            <a href="https://api.whatsapp.com/send?phone=573117121720" target="_blank" rel="noopener noreferrer" className="alink">
+                              <span className="socialbtn text-[#377c4d]">
+                                <i className="fa-brands fa-whatsapp"></i>
+                              </span>
+                            </a>
+                            <a href="mailto:jepa9@hotmail.com" target="_blank" rel="noopener noreferrer" className="alink">
+                              <span className="socialbtn text-[#6cb8d9]">
+                                <i className="fa-brands fa-at"></i>
+                              </span>
+                            </a>
                             <a href="https://github.com/JuanEPerezA" target="_blank" rel="noopener noreferrer">
-                                <span className="socialbtn text-[#e14a84]">
-                                  <i className="fa-brands fa-github"></i>
-                                </span>
+                              <span className="socialbtn text-[#e14a84]">
+                                <i className="fa-brands fa-github"></i>
+                              </span>
                             </a>
                             <a href="https://www.linkedin.com/in/jepa1998/" target="_blank" rel="noopener noreferrer">
-                                <span className="socialbtn text-[#0072b1]">
-                                  <i className="fa-brands fa-linkedin-in"></i>
-                                </span>
+                              <span className="socialbtn text-[#0072b1]">
+                                <i className="fa-brands fa-linkedin-in"></i>
+                              </span>
                             </a>
                           </section>
                           <div className="divPersonalData">
@@ -62,8 +73,8 @@ const About = ({idioma, setIdioma}) => {
                                 </div>
                               </section>
                           </div>
-                          <button className="dowanload-btn">
-                            <img src="./Assets/Images/icons/dowanload.png" alt="icon" className="mr-2" style={{"display":"unset"}}/>
+                          <button className="downloadBtn">
+                            <img src="./Assets/Images/download.png" alt="icon" className="mr-2" style={{"display":"unset"}}/>
                             <a href="./Assets/CV Juan Perez.pdf" target="_blank" rel="noopener noreferrer" download="JuanPérez.pdf" className='text-white'>{lenguaje.download_cv[`${idioma}`]}</a>
                           </button>
                       </div>
@@ -87,15 +98,25 @@ const About = ({idioma, setIdioma}) => {
                                           </h3>
 
                                           <section className="flex justify-center space-x-3">
+                                            <a href="https://api.whatsapp.com/send?phone=573117121720" target="_blank" rel="noopener noreferrer" className="alink">
+                                              <span className="socialbtn text-[#377c4d]">
+                                                <i className="fa-brands fa-whatsapp"></i>
+                                              </span>
+                                            </a>
+                                            <a href="mailto:jepa9@hotmail.com" target="_blank" rel="noopener noreferrer" className="alink">
+                                              <span className="socialbtn text-[#6cb8d9]">
+                                                <i className="fa-brands fa-at"></i>
+                                              </span>
+                                            </a>
                                             <a href="https://github.com/JuanEPerezA" target="_blank" rel="noopener noreferrer">
-                                                <span className="socialbtn text-[#e14a84]">
-                                                  <i className="fa-brands fa-github"></i>
-                                                </span>
+                                              <span className="socialbtn text-[#e14a84]">
+                                                <i className="fa-brands fa-github"></i>
+                                              </span>
                                             </a>
                                             <a href="https://www.linkedin.com/in/jepa1998/" target="_blank" rel="noopener noreferrer">
-                                                <span className="socialbtn text-[#0072b1]">
-                                                  <i className="fa-brands fa-linkedin-in"></i>
-                                                </span>
+                                              <span className="socialbtn text-[#0072b1]">
+                                                <i className="fa-brands fa-linkedin-in"></i>
+                                              </span>
                                             </a>
                                           </section>
 
@@ -140,7 +161,7 @@ const About = ({idioma, setIdioma}) => {
                                                 </div>
                                               </section>
                                           </div>
-                                          <button className="dowanload-btn">
+                                          <button className="downloadBtn">
                                             <i className="fa-solid fa-download"></i>
                                             ​ㅤ{lenguaje.download_cv[`${idioma}`]}
                                           </button>
@@ -167,19 +188,19 @@ const About = ({idioma, setIdioma}) => {
                               <h3 className="text-[40px] font-bold font-robotoSlab pb-5 text-center"> {lenguaje.queHago[`${idioma}`]}</h3>
                               <div className="grid gap-8 grid-cols-1 md:grid-cols-3 xl:grid-cols-3">
                                 <section className="about-box bg-[#fefaf0]">
-                                  <img className="w-10 h-10 object-contain block self-center" src="./Assets/Images/icons/DB.png"alt="icon"/>
+                                  <img className="w-10 h-10 object-contain block self-center" src="./Assets/Images/DB.png"alt="icon"/>
                                   <div className="space-y-2 self-center">
                                     <h3 className="text-[22px] font-semibold text-[#000000]">{lenguaje.dbManagment[`${idioma}`]}</h3>
                                   </div>
                                 </section>
                                 <section className="about-box bg-[#f3faff]">
-                                  <img className="w-10 h-10 object-contain block self-center" src="./Assets/Images/icons/icon5.svg" alt="icon"/>
+                                  <img className="w-10 h-10 object-contain block self-center" src="./Assets/Images/icon5.svg" alt="icon"/>
                                   <div className="space-y-2 self-center">
                                     <h3 className="text-[22px] font-semibold text-[#000000]">{lenguaje.backDev[`${idioma}`]}</h3>
                                   </div>
                                 </section>
                                 <section className="about-box bg-[#fefaf0]">
-                                  <img className="w-10 h-10 object-contain block self-center" src="./Assets/Images/icons/icon1.svg" alt="icon"/>
+                                  <img className="w-10 h-10 object-contain block self-center" src="./Assets/Images/icon1.svg" alt="icon"/>
                                   <div className="space-y-2 self-center">
                                     <h3 className="text-[22px] font-semibold text-[#000000]">{lenguaje.frontDev[`${idioma}`]}</h3>
                                   </div>
@@ -188,27 +209,26 @@ const About = ({idioma, setIdioma}) => {
                           </div>
 
                           <div className="px-2 sm:px-5 md:px-10 lg:px-14">
-                            <div className="max-w-full h-auto py-10 rounded-xl">
+                            <div>
                               <h3 className="text-center text-[40px] font-bold font-robotoSlab mb-3 text-center">{lenguaje.misTrabajos[`${idioma}`]}</h3>
                               <div className="grid gap-8 grid-cols-2 md:grid-cols-4 xl:grid-cols-4">
                                   <section className="about-box">
-                                    <img className="w-15 h-15 object-contain block" src="./Assets/Images/icons/logoNexosColor.png"alt="nexos"/>
+                                    <img className="w-15 h-15 object-contain block" src="./Assets/Images/logoNexosColor.png"alt="nexos"/>
                                   </section>
                                   <section className="about-box">
-                                    <img className="w-15 h-15 object-contain block" src="./Assets/Images/icons/logoHyGColor.png" alt="hyg"/>
+                                    <img className="w-15 h-15 object-contain block" src="./Assets/Images/logoHyGColor.png" alt="hyg"/>
                                   </section>
                                   <section className="about-box logo-mil">
-                                    {/* <img className="w-15 h-15 object-contain block" src="./Assets/Images/icons/logoMille.svg" alt="mille"/> */}
+                                    {/* <img className="w-15 h-15 object-contain block" src="./Assets/Images/logoMille.svg" alt="mille"/> */}
                                   </section>
                                   <section className="about-box">
-                                    <img className="w-15 h-15 object-contain block" src="./Assets/Images/icons/logoTrendi.png"alt="trendi"/>
+                                    <img className="w-15 h-15 object-contain block" src="./Assets/Images/logoTrendi.png"alt="trendi"/>
                                   </section>
                               </div>
                             </div>
                           </div>
-                          <footer className="overflow-hidden rounded-b-2xl">
-                            <p className="text-center py-6 text-gray-lite">© 2024 {lenguaje.derechos[`${idioma}`]} Juan Pérez</p>
-                          </footer>
+
+                          <Footer idioma={idioma} setIdioma={setIdioma}/>
                       </div>
                   </div>
               </section>

@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import DarkMode from './DarkMode';
 import ReactCountryFlag from "react-country-flag"
-import lenguaje from '../Config/lenguaje';
+import lenguaje from '../Configs/lenguaje';
 import { BrowserRouter } from 'react-router-dom';
 import { Disclosure } from '@headlessui/react'
 
-const Navbar = ({idioma, setIdioma}) => {
+export const Navbar = ({idioma, setIdioma}) => {
    useEffect(() => {
     localStorage.setItem("idiomaNuevo", idioma);
    }, [idioma]);
@@ -82,5 +82,3 @@ const Navbar = ({idioma, setIdioma}) => {
       </>
    );
 }
- 
-export default Navbar;
