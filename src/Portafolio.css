@@ -309,6 +309,10 @@
   --card-background-color: #f7f7f7;
   --color-toggle-table: #eff1f5;
   --logo-mille: url('./../public/Assets/Images/logoMille.svg');
+  --fondo: url('./../public/Assets/Images/WallpaperLight.jpg');
+  --fondo-SM: url('./../public/Assets/Images/WallpaperLight-SM.jpg');
+  --bg-text:white;
+  --text-shadow: 1px 1px red;
 }
 
 [data-theme="dark"] {
@@ -320,6 +324,10 @@
   --card-background-color: black;
   --color-toggle-table: gray;
   --logo-mille: url('./../public/Assets/Images/logoMill.svg');
+  --fondo: url('./../public/Assets/Images/WallpaperDark.png');
+  --fondo-SM: url('./../public/Assets/Images/WallpaperDark-SM.jpg');
+  --bg-text:transparent;
+  --text-shadow: transparent;
 }
 
 .logo-mil{
@@ -410,6 +418,10 @@ body {
 
 .darkModeText {
   color: var(--font-color) !important;
+}
+
+.darkModeText2 {
+  color: var(--background-color) !important;
 }
 
 .font-table{
@@ -503,6 +515,20 @@ span{
 }
 /* FIN DARKMODE */
 
+.mainBg{
+  height: 100vh;
+}
+
+.bgText{
+  background: var(--bg-text);
+  text-shadow: var(--text-shadow);
+}
+
+.text-SM{
+  -webkit-text-stroke-width: thin;
+  -webkit-text-stroke-color: var(--button-color);
+}
+
 /* TAMAÑOS PANTALLAS */
 @media screen and (max-width:575px) {
   .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
@@ -523,10 +549,35 @@ span{
     margin-top: 0;
     margin-left: 15%;
   }
+
+  .mainBg{
+    /* DARK CELL -- background: url('./../public/Assets/Images/X1.jpg'); */
+    /* LIGHT background: url('./../public/Assets/Images/X1.jpg'); */
+    background: VAR(--fondo-SM);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .text-SM{
+    -webkit-text-stroke-width: thin;
+    -webkit-text-stroke-color: var(--background-color);
+  }
+
+  .socialbtn{
+    /* background: transparent; */
+    border-radius: 20px;
+    margin-bottom: 40%;
+  }
 }
 
 @media screen and (min-width: 601px) {
   .ml-div {
     margin-left: 30vw;
+  }
+
+  .mainBg{
+    background: var(--fondo);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
   }
 }

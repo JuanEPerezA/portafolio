@@ -3,7 +3,7 @@ import DarkMode from './DarkMode';
 import ReactCountryFlag from "react-country-flag"
 import lenguaje from '../Configs/lenguaje';
 import { BrowserRouter } from 'react-router-dom';
-import { Disclosure } from '@headlessui/react'
+import { Disclosure } from '@headlessui/react';
 
 export const Navbar = ({idioma, setIdioma}) => {
    useEffect(() => {
