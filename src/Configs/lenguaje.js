@@ -179,6 +179,30 @@ const lenguaje = {
         ES: 'Por favor espere...',
         EN: 'Please wait...'
     },
+    pyCodeData:{
+        ES: 'Este proyecto fue desarrollado con: ',
+        EN: 'This project was developed with: '
+    },
+    pyViveLamour:{
+        ES: 'Catálogo básico, con CRUD (con guardado de imágenes en cloudinary),  y con validación sencilla para el admin.',
+        EN: 'Basic catalog, with CRUD (with image saving in cloudinary), and with simple validation for the admin.'
+    },
+    noGitRepo:{
+        ES: 'Repositorio no disponible por temas de seguridad.',
+        EN: 'Repository not available due to security issues.'
+    },
+    dataGitRepo:{
+        ES: 'Ver repositorio.',
+        EN: 'See repository.'
+    },
+    verPy:{
+        ES: 'Ver proyecto.',
+        EN: 'See project'
+    },
+    misProyectos:{
+        ES: 'Mis proyectos',
+        EN: 'My projects'
+    },
 };
 
 export default lenguaje;
