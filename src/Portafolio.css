@@ -80,14 +80,7 @@
   padding-right: 5rem;
 }
 
-.bgConocimientos{
-  /* background: #c4c4ff; */
-  background: #0000f34f;
-  padding: 3%;
-  border-radius: 0.5rem;
-}
-
-.bgNJP{
+/* .bgNJP{
   background: rgb(80,86,246);
   background: linear-gradient(90deg, rgba(80,86,246,1) 15%, rgba(80,86,246,1) 26%, rgba(189,187,245,0.7372198879551821) 100%);
 }
@@ -108,7 +101,7 @@
 
 .bgTrendi{
   background: linear-gradient(90deg, rgb(255 122 82 / 73%) 0%, rgb(243 133 100 / 83%) 35%, rgb(58 132 249 / 88%) 100%);
-}
+} */
 
 .colorNav{
   background: transparent !important;
@@ -273,14 +266,18 @@
 /* Resume */
 
 .resume-btn {
-  /* width: 20%;
-  cursor: default; */
   border-radius: 0.5rem;
   background-color: rgb(237 242 242 / 1);
   padding-left: 1.25rem;
   padding-right: 1.25rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  color: rgb(68 86 108 / 1);
+}
+
+.btnTechs {
+  border-radius: 0.5rem;
+  background-color: rgb(237 242 242 / 1);
   color: rgb(68 86 108 / 1);
 }
 
@@ -301,7 +298,7 @@
 
 /* INICIO DARKMODE */
 :root {
-  --font-color: rgb(0, 0, 0);
+  --font-color: black;
   --background-color: white;
   --link-color: cornflowerblue;
   --button-color: black;
@@ -309,25 +306,40 @@
   --card-background-color: #f7f7f7;
   --color-toggle-table: #eff1f5;
   --logo-mille: url('./../public/Assets/Images/logoMille.svg');
-  --fondo: url('./../public/Assets/Images/WallpaperLight.jpg');
+  --logo-SENA: url('./../public/Assets/Images/logoSENA.png');
+  --logo-HyG: url('./../public/Assets/Images/logoHyGColor.png');
+  --logo-Nxs: url('./../public/Assets/Images/logoNexosColor.png');
+  --fondo: url('./../public/Assets/Images/WallapaperLight2.jpg');
+  /* --fondo: url('https://c1.wallpaperflare.com/preview/887/809/258/desk-home-decor-imac.jpg'); */
   --fondo-SM: url('./../public/Assets/Images/WallpaperLight-SM.jpg');
   --bg-text:white;
-  --text-shadow: 1px 1px red;
+  --text-shadow: 1px 1px black;
+  --text-shadow2: transparent;
+  --text-shadow-sm: transparent;
+  --txt-bg-gray: #595959;
+  --txt-bg-gray2: #a1a1a1;
 }
 
 [data-theme="dark"] {
   --font-color: white;
-  --background-color: rgb(0, 0, 0);
+  --background-color: black;
   --link-color: lightblue;
   --button-color: white;
   --nav-active-color: black;
   --card-background-color: black;
   --color-toggle-table: gray;
   --logo-mille: url('./../public/Assets/Images/logoMill.svg');
-  --fondo: url('./../public/Assets/Images/WallpaperDark.png');
+  --logo-SENA: url('./../public/Assets/Images/logoSENA-dark.png');
+  --logo-HyG: url('./../public/Assets/Images/logoHyG.png');
+  --logo-Nxs: url('./../public/Assets/Images/logoNexos.png');
+  --fondo: url('./../public/Assets/Images/WallpaperDark.jpg');
   --fondo-SM: url('./../public/Assets/Images/WallpaperDark-SM.jpg');
   --bg-text:transparent;
   --text-shadow: transparent;
+  --text-shadow2: -4px -3px black;
+  --text-shadow-sm: -1px -1px black;
+  --txt-bg-gray: #a1a1a1;
+  --txt-bg-gray2: #595959;
 }
 
 .logo-mil{
@@ -516,17 +528,74 @@ span{
 /* FIN DARKMODE */
 
 .mainBg{
-  height: 100vh;
+  height: 100vh !important;
 }
 
 .bgText{
-  background: var(--bg-text);
+  /* background: var(--bg-text); */
   text-shadow: var(--text-shadow);
+}
+
+.tsTitle{
+  text-shadow: var(--text-shadow2);
 }
 
 .text-SM{
   -webkit-text-stroke-width: thin;
   -webkit-text-stroke-color: var(--button-color);
+}
+
+.resumeLogos{
+  width: 35%;
+  float: inline-end;
+  margin-top: -35px !important;
+}
+
+.bgConocimientos{
+  background: #6c757d45;
+  padding: 3%;
+  border-radius: 0.5rem;
+}
+
+.bgLogos{
+  background-color: #6c757d45 !important;
+  background-position: right !important;
+  background-repeat: no-repeat !important;
+  background-size: 25% 80% !important;
+}
+
+.bgLogoLCGS{
+  background: url('./../public/Assets/Images/lcgs.png');
+}
+
+.bgLogoSENA{
+  background: var(--logo-SENA);
+}
+
+.bgLogoNexos{
+  background: url('./../public/Assets/Images/nxs.png');
+  /* background: url('./../public/Assets/Images/logoNexosColor.png'); */
+  /* background: var(--logo-Nxs); */
+}
+
+.bgLogoHyG{
+  background: url('./../public/Assets/Images/hyg.png');
+  /* background: url('./../public/Assets/Images/logoHyGColor.png'); */
+  /* background: var(--logo-HyG); */
+}
+
+.bgLogoMillennium{
+  /* background: var(--logo-mille); */
+  background: url('./../public/Assets/Images/mil.ico');
+}
+
+.bgLogoTrendi{
+  background: url('./../public/Assets/Images/t.png');
+  /* background: url('./../public/Assets/Images/logoTrendi.png'); */
+}
+
+.txtBG{
+  color: var(--txt-bg-gray);
 }
 
 /* TAMAÑOS PANTALLAS */
@@ -551,8 +620,6 @@ span{
   }
 
   .mainBg{
-    /* DARK CELL -- background: url('./../public/Assets/Images/X1.jpg'); */
-    /* LIGHT background: url('./../public/Assets/Images/X1.jpg'); */
     background: VAR(--fondo-SM);
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -568,6 +635,14 @@ span{
     border-radius: 20px;
     margin-bottom: 40%;
   }
+  
+  .bgText{
+    text-shadow: var(--text-shadow-sm);
+  }
+
+  .bgLogos{
+    background: none; 
+  }
 }
 
 @media screen and (min-width: 601px) {
@@ -580,4 +655,66 @@ span{
     background-repeat: no-repeat;
     background-size: 100% 100%;
   }
+}
+
+/* PROYECTOS */
+.projects{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.dataProject{
+  position: relative;
+  max-width: 340px;
+  height: fit-content;
+  margin: 10px;
+}
+
+.dataProject img{
+  width: 100%;
+  display: block;
+}
+
+.dataProject .overlay{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: linear-gradient(rgba(255, 0, 0, 0.684), rgba(0, 0, 0, 0.596));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 1s;
+  font-size: 18px;
+  letter-spacing: 3px;
+  opacity: 0;
+}
+
+.dataProject .overlay .fila-iconos{
+  margin-top: 10px;
+}
+
+.dataProject .overlay .fila-iconos a{
+  color: white;
+  margin-left: 10px;
+}
+
+.dataProject .overlay h3{
+  color: white;
+  margin-bottom: 20px;
+  transition: 1s;
+}
+
+.dataProject .overlay .fila-iconos a:hover{
+  color: white;
+}
+
+.dataProject .overlay:hover{
+  opacity: 1;
+}
+
+.dataProject .overlay:hover h3{
+  margin-bottom: 0px;
 }
