@@ -90,7 +90,7 @@ const Resume = ({idioma, setIdioma}) => {
                   <div>
                     <div className="flex items-center space-x-2 mb-4">
                       <i className="fa-solid text-4xl text-[#F95054] fa-graduation-cap"></i>
-                        <h4 className="text-5xl font-medium">{lenguaje.education[`${idioma}`]}</h4>
+                        <h4 className="text-4xl sm:text-5xl font-medium">{lenguaje.education[`${idioma}`]}</h4>
                     </div>
 
                     {dataJEPA.misEstudios.map(estudio => (
@@ -105,7 +105,7 @@ const Resume = ({idioma, setIdioma}) => {
                   <div>
                     <div className="flex items-center space-x-2 mb-4">
                       <i className="fa-solid text-4xl text-[#F95054] fa-briefcase"></i>
-                      <h4 className="text-5xl font-medium">{lenguaje.experience[`${idioma}`]}</h4>
+                      <h4 className="text-4xl sm:text-5xl font-medium">{lenguaje.experience[`${idioma}`]}</h4>
                     </div>
 
                     {dataJEPA.misTrabajos.map(trabajo => (
@@ -134,7 +134,7 @@ const Resume = ({idioma, setIdioma}) => {
               <div className="pt-12 px-4 md:px-0">
                 <div className="flex items-center space-x-2 mb-4">
                   <i className="fa-solid fa-crown text-4xl text-[#F95054]"></i>
-                  <h4 className="text-5xl font-medium">{lenguaje.misProyectos[`${idioma}`]}</h4>
+                  <h4 className="text-4xl sm:text-5xl font-medium">{lenguaje.misProyectos[`${idioma}`]}</h4>
                 </div>
                 <div className="px-4 pb-2 lg:pb-0 sm:px-5 md:px-10 lg:px-20 bg-center grid gap-4 grid-cols-1 md:grid-cols-3 xl:grid-cols-3">
                   {dataJEPA.misProyectos.map((proyecto) => (
@@ -177,7 +177,7 @@ const Resume = ({idioma, setIdioma}) => {
                         <span key={tecnologia.id} className="lg:hidden inline-block resume-btn rounded-full px-3 py-1 text-xs font-semibold mr-1 mb-1">
                           {tecnologia.nombre}
                         </span>
-                        <span key={tecnologia.id} className=" hidden lg:inline-block resume-btn rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2">
+                        <span key={tecnologia.id} className="hidden lg:inline-block resume-btn rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2">
                           {tecnologia.icon ?
                             <button key={tecnologia.id} className="btnTechs" title={tecnologia.nombre}>
                               <i className={tecnologia.icon}></i>
