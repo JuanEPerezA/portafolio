@@ -181,22 +181,22 @@ const Contacto = ({idioma, setIdioma}) => {
                   </section>
 
                   <div className="relative z-0 w-full mb-8 group">
-                    <input type="text" id="asunto" name="asunto" autocomplete="off" value={asunto} onChange={(e) => setAsunto(e.target.value)} className="block autofill:text-red-900 needed py-2.5 px-0 w-full text-sm text-gray-lite bg-transparent border-0 border-b-[2px] border-[#B5B5B5] appearance-none focus:outline-none focus:ring-0 focus:border-[#5185D4] peer"/>
-                    <label htmlFor="asunto" className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#5185D4] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8">
+                    <input type="text" id="asunto" name="asunto" autocomplete="off" value={asunto} onChange={(e) => setAsunto(e.target.value)} className="block autofill:text-red-900 needed py-2.5 px-0 w-full text-sm text-gray-lite bg-transparent border-b-[2px] border-[#B5B5B5] appearance-none focus:outline-none focus:ring-0 focus:border-[#5185D4] peer"/>
+                    <label htmlFor="asunto" className="peer-focus:font-medium absolute text-md txtBG duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#5185D4] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8">
                       {errores.asunto ? (<><span>{lenguaje.asunto[`${idioma}`]}</span><span id="txtAsuntoRequerido" className='textCamposRequeridos'>{' | '}{lenguaje.asuntoRequerido[`${idioma}`]}</span></>) : (<>{lenguaje.asunto[`${idioma}`]}{' *'}</>)}
                     </label>
                   </div>
 
                   <div className="relative z-0 w-full mb-8 group">
-                    <input type="email" id="correo" name="correo" autocomplete="off" value={correo} onChange={(e) => setcorreo(e.target.value)} className="block autofill:text-red-900 needed py-2.5 px-0 w-full text-sm text-gray-lite bg-transparent border-0 border-b-[2px] border-[#B5B5B5] appearance-none focus:outline-none focus:ring-0 focus:border-[#5185D4] peer"/>
-                    <label htmlFor="correo" className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#5185D4] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8">
+                    <input type="email" id="correo" name="correo" autocomplete="off" value={correo} onChange={(e) => setcorreo(e.target.value)} className="block autofill:text-red-900 needed py-2.5 px-0 w-full text-sm text-gray-lite bg-transparent border-b-[2px] border-[#B5B5B5] appearance-none focus:outline-none focus:ring-0 focus:border-[#5185D4] peer"/>
+                    <label htmlFor="correo" className="peer-focus:font-medium absolute text-md txtBG duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#5185D4] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8">
                       {errores.correo ? (<><span>{lenguaje.correo[`${idioma}`]}</span><span id="txtCorreoRequerido" className='textCamposRequeridos'>{' | '}{lenguaje.correoRequerido[`${idioma}`]}</span></>) : (<>{lenguaje.correo[`${idioma}`]}{' *'}</>)}
                     </label>
                   </div>
 
                   <div className="relative z-0 w-full mb-8 group">
-                    <textarea id="mensaje" name="mensaje" autocomplete="off" value={mensaje} onChange={(e) => setMensaje(e.target.value)} className="block autofill:text-red-900 needed py-2.5 px-0 w-full text-sm text-gray-lite bg-transparent border-0 border-b-[2px] border-[#B5B5B5] appearance-none focus:outline-none focus:ring-0 focus:border-[#5185D4] peer"/>
-                    <label htmlFor="mensaje" className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#5185D4] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8">
+                    <textarea id="mensaje" name="mensaje" autocomplete="off" value={mensaje} onChange={(e) => setMensaje(e.target.value)} className="block autofill:text-red-900 needed py-2.5 px-0 w-full text-sm text-gray-lite bg-transparent border-b-[2px] border-[#B5B5B5] appearance-none focus:outline-none focus:ring-0 focus:border-[#5185D4] peer"/>
+                    <label htmlFor="mensaje" className="peer-focus:font-medium absolute text-md txtBG duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#5185D4] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8">
                       {errores.mensaje ? (<><span>{lenguaje.mensaje[`${idioma}`]}</span><span id="txtMensajeRequerido" className='textCamposRequeridos'>{' | '}{lenguaje.mensajeRequerido[`${idioma}`]}</span></>) : (<>{lenguaje.mensaje[`${idioma}`]}{' *'}</>)}
                     </label>
                   </div>
