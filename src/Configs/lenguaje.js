@@ -64,7 +64,7 @@ const lenguaje = {
         EN: 'I have more than 4 years of experience.'
     },
     queHago:{
-        ES: '¿Que hago?',
+        ES: '¿Qué hago?',
         EN: 'What I do!'
     },
     dbManagment:{
@@ -80,7 +80,7 @@ const lenguaje = {
         EN: 'Frontend Development'
     },
     misTrabajos:{
-        ES: '¿Donde he trabajado?',
+        ES: '¿Dónde he trabajado?',
         EN: 'Where I work?'
     },
     derechos:{
@@ -100,6 +100,10 @@ const lenguaje = {
         EN: 'Academic Bachelor'
     },
     profesional:{
+        ES: 'Tecnólogo en ADSI',
+        EN: 'Technologist ADSI'
+    },
+    profesional2:{
         ES: 'Tecnólogo en Análisis y Desarrollo de Sistemas de Información',
         EN: 'Technologist in Analysis and Development of Information Systems'
     },

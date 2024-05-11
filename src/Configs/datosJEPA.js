@@ -8,21 +8,24 @@ const DatosJEPA = (idioma) => {
         "nombre": "Niño Jesus de Praga",
         "año": 2009,
         "imagen": "bgLogoLCGS",
-        "educacion": lenguaje.primaria[idioma]
+        "educacion": lenguaje.primaria[idioma],
+        "edTitulo": lenguaje.primaria[idioma],
       },
       {
         "id": 2,
         "nombre": "IE Luís Carlos Galán Sarmiento",
         "año": 2015,
         "imagen": "bgLogoLCGS",
-        "educacion": lenguaje.bachiller[`${idioma}`]
+        "educacion": lenguaje.bachiller[`${idioma}`],
+        "edTitulo": lenguaje.bachiller[`${idioma}`],
       },
       {
         "id": 3,
         "nombre": "SENA",
         "año": 2018,
         "imagen": "bgLogoSENA",
-        "educacion": lenguaje.profesional[`${idioma}`]
+        "educacion": lenguaje.profesional[`${idioma}`],
+        "edTitulo": lenguaje.profesional2[`${idioma}`],
       }
     ],
     misTrabajos: [
@@ -31,28 +34,28 @@ const DatosJEPA = (idioma) => {
           "nombre": "Nexos Software S.A.S",
           "año": "02/2018 - 08/2018",
           "imagen": "bgLogoNexos",
-          "educacion": lenguaje.expNexos[idioma]
+          "puesto": lenguaje.expNexos[idioma]
         },
         {
           "id": 2,
           "nombre": "HYG Consultores S.A.S",
           "año": "04/2019 – 10/2020",
           "imagen": "bgLogoHyG",
-          "educacion": lenguaje.desarrolladorWeb[idioma]
+          "puesto": lenguaje.desarrolladorWeb[idioma]
         },
         {
           "id": 3,
           "nombre": "Proyectos Millennium S.A.S",
           "año": "11/2021 – 07/2022",
           "imagen": "bgLogoMillennium",
-          "educacion": lenguaje.desarrolladorWeb[idioma]
+          "puesto": lenguaje.desarrolladorWeb[idioma]
         },
         {
           "id": 4,
           "nombre": "Trendi - Trends & Innovation S.A.S",
           "año": "07/2022 – 03/2024",
           "imagen": "bgLogoTrendi",
-          "educacion": lenguaje.full[idioma]
+          "puesto": lenguaje.full[idioma]
         },
     ],
     misProyectos: [

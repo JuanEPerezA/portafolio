@@ -96,7 +96,7 @@ const Resume = ({idioma, setIdioma}) => {
                     {dataJEPA.misEstudios.map(estudio => (
                       <div key={estudio.id} className={`bgLogos py-4 pl-5 pr-3 space-y-2 mb-6 rounded-lg ${estudio.imagen}`}>
                         <span className="text-tiny txtBG font-semibold">{estudio.año}</span>
-                        <h3 className="text-xl darkModeText font-semibold">{lenguaje.primaria[`${idioma}`]}</h3>
+                        <h3 className="text-xl darkModeText font-semibold" title={estudio.edTitulo}>{estudio.educacion}</h3>
                         <p className="txtBG">{estudio.nombre}</p>
                     </div>
                     ))}
@@ -111,7 +111,7 @@ const Resume = ({idioma, setIdioma}) => {
                     {dataJEPA.misTrabajos.map(trabajo => (
                       <div key={trabajo.id} className={`bgLogos py-4 pl-5 pr-3 space-y-2 mb-6 rounded-lg ${trabajo.imagen}`}>
                         <span className="text-tiny txtBG font-semibold">{trabajo.año}</span>
-                        <h3 className="text-xl darkModeText font-semibold">{lenguaje.expNexos[`${idioma}`]}</h3>
+                        <h3 className="text-xl darkModeText font-semibold">{trabajo.puesto}</h3>
                         <p className="txtBG">{trabajo.nombre}</p>
                     </div>
                     ))}
@@ -137,7 +137,7 @@ const Resume = ({idioma, setIdioma}) => {
               </div>
               <div className="container px-4 pb-2 lg:pb-0 sm:px-5 md:px-10 lg:px-20 bg-center grid gap-4 grid-cols-1 md:grid-cols-3 xl:grid-cols-3">
                 {dataJEPA.misProyectos.map((proyecto) => (
-                <div key={proyecto.id} class="max-w-sm rounded overflow-hidden bgConocimientos">
+                <div key={proyecto.id} className="max-w-sm rounded overflow-hidden bgConocimientos">
                   <div className="dataProject">
                     <img src={`./Assets/Images/${proyecto.imagen}`} alt={proyecto.nombre} />
                     <div className="overlay">
@@ -152,15 +152,15 @@ const Resume = ({idioma, setIdioma}) => {
                       </div>
                     </div>
                   </div>
-                  <div class="px-6 py-4">
-                    <div class="font-bold text-xl mb-2 text-center">{proyecto.nombre}</div>
-                    <p class="txtBG">
+                  <div className="px-6 py-4">
+                    <div className="font-bold text-xl mb-2 text-center">{proyecto.nombre}</div>
+                    <p className="txtBG">
                       {proyecto.descripcion}
                     </p>
                   </div>
-                  <div class="px-6 pt-4 pb-2">
+                  <div className="px-6 pt-4 pb-2">
                   {dataJEPA.misProyectos[0].tecnologias.map((tecnologia) => (
-                    <span key={tecnologia.id} class="inline-block resume-btn rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                    <span key={tecnologia.id} className="inline-block resume-btn rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
                       {tecnologia.icon ?
                         <button key={tecnologia.id} className="btnTechs" title={tecnologia.nombre}>
                           <i className={tecnologia.icon}></i>
