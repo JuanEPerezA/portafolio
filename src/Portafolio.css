@@ -133,7 +133,7 @@
 }
 
 .downloadBtn {
-  background-image: linear-gradient(to right, #E55D87 0%, #5FC3E4  51%, #E55D87  100%);
+  background-image: linear-gradient(to right, var(--button-color) 0%, red  51%, var(--button-color)  100%);
   margin: 10px;
   padding: 10px 30px;
   margin-top: 1rem;
@@ -206,8 +206,12 @@
 }
 
 .imgAvatarSM {
-  height: 30vh;
-  width: 45vw;
+  /* height: 25vh;
+  width: 40vw;
+  margin-top: 20%; */
+  height: 33vh;
+  width: 55vw;
+  margin-top: 14%;
 }
 
 /* About */
