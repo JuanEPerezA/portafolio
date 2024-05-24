@@ -188,8 +188,8 @@ const lenguaje = {
         EN: 'This project was developed with: '
     },
     pyViveLamour:{
-        ES: 'Catálogo básico, con CRUD (con guardado de imágenes en cloudinary),  y con validación sencilla para el admin.',
-        EN: 'Basic catalog, with CRUD (with image saving in cloudinary), and with simple validation for the admin.'
+        ES: 'Catálogo con CRUD (con guardado de imágenes y videos en cloudinary), al igual que una pequeña validación para ingresar a la vista de administración.',
+        EN: 'Catalog with CRUD (with saving of images and videos in cloudinary), and a small validation to enter the administration view.'
     },
     noGitRepo:{
         ES: 'Repositorio no disponible por temas de seguridad.',
