@@ -722,3 +722,9 @@ span{
 .dataProject .overlay:hover h3{
   margin-bottom: 0px;
 }
+
+.imgsPys {
+  object-fit: cover;
+  height: 34vh;
+  width: 100%;
+}

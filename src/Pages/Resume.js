@@ -69,7 +69,7 @@ const Resume = ({idioma, setIdioma}) => {
                   {dataJEPA.misProyectos.map((proyecto) => (
                   <div key={`proyecto-${proyecto.id}`} className="max-w-sm rounded overflow-hidden bgConocimientos">
                     <div className="dataProject">
-                      <img src={`./Assets/Images/${proyecto.imagen}`} alt={proyecto.nombre} />
+                      <img src={`./Assets/Images/${proyecto.imagen}`} alt={proyecto.nombre} className='imgsPys'/>
                       <div className="overlay">
                         <h3>{proyecto.nombre}</h3>
                         <div className="fila-iconos">
@@ -101,7 +101,7 @@ const Resume = ({idioma, setIdioma}) => {
                       </p>
                     </div>
                     <div className="px-6 pt-4 pb-2">
-                    {dataJEPA.misProyectos[0].tecnologias.map((tecnologia) => (
+                    {proyecto.tecnologias.map((tecnologia) => (
                       <>
                         <span key={`tecnologias-sm-${tecnologia.id}`} className="lg:hidden inline-block resume-btn rounded-full px-3 py-1 text-xs font-semibold mr-1 mb-1">
                           {tecnologia.nombre}

@@ -99,6 +99,36 @@ const DatosJEPA = (idioma) => {
           }
         ]
       },
+      {
+        "id": 2,
+        "nombre": "Triki (Tic Tac Toe)",
+        "descripcion": lenguaje.pyTriki[idioma],
+        "imagen": "Triki.png",
+        "tecnologias": [
+          {
+            "id": 1,
+            "nombre": "React JS",
+            'icon': "fa-brands fa-react"
+          },
+          {
+            "id": 2,
+            "nombre": "Vite",
+            'icon': false
+          },
+          {
+            "id": 3,
+            "nombre": "CSS",
+            'icon': "fa-brands fa-css3-alt"
+          },
+        ],
+        "info": [
+          {
+            "codigoDisponible": true,
+            "repositorio": "https://github.com/JuanEPerezA/triki_react",
+            "linkApp": "https://triki-jepa.vercel.app/"
+          }
+        ]
+      },
     ],
     misConocimientos: [
         {

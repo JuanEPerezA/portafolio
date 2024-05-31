@@ -188,8 +188,8 @@ const lenguaje = {
         EN: 'This project was developed with: '
     },
     pyViveLamour:{
-        ES: 'Catálogo con CRUD (con guardado de imágenes y videos en cloudinary), al igual que una pequeña validación para ingresar a la vista de administración.',
-        EN: 'Catalog with CRUD (with saving of images and videos in cloudinary), and a small validation to enter the administration view.'
+        ES: 'Catálogo con vistas de: productos, detalles del producto (con carrusel), nosotros y admin, con CRUD (con guardado de imágenes y videos en cloudinary), al igual que una pequeña validación para ingresar a la vista de administración.',
+        EN: 'Catalog with views of: products, product details (with carousel), about and admin, with CRUD (with saving of images and videos in cloudinary), and a small validation to enter the administration view.'
     },
     noGitRepo:{
         ES: 'Repositorio no disponible por temas de seguridad.',
@@ -206,6 +206,10 @@ const lenguaje = {
     misProyectos:{
         ES: 'Mis proyectos',
         EN: 'My projects'
+    },
+    pyTriki:{
+        ES: 'Juego de triki con opción de jugarse individual (cuenta con 3 niveles: fácil, medio/normal, y difícil), y con otra persona, se puede personalizar quien inicia, los nombres de las personas, y se puede llevar el conteo de resultados.',
+        EN: 'Tic Tac Toe game with the option of playing individually (it has 3 levels: easy, medium/normal, and difficult), and with another person, you can customize who starts, the names of the people, and you can keep count of results.'
     },
 };
 
