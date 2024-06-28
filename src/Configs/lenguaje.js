@@ -211,6 +211,10 @@ const lenguaje = {
         ES: 'Juego de triki con opción de jugarse individual (cuenta con 3 niveles: fácil, medio/normal, y difícil), y con otra persona, se puede personalizar quien inicia, los nombres de las personas, y se puede llevar el conteo de resultados.',
         EN: 'Tic Tac Toe game with the option of playing individually (it has 3 levels: easy, medium/normal, and difficult), and with another person, you can customize who starts, the names of the people, and you can keep count of results.'
     },
+    pyToDoList:{
+        ES: 'To Do List, con JWT para la autenticación, validación y vencimiento de token, validación de datos, CRUD de notas, las cuales se pueden cambiar de estado arrastrandolas, o con la opción presentada, el registro pide una clave, para tener un manejo de los registros.',
+        EN: 'To Do List, with JWT for authentication, token validation and expiration, data validation, CRUD of notes, which can be changed state by dragging them, or with the option presented, the registry asks for a key, to have management of the registers.'
+    },
 };
 
 export default lenguaje;

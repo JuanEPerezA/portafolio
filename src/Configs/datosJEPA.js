@@ -129,6 +129,46 @@ const DatosJEPA = (idioma) => {
           }
         ]
       },
+      {
+        "id": 3,
+        "nombre": "To Do List",
+        "descripcion": lenguaje.pyToDoList[idioma],
+        "imagen": "to-do-list.png",
+        "tecnologias": [
+          {
+            "id": 1,
+            "nombre": "MongoDB",
+            'icon': false
+          },
+          {
+            "id": 2,
+            "nombre": "Express",
+            'icon': false
+          },
+          {
+            "id": 3,
+            "nombre": "Node JS",
+            'icon': "fa-brands fa-node-js"
+          },
+          {
+            "id": 4,
+            "nombre": "React JS",
+            'icon': "fa-brands fa-react"
+          },
+          {
+            "id": 5,
+            "nombre": "Bootstrap",
+            'icon': "fa-brands fa-bootstrap"
+          },
+        ],
+        "info": [
+          {
+            "codigoDisponible": false,
+            "repositorio": "https://github.com/JuanEPerezA/",
+            "linkApp": "https://todolist-jepa.vercel.app/"
+          }
+        ]
+      },
     ],
     misConocimientos: [
         {
