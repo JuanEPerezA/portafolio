@@ -133,7 +133,7 @@ const DatosJEPA = (idioma) => {
         "id": 3,
         "nombre": "To Do List",
         "descripcion": lenguaje.pyToDoList[idioma],
-        "imagen": "to-do-list.png",
+        "imagen": "ToDoList.jpg",
         "tecnologias": [
           {
             "id": 1,
@@ -165,7 +165,7 @@ const DatosJEPA = (idioma) => {
           {
             "codigoDisponible": false,
             "repositorio": "https://github.com/JuanEPerezA/",
-            "linkApp": "https://todolist-jepa.vercel.app/"
+            "linkApp": "https://todolist-jepa.vercel.app/visitante"
           }
         ]
       },
