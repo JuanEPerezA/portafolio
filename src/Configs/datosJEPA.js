@@ -133,7 +133,7 @@ const DatosJEPA = (idioma) => {
         "id": 3,
         "nombre": "To Do List",
         "descripcion": lenguaje.pyToDoList[idioma],
-        "imagen": "to-do-list.jpg",
+        "imagen": "2.jpg",
         "tecnologias": [
           {
             "id": 1,
