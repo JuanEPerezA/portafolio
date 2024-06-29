@@ -73,7 +73,7 @@ const Resume = ({idioma, setIdioma}) => {
                       <div className="overlay">
                         <h3>{proyecto.nombre}</h3>
                         <div className="fila-iconos">
-                          <a href={proyecto.info[0].repositorio} target="_blank" rel='noreferrer' title={proyecto.info.codigoDisponible ? lenguaje.dataGitRepo[`${idioma}`] : lenguaje.noGitRepo[`${idioma}`]}>
+                          <a href={proyecto.info[0].repositorio} target="_blank" rel='noreferrer' title={proyecto.info[0].codigoDisponible ? lenguaje.dataGitRepo[`${idioma}`] : lenguaje.noGitRepo[`${idioma}`]}>
                             <i className="fa-brands fa-github"></i>
                           </a>
                           <a href={proyecto.info[0].linkApp} target="_blank" rel='noreferrer' title={lenguaje.verPy[`${idioma}`]}>
@@ -86,7 +86,7 @@ const Resume = ({idioma, setIdioma}) => {
                       <div className="font-bold text-2xl mb-2 text-center">{proyecto.nombre}</div>
                       <div className="lg:hidden px-6 pb-2">              
                         <span className="inline-block rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2 btn bg-black">
-                          <a href={proyecto.info[0].repositorio} target="_blank" rel='noreferrer' title={proyecto.info.codigoDisponible ? lenguaje.dataGitRepo[`${idioma}`] : lenguaje.noGitRepo[`${idioma}`]}>
+                          <a href={proyecto.info[0].repositorio} target="_blank" rel='noreferrer' title={proyecto.info[0].codigoDisponible ? lenguaje.dataGitRepo[`${idioma}`] : lenguaje.noGitRepo[`${idioma}`]}>
                             <i className="fa-brands fa-github text-white"></i>
                           </a>
                         </span>
