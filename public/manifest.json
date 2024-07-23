@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Portafolio Juan Pérez",
+  "name": "Portafolio creado con react.js",
   "icons": [
     {
       "src": "Assets/Images/Icon.png",
