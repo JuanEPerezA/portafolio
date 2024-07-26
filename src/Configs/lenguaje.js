@@ -215,6 +215,14 @@ const lenguaje = {
         ES: 'To Do List, con JWT para la autenticación, validación y vencimiento de token, validación de datos, CRUD de notas, las cuales se pueden cambiar de estado arrastrandolas, o con la opción presentada, el registro pide una clave, para tener un manejo de los registros.',
         EN: 'To Do List, with JWT for authentication, token validation and expiration, data validation, CRUD of notes, which can be changed state by dragging them, or with the option presented, the registry asks for a key, to have management of the registers.'
     },
+    navbar_scroll:{
+        ES: 'Página con scroll',
+        EN: 'Scroll Page'
+    },
+    navbar_noScroll:{
+        ES: 'Página sin scroll',
+        EN: 'Page Without Scroll'
+    },
 };
 
 export default lenguaje;

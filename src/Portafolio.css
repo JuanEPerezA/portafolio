@@ -126,6 +126,7 @@
 .divIzquierda {
   height: 100vh;
   position: fixed;
+  z-index: 999;
 }
 
 .divDerecha{
@@ -727,4 +728,17 @@ span{
   object-fit: cover;
   height: 34vh;
   width: 100%;
+}
+
+.navbarScroll {
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+}
+
+.footerScroll {
+  padding: 4px;
+  bottom: -12vh;
+  position: relative;
+  z-index: 999;
 }

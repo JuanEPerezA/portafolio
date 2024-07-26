@@ -1,6 +1,6 @@
 import React from 'react';
 import lenguaje from '../Configs/lenguaje';
-import Footer from '../Components/Footer';
+// import Footer from '../Components/Footer';
 import DivIzq from '../Components/DivIzq';
 
 const About = ({idioma, setIdioma}) => {
@@ -169,7 +169,7 @@ const About = ({idioma, setIdioma}) => {
                   </div>
                 </div>
 
-                <Footer idioma={idioma} setIdioma={setIdioma}/>
+                {/* <Footer idioma={idioma} setIdioma={setIdioma}/> */}
               </div>
             </div>
           </section>

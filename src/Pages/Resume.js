@@ -60,7 +60,8 @@ const Resume = ({idioma, setIdioma}) => {
                   </div>
                 </div>
               </div>
-              <div className="pt-12 px-4 md:px-0">
+              <div id="MisProyectos" className="pt-12 px-4 md:px-0">
+                <br/>
                 <div className="flex items-center space-x-2 mb-4">
                   <i className="fa-solid fa-crown text-4xl text-[#F95054]"></i>
                   <h4 className="text-4xl sm:text-5xl font-medium">{lenguaje.misProyectos[`${idioma}`]}</h4>

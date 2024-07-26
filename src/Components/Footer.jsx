@@ -8,7 +8,7 @@ const Footer = ({idioma, setIdioma}) => {
 
    return (
       <>
-      <footer className="footerPosition d-flex flex-wrap justify-content-between align-items-center border-top" style={{"padding": "4px", "bottom": "-12vh", "position": "relative"}}>
+      <footer className="footerPosition d-flex flex-wrap justify-content-between align-items-center border-top footerScroll">
          <div className="col-lg-6 col-md-7 col-sm-12 col-12 d-flex align-items-center footer">
             © {new Date().getFullYear()} || {lenguaje.derechos[`${idioma}`]}
          </div>
