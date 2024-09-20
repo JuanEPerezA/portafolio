@@ -71,7 +71,7 @@ const DivIzq = ({idioma, setIdioma}) => {
                 </div>
                 <button className="downloadBtn">
                   <img src="./Assets/Images/download.png" alt="icon" className="mr-2" style={{"display":"unset"}}/>
-                  <a href="./Assets/CV Juan Perez.pdf" target="_blank" rel="noopener noreferrer" download="JuanPérez.pdf" className='text-white'>{lenguaje.download_cv[`${idioma}`]}</a>
+                  <a href={idioma == 'EN' ? "./Assets/CV Juan Perez.pdf" : "./Assets/HV Juan Perez.pdf"} target="_blank" rel="noopener noreferrer" download="JuanPérez.pdf" className='text-white'>{lenguaje.download_cv[`${idioma}`]}</a>
                 </button>
             </div>
         </div>
