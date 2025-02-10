@@ -10,7 +10,7 @@ const DivIzq = ({idioma, setIdioma}) => {
                 <h2 className="mt-6 mb-1 text-[26px] font-semibold">Juan Esteban Pérez Aguas</h2>
                 <h3 className="text-[#7B7B7B] inline-block px-5 rounded-lg">{lenguaje.cargo[`${idioma}`]}</h3>
                 <section className="flex justify-center space-x-3">
-                  <a href="https://api.whatsapp.com/send?phone=573117121720" target="_blank" rel="noopener noreferrer" className="alink">
+                  <a href="https://api.whatsapp.com/send?phone=573117121720" data-testid="whatsapp-link" target="_blank" rel="noopener noreferrer" className="alink">
                     <span className="socialbtn text-[#377c4d]">
                       <i className="fa-brands fa-whatsapp"></i>
                     </span>
@@ -20,12 +20,12 @@ const DivIzq = ({idioma, setIdioma}) => {
                       <i className="fa-brands fa-at"></i>
                     </span>
                   </a>
-                  <a href="https://github.com/JuanEPerezA" target="_blank" rel="noopener noreferrer">
+                  <a href="https://github.com/JuanEPerezA" data-testid="github-link" target="_blank" rel="noopener noreferrer">
                     <span className="socialbtn text-[#e14a84]">
                       <i className="fa-brands fa-github"></i>
                     </span>
                   </a>
-                  <a href="https://www.linkedin.com/in/jepa1998/" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.linkedin.com/in/jepa1998/" data-testid="linkedin-link" target="_blank" rel="noopener noreferrer">
                     <span className="socialbtn text-[#0072b1]">
                       <i className="fa-brands fa-linkedin-in"></i>
                     </span>
