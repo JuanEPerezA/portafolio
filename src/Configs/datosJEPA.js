@@ -57,6 +57,13 @@ const DatosJEPA = (idioma) => {
           "imagen": "bgLogoTrendi",
           "puesto": lenguaje.full[idioma]
         },
+        {
+          "id": 5,
+          "nombre": "Grupo Kapli",
+          "año": "02/2025 – Actualmente",
+          "imagen": "bgLogoKapli",
+          "puesto": lenguaje.full[idioma]
+        },
     ],
     misProyectos: [
       {

@@ -151,7 +151,7 @@ const About = ({idioma, setIdioma}) => {
 
                 <div className="px-2 sm:px-5 md:px-10 lg:px-14">
                   <div>
-                    <h3 className="text-center text-[40px] font-bold font-robotoSlab mb-3 text-center">{lenguaje.misTrabajos[`${idioma}`]}</h3>
+                    <h3 className="text-center text-[40px] font-bold font-robotoSlab mb-3">{lenguaje.misTrabajos[`${idioma}`]}</h3>
                     <div className="grid gap-8 grid-cols-2 md:grid-cols-4 xl:grid-cols-4">
                         <section className="about-box">
                           <img className="w-15 h-15 object-contain block" src="./Assets/Images/logoNexosColor.png"alt="nexos"/>
@@ -164,6 +164,9 @@ const About = ({idioma, setIdioma}) => {
                         </section>
                         <section className="about-box">
                           <img className="w-15 h-15 object-contain block" src="./Assets/Images/logoTrendi.png"alt="trendi"/>
+                        </section>
+                        <section className="about-box">
+                          <img className="w-15 h-15 object-contain block" src="./Assets/Images/logoKapli.png"alt="kapli"/>
                         </section>
                     </div>
                   </div>

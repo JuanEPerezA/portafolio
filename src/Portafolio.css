@@ -599,6 +599,11 @@ span{
   /* background: url('./../public/Assets/Images/logoTrendi.png'); */
 }
 
+.bgLogoKapli{
+  background: url('./../public/Assets/Images/k.png');
+  /* background: url('./../public/Assets/Images/logoKapli.png'); */
+}
+
 .txtBG{
   color: var(--txt-bg-gray);
 }
