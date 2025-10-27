@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import lenguaje from '../Configs/lenguaje';
+import DownloadButton from '../Components/DownloadButton';
 // import Footer from '../Components/Footer';
 const DivIzq = lazy(() => import('../Components/DivIzq'));
 const SocialLinks = lazy(() => import('../Components/SocialLinks'));
@@ -108,10 +109,9 @@ const About = ({idioma, setIdioma}) => {
                                 </div>
                               </section>
                           </div>
-                          <button className="downloadBtn">
-                            <i className="fa-solid fa-download"></i>
-                            ​ㅤ{lenguaje.download_cv[`${idioma}`]}
-                          </button>
+                          <section className='place-self-center'>
+                            <DownloadButton idioma={idioma} />
+                          </section>
                         </div>
                       </div>
                     </div>
