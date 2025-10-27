@@ -1,5 +1,8 @@
 import React, { Suspense, lazy } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+import 'swiper/css';
 import lenguaje from '../Configs/lenguaje';
 // import Footer from '../Components/Footer';
 const DivIzq = lazy(() => import('../Components/DivIzq'));
@@ -141,23 +144,48 @@ const About = ({idioma, setIdioma}) => {
                 <div className="px-2 sm:px-5 md:px-10 lg:px-14">
                   <div>
                     <h3 className="text-center text-[40px] font-bold font-robotoSlab mb-3">{lenguaje.misTrabajos[`${idioma}`]}</h3>
-                    <div className="grid gap-8 grid-cols-2 md:grid-cols-4 xl:grid-cols-4">
+                    <Swiper
+                      spaceBetween={32}
+                      slidesPerView={2}
+                      loop={true}
+                      navigation={true}
+                      autoplay={{
+                        delay: 3000,
+                        disableOnInteraction: false,
+                      }}
+                      modules={[Autoplay]}
+                      breakpoints={{
+                        768: {
+                          slidesPerView: 5,
+                        },
+                      }}
+                    >
+                      <SwiperSlide>
                         <section className="about-box">
-                          <img className="w-15 h-15 object-contain block" src="./Assets/Images/logoNexosColor.png"alt="nexos"/>
+                          <img className="w-15 h-15 object-contain block" src="./Assets/Images/logoNexosColor.png" alt="nexos"/>
                         </section>
+                      </SwiperSlide>
+                      <SwiperSlide>
                         <section className="about-box">
                           <img className="w-15 h-15 object-contain block" src="./Assets/Images/logoHyGColor.png" alt="hyg"/>
                         </section>
+                      </SwiperSlide>
+                      <SwiperSlide>
                         <section className="about-box logo-mil">
                           {/* <img className="w-15 h-15 object-contain block" src="./Assets/Images/logoMille.svg" alt="mille"/> */}
                         </section>
+                      </SwiperSlide>
+                      <SwiperSlide>
                         <section className="about-box">
-                          <img className="w-15 h-15 object-contain block" src="./Assets/Images/logoTrendi.png"alt="trendi"/>
+                          <img className="w-15 h-15 object-contain block" src="./Assets/Images/logoTrendi.png" alt="trendi"/>
                         </section>
+                      </SwiperSlide>
+                      <SwiperSlide>
                         <section className="about-box">
-                          <img className="w-15 h-15 object-contain block" src="./Assets/Images/logoKapli.png"alt="kapli"/>
+                          <img className="w-15 h-15 object-contain block" src="./Assets/Images/logoKapli.png" alt="kapli"/>
                         </section>
-                    </div>
+                      </SwiperSlide>
+                    </Swiper>
                   </div>
                 </div>
 
