@@ -1,4 +1,5 @@
 import React, { Suspense, lazy } from 'react';
+import { Helmet } from 'react-helmet-async';
 import lenguaje from '../Configs/lenguaje';
 // import Footer from '../Components/Footer';
 const DivIzq = lazy(() => import('../Components/DivIzq'));
@@ -7,6 +8,14 @@ const SocialLinks = lazy(() => import('../Components/SocialLinks'));
 const About = ({idioma, setIdioma}) => {
   return (
     <Suspense fallback={<div className="flex justify-center items-center min-h-screen"><div className="animate-spin rounded-full h-32 w-32 border-b-2 border-gray-900"></div></div>}>
+      <Helmet>
+        <title>{lenguaje.aboutMe[`${idioma}`]} - Juan Esteban Pérez Aguas</title>
+        <meta name="description" content={lenguaje.aboutMeText1[`${idioma}`]?.substring(0, 150) + "..."} />
+        <meta name="keywords" content="About, Full Stack Developer, Experience, Skills, Juan Esteban Pérez Aguas" />
+        <meta property="og:title" content={`${lenguaje.aboutMe[`${idioma}`]} - Juan Esteban Pérez Aguas`} />
+        <meta property="og:description" content="Learn more about my background, experience, and skills as a Full Stack Developer." />
+        <meta property="og:type" content="website" />
+      </Helmet>
       <main className="bg-homeBg min-h-screen bg-no-repeat bg-center bg-cover bg-fixed md:pb-16 w-full">
         <div className="container grid grid-cols-12 md:gap-10 justify-between darkMode">
           <DivIzq idioma={idioma} setIdioma={setIdioma}/>

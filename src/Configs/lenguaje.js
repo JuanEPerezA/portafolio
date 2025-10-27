@@ -223,6 +223,20 @@ const lenguaje = {
         ES: 'Página sin scroll',
         EN: 'Page Without Scroll'
     },
+    helmet:{
+        title:{
+            ES: 'Portafolio de Juan Pérez - Desarrollador Fullstack',
+            EN: 'Juan Pérez Portfolio - Fullstack Developer'
+        },
+        description:{
+            ES: 'Explora el portafolio de Juan Pérez, Tecnólogo en Análisis y Desarrollo de Software con más de 4 años de experiencia en desarrollo web fullstack.',
+            EN: 'Explore Juan Pérez\'s portfolio, Technologist in Software Analysis and Development with over 4 years of experience in fullstack web development.'
+        },
+        keywords:{
+            ES: 'desarrollador fullstack, portafolio, Juan Pérez, desarrollo web, React, Node.js',
+            EN: 'fullstack developer, portfolio, Juan Pérez, web development, React, Node.js'
+        }
+    }
 };
 
 export default lenguaje;

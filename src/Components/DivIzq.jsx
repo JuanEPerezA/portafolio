@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { memo } from 'react';
 import lenguaje from '../Configs/lenguaje';
 import SocialLinks from './SocialLinks';
 import DownloadButton from './DownloadButton';
 import PersonalData from './PersonalData';
 
-const DivIzq = ({idioma, setIdioma}) => {
+const DivIzq = memo(({idioma, setIdioma}) => {
    return (
       <section className="col-span-12 lg:col-span-4 hidden lg:block h-screen sticky top-44 darkMode divIzquierda">
         <div className="w-full mb-6 lg:mb-0 mx-auto relative text-center px-6 rounded-[20px] mt-[180px] md:mt-[220px] lg:mt-0">
@@ -21,6 +21,8 @@ const DivIzq = ({idioma, setIdioma}) => {
         </div>
       </section>
    );
-}
+});
+
+DivIzq.displayName = 'DivIzq';
 
 export default DivIzq;

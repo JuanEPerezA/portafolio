@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { memo } from 'react';
 
-const SocialLinks = ({ className = "flex space-x-3" }) => {
+const SocialLinks = memo(({ className = "flex space-x-3" }) => {
   return (
     <section className={className}>
       <a href="https://api.whatsapp.com/send?phone=573117121720" target="_blank" rel="noopener noreferrer" className="alink">
@@ -25,6 +25,8 @@ const SocialLinks = ({ className = "flex space-x-3" }) => {
       </a>
     </section>
   );
-};
+});
+
+SocialLinks.displayName = 'SocialLinks';
 
 export default SocialLinks;

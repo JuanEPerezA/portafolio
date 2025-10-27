@@ -1,4 +1,5 @@
 import React, { useState, Suspense, lazy } from 'react';
+import { Helmet } from 'react-helmet-async';
 import emailjs from 'emailjs-com';
 import lenguaje from '../Configs/lenguaje';
 import Swal from 'sweetalert2';
@@ -82,6 +83,14 @@ const Contacto = ({idioma, setIdioma}) => {
 
   return (
     <Suspense fallback={<div className="flex justify-center items-center min-h-screen"><div className="animate-spin rounded-full h-32 w-32 border-b-2 border-gray-900"></div></div>}>
+      <Helmet>
+        <title>{lenguaje.contactMe[`${idioma}`]} - Juan Esteban Pérez Aguas</title>
+        <meta name="description" content="Get in touch with me for collaboration opportunities, project inquiries, or professional discussions." />
+        <meta name="keywords" content="Contact, Full Stack Developer, Collaboration, Projects, Juan Esteban Pérez Aguas" />
+        <meta property="og:title" content={`${lenguaje.contactMe[`${idioma}`]} - Juan Esteban Pérez Aguas`} />
+        <meta property="og:description" content="Contact form for professional inquiries and collaborations." />
+        <meta property="og:type" content="website" />
+      </Helmet>
       <main className="bg-homeBg bg-no-repeat bg-center bg-cover bg-fixed md:pb-16 w-full">
         <div className="container grid grid-cols-12 md:gap-10 justify-between">
           <DivIzq idioma={idioma} setIdioma={setIdioma}/>

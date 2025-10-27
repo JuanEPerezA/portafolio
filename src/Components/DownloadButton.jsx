@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { memo } from 'react';
 import lenguaje from '../Configs/lenguaje';
 
-const DownloadButton = ({ idioma, className = "downloadBtn" }) => {
+const DownloadButton = memo(({ idioma, className = "downloadBtn" }) => {
   return (
     <button className={className}>
       <img src="./Assets/Images/download.png" alt="icon" className="mr-2" style={{ display: "unset" }} />
@@ -10,6 +10,8 @@ const DownloadButton = ({ idioma, className = "downloadBtn" }) => {
       </a>
     </button>
   );
-};
+});
+
+DownloadButton.displayName = 'DownloadButton';
 
 export default DownloadButton;

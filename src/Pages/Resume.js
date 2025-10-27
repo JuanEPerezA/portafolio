@@ -1,12 +1,22 @@
 import React, { Suspense, lazy } from 'react';
+import { Helmet } from 'react-helmet-async';
 import lenguaje from '../Configs/lenguaje';
 import DatosJEPA from '../Configs/datosJEPA';
 const DivIzq = lazy(() => import('../Components/DivIzq'));
+const OptimizedImage = lazy(() => import('../Components/OptimizedImage'));
 
 const Resume = ({idioma, setIdioma}) => {
   const dataJEPA = DatosJEPA(idioma);
   return (
     <Suspense fallback={<div className="flex justify-center items-center min-h-screen"><div className="animate-spin rounded-full h-32 w-32 border-b-2 border-gray-900"></div></div>}>
+      <Helmet>
+        <title>{lenguaje.resume[`${idioma}`]} - Juan Esteban Pérez Aguas</title>
+        <meta name="description" content="View my professional experience, education, skills, and projects as a Full Stack Developer." />
+        <meta name="keywords" content="Resume, Experience, Education, Skills, Projects, Full Stack Developer, Juan Esteban Pérez Aguas" />
+        <meta property="og:title" content={`${lenguaje.resume[`${idioma}`]} - Juan Esteban Pérez Aguas`} />
+        <meta property="og:description" content="Professional resume showcasing experience, education, and technical skills." />
+        <meta property="og:type" content="website" />
+      </Helmet>
       <div className="bg-homeBg min-h-screen bg-no-repeat bg-center bg-cover bg-fixed md:pb-16 w-full">
         <div className="container grid grid-cols-12 md:gap-10 justify-between darkMode">
           <DivIzq idioma={idioma} setIdioma={setIdioma}/>
@@ -70,7 +80,7 @@ const Resume = ({idioma, setIdioma}) => {
                   {dataJEPA.misProyectos.map((proyecto) => (
                   <div key={`proyecto-${proyecto.id}`} className="max-w-sm rounded overflow-hidden bgConocimientos">
                     <div className="dataProject">
-                      <img src={`./Assets/Images/${proyecto.imagen}`} alt={proyecto.nombre} className='imgsPys'/>
+                      <OptimizedImage src={`./Assets/Images/${proyecto.imagen}`} alt={proyecto.nombre} className='imgsPys'/>
                       <div className="overlay">
                         <h3>{proyecto.nombre}</h3>
                         <div className="fila-iconos">

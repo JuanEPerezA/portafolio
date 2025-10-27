@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { memo } from 'react';
 import lenguaje from '../Configs/lenguaje';
 
-const PersonalData = ({ idioma, className = "divPersonalData" }) => {
+const PersonalData = memo(({ idioma, className = "divPersonalData" }) => {
   return (
     <div className={className}>
       <section className="flex border-b border-[#E3E3E3] pb-2.5">
@@ -42,6 +42,8 @@ const PersonalData = ({ idioma, className = "divPersonalData" }) => {
       </section>
     </div>
   );
-};
+});
+
+PersonalData.displayName = 'PersonalData';
 
 export default PersonalData;
