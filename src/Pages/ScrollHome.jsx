@@ -12,15 +12,14 @@ export const ScrollHome = ({idioma, setIdioma}) => {
       {/* <section id="Home">
         <Home idioma={idioma} setIdioma={setIdioma}/>
       </section> */}
+      <section id="About">
+        <br/>
+        <About idioma={idioma} setIdioma={setIdioma}/>
+      </section>
 
       <section id="Resume">
         <br/>
         <Resume idioma={idioma} setIdioma={setIdioma}/>
-      </section>
-
-      <section id="About">
-        <br/>
-        <About idioma={idioma} setIdioma={setIdioma}/>
       </section>
 
       <section id="Contacto">

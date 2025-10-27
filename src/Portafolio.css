@@ -138,7 +138,6 @@
   margin: 10px;
   padding: 10px 30px;
   margin-top: 1rem;
-  margin-left: 5rem;
   text-align: center;
   text-transform: uppercase;
   transition: 0.5s;
@@ -628,7 +627,6 @@ span{
     margin: 0;
     padding: 10px 30px;
     margin-top: 0;
-    margin-left: 15%;
   }
 
   .mainBg{
@@ -658,7 +656,7 @@ span{
 
   /* Responsive improvements */
   .after-effect::after {
-    width: 80vw;
+    width: 40vw;
   }
 
   .about-box {

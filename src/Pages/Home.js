@@ -24,7 +24,7 @@ const Home = ({idioma, setIdioma}) => {
           <h3 className="sm:hidden mb-4 text-2xl md:text-3xl lg:text-4xl font-semibold darkModeText text-center">Pérez Aguas</h3>
           <h6 className="sm:hidden mb-4 text-lg md:text-xl lg:text-2xl text-[#7B7B7B] text-center bgText">{lenguaje.cargo[`${idioma}`]}</h6>
           <SocialLinks />
-          <DownloadButton idioma={idioma} className="downloadBtn" style={{"marginLeft":"1rem"}} />
+          <DownloadButton idioma={idioma} className="downloadBtn" />
       </div>
     </Suspense>
   );

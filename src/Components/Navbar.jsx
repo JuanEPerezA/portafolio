@@ -33,7 +33,7 @@ export const Navbar = ({idioma, setIdioma}) => {
                       )}
                     </Disclosure.Button>
                   </div>
-                  <div className="hidden sm:ml-6 sm:block flex flex-1 items-center justify-center hidden sm:ml-6 sm:block">
+                  <div className="hidden sm:ml-6 sm:block flex flex-1 items-center justify-center">
                     <a href="/Home" className={`darkMode anavbar rounded-md px-3 py-2 text-sm font-medium ${window.location.pathname === '/Home' ? 'navBarActive' : '' }`}>{lenguaje.navbar_home[`${idioma}`]}</a>
                     <a href="/Resume" className={`darkMode anavbar rounded-md px-3 py-2 text-sm font-medium ${window.location.pathname === '/Resume' ? 'navBarActive' : '' }`}>{lenguaje.navbar_resume[`${idioma}`]}</a>
                     <a href="/About" className={`darkMode anavbar rounded-md px-3 py-2 text-sm font-medium ${window.location.pathname === '/About' ? 'navBarActive' : '' }`} >{lenguaje.navbar_about[`${idioma}`]}</a>

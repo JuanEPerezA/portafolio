@@ -36,7 +36,7 @@ export const NavbarScroll = ({idioma, setIdioma}) => {
                     )}
                   </Disclosure.Button>
                 </div>
-                <div className="hidden sm:ml-6 sm:block flex flex-1 items-center justify-center hidden sm:ml-6 sm:block">
+                <div className="hidden sm:ml-6 sm:block flex flex-1 items-center justify-center">
                   <a href="/Home" className={`darkMode anavbar rounded-md px-3 py-2 text-sm font-medium`}>{lenguaje.navbar_noScroll[`${idioma}`]}</a>
                   <a href="#Resume" className={`darkMode anavbar rounded-md px-3 py-2 text-sm font-medium`}>{lenguaje.navbar_resume[`${idioma}`]}</a>
                   <a href="#MisProyectos" className={`darkMode anavbar rounded-md px-3 py-2 text-sm font-medium`}>{lenguaje.misProyectos[`${idioma}`]}</a>
@@ -76,9 +76,9 @@ export const NavbarScroll = ({idioma, setIdioma}) => {
             <Disclosure.Panel className="sm:hidden space-y-1 px-2 pb-3 pt-2" id="mobile-menu">
               <a href="/Home" className={`darkMode block anavbar rounded-md px-3 py-2 text-base font-medium`}><i className="fa-solid fa-house">​ㅤ</i>{lenguaje.navbar_noScroll[`${idioma}`]}</a>
               <a href="#Resume" className={`darkMode block anavbar rounded-md px-3 py-2 text-base font-medium`}><i className="fa-regular fa-file-lines">​ㅤ</i>{lenguaje.navbar_resume[`${idioma}`]}</a>
+              <a href="#MisProyectos" className={`darkMode block anavbar rounded-md px-3 py-2 text-base font-medium`}><i className="fa-solid fa-pager">​ㅤ</i>{lenguaje.misProyectos[`${idioma}`]}</a>
               <a href="#About" className={`darkMode block anavbar rounded-md px-3 py-2 text-base font-medium`} ><i className="fa-regular fa-user">​ㅤ</i>{lenguaje.navbar_about[`${idioma}`]}</a>
               <a href="#Contact" className={`darkMode block anavbar rounded-md px-3 py-2 text-base font-medium`}><i className="fa-solid fa-address-book">​ㅤ</i>{lenguaje.navbar_contact[`${idioma}`]}</a>
-              <a href="#MisProyectos" className={`darkMode block anavbar rounded-md px-3 py-2 text-base font-medium`}><i className="fa-solid fa-pager">​ㅤ</i>{lenguaje.misProyectos[`${idioma}`]}</a>
             </Disclosure.Panel>
           </>
         )}
