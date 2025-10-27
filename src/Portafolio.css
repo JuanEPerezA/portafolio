@@ -210,6 +210,8 @@
   height: 25vh;
   width: 40vw;
   margin-top: 20%;
+  max-width: 200px;
+  max-height: 200px;
   /* height: 33vh;
   width: 55vw;
   margin-top: 14%; */
@@ -645,13 +647,35 @@ span{
     border-radius: 20px;
     margin-bottom: 40%;
   }
-  
+
   .bgText{
     text-shadow: var(--text-shadow-sm);
   }
 
   .bgLogos{
-    background: none; 
+    background: none;
+  }
+
+  /* Responsive improvements */
+  .after-effect::after {
+    width: 80vw;
+  }
+
+  .about-box {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .projects {
+    justify-content: center;
+  }
+
+  .dataProject {
+    max-width: 280px;
+  }
+
+  .navbarScroll {
+    position: relative;
   }
 }
 

@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import lenguaje from '../Configs/lenguaje';
 import DatosJEPA from '../Configs/datosJEPA';
-import DivIzq from '../Components/DivIzq';
+const DivIzq = lazy(() => import('../Components/DivIzq'));
 
 const Resume = ({idioma, setIdioma}) => {
   const dataJEPA = DatosJEPA(idioma);
   return (
-    <>
+    <Suspense fallback={<div className="flex justify-center items-center min-h-screen"><div className="animate-spin rounded-full h-32 w-32 border-b-2 border-gray-900"></div></div>}>
       <div className="bg-homeBg min-h-screen bg-no-repeat bg-center bg-cover bg-fixed md:pb-16 w-full">
         <div className="container grid grid-cols-12 md:gap-10 justify-between darkMode">
           <DivIzq idioma={idioma} setIdioma={setIdioma}/>
@@ -127,7 +127,7 @@ const Resume = ({idioma, setIdioma}) => {
           </div>
         </div>
       </div>
-    </>
+    </Suspense>
   );
 }
 

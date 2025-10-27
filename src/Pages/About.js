@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import lenguaje from '../Configs/lenguaje';
 // import Footer from '../Components/Footer';
-import DivIzq from '../Components/DivIzq';
-import SocialLinks from '../Components/SocialLinks';
+const DivIzq = lazy(() => import('../Components/DivIzq'));
+const SocialLinks = lazy(() => import('../Components/SocialLinks'));
 
 const About = ({idioma, setIdioma}) => {
   return (
-    <>
+    <Suspense fallback={<div className="flex justify-center items-center min-h-screen"><div className="animate-spin rounded-full h-32 w-32 border-b-2 border-gray-900"></div></div>}>
       <main className="bg-homeBg min-h-screen bg-no-repeat bg-center bg-cover bg-fixed md:pb-16 w-full">
         <div className="container grid grid-cols-12 md:gap-10 justify-between darkMode">
           <DivIzq idioma={idioma} setIdioma={setIdioma}/>
@@ -158,7 +158,7 @@ const About = ({idioma, setIdioma}) => {
           </section>
         </div>
       </main>
-    </>
+    </Suspense>
   );
 }
 

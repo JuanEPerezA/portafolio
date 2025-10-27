@@ -3,12 +3,15 @@ import DarkMode from './DarkMode';
 import ReactCountryFlag from "react-country-flag"
 import lenguaje from '../Configs/lenguaje';
 import { Disclosure } from '@headlessui/react';
-import $ from 'jquery';
 
 export const NavbarScroll = ({idioma, setIdioma}) => {
    useEffect(() => {
     localStorage.setItem("idiomaNuevo", idioma);
-    $(".navbarNormal").hide()
+    // Hide navbarNormal when NavbarScroll is mounted
+    const navbarNormal = document.querySelector('.navbarNormal');
+    if (navbarNormal) {
+      navbarNormal.style.display = 'none';
+    }
    }, [idioma]);
 
    return (

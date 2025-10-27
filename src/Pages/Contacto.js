@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, Suspense, lazy } from 'react';
 import emailjs from 'emailjs-com';
 import lenguaje from '../Configs/lenguaje';
 import Swal from 'sweetalert2';
-import $ from 'jquery';
 import Footer from '../Components/Footer';
-import DivIzq from '../Components/DivIzq';
+const DivIzq = lazy(() => import('../Components/DivIzq'));
 
 const Contacto = ({idioma, setIdioma}) => {
   const [asunto, setAsunto] = useState('');
   const [correo, setcorreo] = useState('');
   const [mensaje, setMensaje] = useState('');
   const [errores, setErrores] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const validarFormulario = () => {
     const nuevosErrores = {};
@@ -35,17 +35,11 @@ const Contacto = ({idioma, setIdioma}) => {
   };
 
   const handleSubmit = (e) => {
-    $("#btnSend").css("cursor", "wait");
-    $("#btnSend").attr('disabled', 'disabled');
-    $("#btnSend").html(lenguaje.btnWaitText[`${idioma}`]);
     e.preventDefault();
     if (validarFormulario()) {
+      setIsSubmitting(true);
       enviarCorreo();
       console.log('Formulario enviado');
-    } else {
-      $("#btnSend").removeAttr('disabled')
-      $("#btnSend").css("cursor", "pointer");
-      $("#btnSend").html(lenguaje.enviarCorreo[`${idioma}`]);
     }
   };
 
@@ -66,9 +60,7 @@ const Contacto = ({idioma, setIdioma}) => {
           timer: 2000
         });
         limpiarCampos();
-        $("#btnSend").removeAttr('disabled');
-        $("#btnSend").css("cursor", "pointer");
-        $("#btnSend").html(lenguaje.enviarCorreo[`${idioma}`]);
+        setIsSubmitting(false);
       }, (error) => {
         Swal.fire({
           icon: "error",
@@ -77,12 +69,10 @@ const Contacto = ({idioma, setIdioma}) => {
           showConfirmButton: true
         });
         console.error('Error al enviar el correo:', error);
-        $("#btnSend").removeAttr('disabled');
-        $("#btnSend").css("cursor", "pointer");
-        $("#btnSend").html(lenguaje.enviarCorreo[`${idioma}`]);
+        setIsSubmitting(false);
       });
   };
-  
+
   function limpiarCampos() {
     setAsunto('');
     setcorreo('');
@@ -91,7 +81,7 @@ const Contacto = ({idioma, setIdioma}) => {
   }
 
   return (
-    <>
+    <Suspense fallback={<div className="flex justify-center items-center min-h-screen"><div className="animate-spin rounded-full h-32 w-32 border-b-2 border-gray-900"></div></div>}>
       <main className="bg-homeBg bg-no-repeat bg-center bg-cover bg-fixed md:pb-16 w-full">
         <div className="container grid grid-cols-12 md:gap-10 justify-between">
           <DivIzq idioma={idioma} setIdioma={setIdioma}/>
@@ -130,8 +120,8 @@ const Contacto = ({idioma, setIdioma}) => {
                     </label>
                   </div>
 
-                  <button type="submit" id="btnSend" className="blackButton px-6 py-2 rounded-lg border-[2px] mt-3 font-semibold cursor-pointer hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476] hover:text-white transition-colors duration-300 ease-in-out hover:border-transparent"
-                  >{lenguaje.enviarCorreo[`${idioma}`]}</button>
+                  <button type="submit" id="btnSend" className={`blackButton px-6 py-2 rounded-lg border-[2px] mt-3 font-semibold cursor-pointer hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476] hover:text-white transition-colors duration-300 ease-in-out hover:border-transparent ${isSubmitting ? 'cursor-wait opacity-50' : 'cursor-pointer'}`} disabled={isSubmitting}
+                  >{isSubmitting ? lenguaje.btnWaitText[`${idioma}`] : lenguaje.enviarCorreo[`${idioma}`]}</button>
                 </form>
               </div>
 
@@ -140,7 +130,7 @@ const Contacto = ({idioma, setIdioma}) => {
           </section>
         </div>
       </main>
-    </>
+    </Suspense>
   );
 }
 
