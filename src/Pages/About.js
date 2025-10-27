@@ -2,6 +2,7 @@ import React from 'react';
 import lenguaje from '../Configs/lenguaje';
 // import Footer from '../Components/Footer';
 import DivIzq from '../Components/DivIzq';
+import SocialLinks from '../Components/SocialLinks';
 
 const About = ({idioma, setIdioma}) => {
   return (
@@ -39,28 +40,7 @@ const About = ({idioma, setIdioma}) => {
                             {lenguaje.cargo[`${idioma}`]}
                           </h3>
 
-                          <section className="flex justify-center space-x-3">
-                            <a href="https://api.whatsapp.com/send?phone=573117121720" target="_blank" rel="noopener noreferrer" className="alink">
-                              <span className="socialbtn text-[#377c4d]">
-                                <i className="fa-brands fa-whatsapp"></i>
-                              </span>
-                            </a>
-                            <a href="mailto:jepa9@hotmail.com" target="_blank" rel="noopener noreferrer" className="alink">
-                              <span className="socialbtn text-[#6cb8d9]">
-                                <i className="fa-brands fa-at"></i>
-                              </span>
-                            </a>
-                            <a href="https://github.com/JuanEPerezA" target="_blank" rel="noopener noreferrer">
-                              <span className="socialbtn text-[#e14a84]">
-                                <i className="fa-brands fa-github"></i>
-                              </span>
-                            </a>
-                            <a href="https://www.linkedin.com/in/jepa1998/" target="_blank" rel="noopener noreferrer">
-                              <span className="socialbtn text-[#0072b1]">
-                                <i className="fa-brands fa-linkedin-in"></i>
-                              </span>
-                            </a>
-                          </section>
+                          <SocialLinks className="flex justify-center space-x-3" />
 
                             <section className="grid-cols-12 pb-5 pt-1 items-center">
                               <div className="col-span-12">
