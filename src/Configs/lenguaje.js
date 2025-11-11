@@ -225,16 +225,16 @@ const lenguaje = {
     },
     helmet:{
         title:{
-            ES: 'Portafolio de Juan Pérez - Desarrollador Fullstack',
-            EN: 'Juan Pérez Portfolio - Fullstack Developer'
+            ES: 'Portafolio de Juan E. Pérez Aguas - Desarrollador Web Fullstack 👨🏽‍💻',
+            EN: 'Juan E. Pérez Aguas Portfolio - Fullstack Web Developer 👨🏽‍💻'
         },
         description:{
-            ES: 'Explora el portafolio de Juan Pérez, Tecnólogo en Análisis y Desarrollo de Software con más de 4 años de experiencia en desarrollo web fullstack.',
-            EN: 'Explore Juan Pérez\'s portfolio, Technologist in Software Analysis and Development with over 4 years of experience in fullstack web development.'
+            ES: 'Bienvenido a mi protafolio, soy un Desarrollador web fullstack con más de 4 años de experiencia',
+            EN: 'Welcome to my portfolio, I am a fullstack web developer with over 4 years of experience.'
         },
         keywords:{
-            ES: 'desarrollador fullstack, portafolio, Juan Pérez, desarrollo web, React, Node.js',
-            EN: 'fullstack developer, portfolio, Juan Pérez, web development, React, Node.js'
+            ES: 'desarrollador fullstack, portafolio, Juan Pérez, desarrollo web, React, Node.js, PHP, Pérez Aguas, JEPADEV',
+            EN: 'fullstack developer, portfolio, Juan Pérez, web development, React, Node.js, PHP, Pérez Aguas, JEPADEV'
         }
     }
 };
